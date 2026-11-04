@@ -11,7 +11,7 @@ interface StatCardProps {
     text: string;
     variant: 'positive' | 'negative' | 'neutral';
   };
-  highlightColor?: string;
+  accentColor?: string;
 }
 
 export const StatCard: React.FC<StatCardProps> = ({
@@ -20,32 +20,37 @@ export const StatCard: React.FC<StatCardProps> = ({
   subValue,
   icon: Icon,
   badge,
-  highlightColor
+  accentColor = '#385463'
 }) => {
   return (
-    <div className="bg-white rounded-xl border border-slate-200/80 p-5 shadow-xs hover:shadow-sm transition-all relative overflow-hidden">
-      {highlightColor && (
-        <div
-          className="absolute top-0 left-0 right-0 h-1"
-          style={{ backgroundColor: highlightColor }}
-        />
-      )}
+    <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs hover:shadow-md transition-all duration-200 relative overflow-hidden group">
+      {/* Top accent bar */}
+      <div
+        className="absolute top-0 left-0 right-0 h-[3px] transition-all group-hover:h-[4px]"
+        style={{ backgroundColor: accentColor }}
+      />
+
       <div className="flex items-start justify-between">
-        <div className="space-y-1">
-          <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider">{title}</p>
-          <h3 className="text-2xl font-bold tracking-tight text-slate-900">{value}</h3>
-          {subValue && <p className="text-xs text-slate-500 font-medium">{subValue}</p>}
+        <div>
+          <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider">{title}</span>
+          <h3 className="text-2xl font-extrabold tracking-tight text-slate-900 mt-1">{value}</h3>
+          {subValue && (
+            <p className="text-xs text-slate-500 font-medium mt-0.5">{subValue}</p>
+          )}
         </div>
-        <div className="p-2.5 rounded-lg bg-slate-50 border border-slate-100 text-[#385463]">
+        <div
+          className="p-2.5 rounded-xl transition-all"
+          style={{ backgroundColor: `${accentColor}15`, color: accentColor }}
+        >
           <Icon className="w-5 h-5" />
         </div>
       </div>
 
       {badge && (
         <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-          <span className="text-xs text-slate-500">Status vs Orçado:</span>
+          <span className="text-[11px] text-slate-400 font-medium">Desempenho</span>
           <span
-            className={`inline-flex items-center text-xs font-semibold px-2 py-0.5 rounded-full ${
+            className={`inline-flex items-center text-xs font-bold px-2 py-0.5 rounded-full ${
               badge.variant === 'positive'
                 ? 'bg-emerald-50 text-emerald-700 border border-emerald-200'
                 : badge.variant === 'negative'

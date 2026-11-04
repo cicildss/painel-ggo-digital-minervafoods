@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, FileSpreadsheet, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Search, FileSpreadsheet, ChevronLeft, ChevronRight, FileText, DollarSign, Database } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import type { AnalyticsRecord } from '../types';
 
@@ -12,7 +12,7 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
   const [searchTerm, setSearchTerm] = useState('');
   const [filterType, setFilterType] = useState<'ALL' | 'Orçado' | 'Realizado'>('ALL');
   const [page, setPage] = useState(1);
-  const pageSize = 25;
+  const pageSize = 30;
 
   const scaleDivisor = scale === 'BRL_1000' ? 1000 : 1;
   const scaleSuffix = scale === 'BRL_1000' ? ' mil' : '';
@@ -44,6 +44,9 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
   const totalPages = Math.ceil(filtered.length / pageSize) || 1;
   const pageRecords = filtered.slice((page - 1) * pageSize, page * pageSize);
 
+  // Totals for top cards
+  const totalVolume = filtered.reduce((acc, r) => acc + r.valor, 0);
+
   // Excel Export
   const exportToExcel = () => {
     const exportData = filtered.map((r) => ({
@@ -68,9 +71,53 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-5">
+      {/* Analytics Summary Row */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div className="bg-white p-4 rounded-xl border border-slate-200/90 shadow-xs flex items-center justify-between">
+          <div>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Total de Registros</span>
+            <div className="text-2xl font-extrabold text-slate-900 mt-1">{filtered.length}</div>
+            <p className="text-xs text-slate-400 mt-0.5">Lançamentos filtrados</p>
+          </div>
+          <div className="p-2.5 rounded-xl bg-slate-50 text-[#385463]">
+            <Database className="w-5 h-5" />
+          </div>
+        </div>
+
+        <div className="bg-white p-4 rounded-xl border border-slate-200/90 shadow-xs flex items-center justify-between">
+          <div>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Volume Financeiro Filtrado</span>
+            <div className="text-2xl font-extrabold text-slate-900 mt-1">{formatCurrency(totalVolume)}</div>
+            <p className="text-xs text-slate-400 mt-0.5">Soma total dos lançamentos exibidos</p>
+          </div>
+          <div className="p-2.5 rounded-xl bg-slate-50 text-[#385463]">
+            <DollarSign className="w-5 h-5" />
+          </div>
+        </div>
+
+        <div className="bg-white p-4 rounded-xl border border-slate-200/90 shadow-xs flex items-center justify-between">
+          <div>
+            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Exportação Executiva</span>
+            <div className="mt-2">
+              <button
+                onClick={exportToExcel}
+                className="flex items-center space-x-2 px-3.5 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-xs transition-all cursor-pointer"
+              >
+                <FileSpreadsheet className="w-4 h-4" />
+                <span>Exportar Base (.xlsx)</span>
+              </button>
+            </div>
+            <p className="text-[11px] text-slate-400 mt-1.5">Download imediato para Excel</p>
+          </div>
+          <div className="p-2.5 rounded-xl bg-emerald-50 text-emerald-600">
+            <FileText className="w-5 h-5" />
+          </div>
+        </div>
+      </div>
+
       {/* Controls Bar */}
-      <div className="bg-white rounded-xl border border-slate-200/80 p-4 shadow-xs flex flex-col md:flex-row items-center justify-between gap-3">
+      <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs flex flex-col md:flex-row items-center justify-between gap-3">
         <div className="flex items-center space-x-2 w-full md:w-96">
           <div className="relative w-full">
             <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
@@ -87,41 +134,32 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
           </div>
         </div>
 
-        <div className="flex items-center space-x-3 w-full md:w-auto justify-between md:justify-end">
-          <div className="flex items-center space-x-1">
-            {(['ALL', 'Orçado', 'Realizado'] as const).map((t) => (
-              <button
-                key={t}
-                onClick={() => {
-                  setFilterType(t);
-                  setPage(1);
-                }}
-                className={`px-3 py-1 text-xs rounded-md font-semibold transition-all ${
-                  filterType === t
-                    ? 'bg-[#24303b] text-white shadow-xs'
-                    : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
-                }`}
-              >
-                {t === 'ALL' ? 'Todos' : t}
-              </button>
-            ))}
-          </div>
-
-          <button
-            onClick={exportToExcel}
-            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-semibold shadow-xs transition-all"
-          >
-            <FileSpreadsheet className="w-4 h-4" />
-            <span>Exportar Excel (.xlsx)</span>
-          </button>
+        <div className="flex items-center space-x-2">
+          <span className="text-xs text-slate-400 font-medium mr-1">Tipo de Lançamento:</span>
+          {(['ALL', 'Orçado', 'Realizado'] as const).map((t) => (
+            <button
+              key={t}
+              onClick={() => {
+                setFilterType(t);
+                setPage(1);
+              }}
+              className={`px-3 py-1 text-xs rounded-md font-bold transition-all cursor-pointer ${
+                filterType === t
+                  ? 'bg-[#1c2630] text-white shadow-xs'
+                  : 'bg-slate-100 text-slate-600 hover:bg-slate-200'
+              }`}
+            >
+              {t === 'ALL' ? 'Todos' : t}
+            </button>
+          ))}
         </div>
       </div>
 
       {/* Table */}
-      <div className="bg-white rounded-xl border border-slate-200/80 shadow-xs overflow-hidden">
+      <div className="bg-white rounded-xl border border-slate-200/90 shadow-xs overflow-hidden">
         <div className="overflow-x-auto max-h-[580px]">
           <table className="w-full text-xs text-left">
-            <thead className="bg-[#24303b] text-white font-semibold sticky top-0 z-10">
+            <thead className="bg-[#1c2630] text-white font-semibold sticky top-0 z-10 border-b border-[#2b3d4a]">
               <tr>
                 <th className="py-2.5 px-3">Data</th>
                 <th className="py-2.5 px-3">Documento</th>
@@ -137,20 +175,20 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
               {pageRecords.map((r, i) => (
                 <tr key={i} className="hover:bg-slate-50/80 transition-colors">
                   <td className="py-2 px-3 text-slate-500 whitespace-nowrap">{r.data}</td>
-                  <td className="py-2 px-3 font-mono text-slate-600">{r.documento || '-'}</td>
+                  <td className="py-2 px-3 font-mono text-slate-600 font-semibold">{r.documento || '-'}</td>
                   <td className="py-2 px-3">
-                    <div className="font-mono font-bold text-slate-800">{r.conta}</div>
+                    <div className="font-mono font-bold text-slate-900">{r.conta}</div>
                     <div className="text-[11px] text-slate-500 truncate max-w-xs">{r.desc_conta}</div>
                   </td>
-                  <td className="py-2 px-3 text-slate-700">{r.pacote}</td>
+                  <td className="py-2 px-3 text-slate-700 font-medium">{r.pacote}</td>
                   <td className="py-2 px-3">
-                    <div className="font-mono font-bold text-slate-800">{r.centro_custo}</div>
+                    <div className="font-mono font-bold text-slate-900">{r.centro_custo}</div>
                     <div className="text-[11px] text-slate-500 truncate max-w-xs">{r.desc_centro}</div>
                   </td>
                   <td className="py-2 px-3 text-slate-600">{r.gestor}</td>
                   <td className="py-2 px-3">
                     <span
-                      className={`px-2 py-0.5 rounded text-[10px] font-semibold ${
+                      className={`px-2 py-0.5 rounded text-[10px] font-bold ${
                         r.tipo === 'Orçado'
                           ? 'bg-blue-50 text-blue-700 border border-blue-200'
                           : 'bg-slate-100 text-slate-800 border border-slate-300'
@@ -159,7 +197,7 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
                       {r.tipo}
                     </span>
                   </td>
-                  <td className="py-2 px-3 text-right font-bold text-slate-900 whitespace-nowrap">
+                  <td className="py-2 px-3 text-right font-extrabold text-slate-900 whitespace-nowrap">
                     {formatCurrency(r.valor)}
                   </td>
                 </tr>
@@ -179,7 +217,7 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
             <button
               disabled={page === 1}
               onClick={() => setPage((p) => Math.max(p - 1, 1))}
-              className="p-1 rounded bg-white border border-slate-300 disabled:opacity-40 hover:bg-slate-100"
+              className="p-1 rounded bg-white border border-slate-300 disabled:opacity-40 hover:bg-slate-100 cursor-pointer"
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -189,7 +227,7 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
             <button
               disabled={page === totalPages}
               onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
-              className="p-1 rounded bg-white border border-slate-300 disabled:opacity-40 hover:bg-slate-100"
+              className="p-1 rounded bg-white border border-slate-300 disabled:opacity-40 hover:bg-slate-100 cursor-pointer"
             >
               <ChevronRight className="w-4 h-4" />
             </button>
