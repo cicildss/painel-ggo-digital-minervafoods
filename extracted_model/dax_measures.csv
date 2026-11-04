@@ -1,0 +1,598 @@
+TableName,Name,Expression,DisplayFolder,Description
+@ 1.Overview,KPI Ano MAX,"
+IF('@ 0.Medidas Basicas'[Orçado] > '@ 0.Medidas Basicas'[Realizado],
+    '@ 0.Medidas Basicas'[Orçado],
+    '@ 0.Medidas Basicas'[Realizado]
+)",,
+@ 1.Overview,KPI Ano Anterior MAX,"
+IF('@ 1.Overview'[Orçado Ano Anterior] > '@ 1.Overview'[Realizado Ano Anterior],
+    '@ 1.Overview'[Orçado Ano Anterior],
+    '@ 1.Overview'[Realizado Ano Anterior]
+)",,
+@ 0.Medidas Basicas,Orçado,"
+VAR EscalaSelecionada =
+    SELECTEDVALUE('aux_escala_valores'[Opcao], ""BRL"")
+VAR ValorBase =
+    CALCULATE(
+        SUM('@fato'[Valor Reais]),
+        '@fato'[Tipo Lancamento] = 1
+    )
+RETURN
+    SWITCH(
+        EscalaSelecionada,
+        ""BRL/1000"", ValorBase / 1000,
+        ValorBase
+    )
+",,
+@ 0.Medidas Basicas,Realizado,"
+VAR EscalaSelecionada =
+    SELECTEDVALUE('aux_escala_valores'[Opcao], ""BRL"")
+VAR ValorBase =
+    CALCULATE(
+        SUM('@fato'[Valor Reais]),
+        '@fato'[Tipo Lancamento] = 2
+    )
+RETURN
+    SWITCH(
+        EscalaSelecionada,
+        ""BRL/1000"", ValorBase / 1000,
+        ValorBase
+    )
+",,
+@ 1.Overview,Orçado Ano,"
+CALCULATE(
+    '@ 0.Medidas Basicas'[Orçado],
+    'dim_calendario'[Ano] = YEAR(TODAY())
+    )",,
+@ 1.Overview,Orçado Ano Anterior,"
+CALCULATE(
+    '@ 0.Medidas Basicas'[Orçado],
+    'dim_calendario'[Ano] = YEAR(TODAY())-1
+    )",,
+@ 1.Overview,Realizado Ano,"
+CALCULATE(
+    '@ 0.Medidas Basicas'[Realizado],
+    'dim_calendario'[Ano] = YEAR(TODAY())
+    )",,
+@ 1.Overview,Realizado Ano Anterior,"
+CALCULATE(
+    '@ 0.Medidas Basicas'[Realizado],
+    'dim_calendario'[Ano] = YEAR(TODAY())-1
+    )",,
+@ 1.Overview,Cor Indicador Ano,"
+[Orçado] - [Realizado]",,
+@ 1.Overview,Cor Indicador Ano Anterior,"
+[Orçado Ano Anterior] - [Realizado Ano Anterior]",,
+@ 0.Medidas Basicas,Desvio,"
+'@ 0.Medidas Basicas'[Realizado] - '@ 0.Medidas Basicas'[Orçado]",,
+@ 0.Medidas Basicas,Desvio %,"
+VAR Real = [Realizado]
+VAR Orc  = [Orçado]
+RETURN
+SWITCH (
+    TRUE(),
+    ( ( ISBLANK(Orc) || Orc = 0 ) && ( NOT ISBLANK(Real) && Real <> 0 ) ), """",
+    ( ( NOT ISBLANK(Orc) && Orc <> 0 ) && ( ISBLANK(Real) || Real = 0 ) ), """",
+    ( ( ISBLANK(Orc) || Orc = 0 ) && ( ISBLANK(Real) || Real = 0 ) ), BLANK(),
+    FORMAT ( DIVIDE ( Real, Orc ) - 1, ""##%"" )
+)",,
+@ 0.Medidas Basicas,Valor,"
+VAR EscalaSelecionada =
+    SELECTEDVALUE('aux_escala_valores'[Opcao], ""$"")
+VAR ValorBase =
+    CALCULATE(
+        SUM('@fato'[Valor Reais])
+    )
+RETURN
+    SWITCH(
+        EscalaSelecionada,
+        ""$/1000"", ValorBase / 1000,
+        ValorBase
+    )
+",,
+@ 4.Pacotes,TopN Barras Pacotes Realizado,"
+VAR N_Pacotes = 5
+
+VAR PacoteSel =
+    SELECTEDVALUE ( aux_pacote[pacote_conta_contabil] )
+
+VAR BasePacotes =
+    ALLSELECTED (
+        dim_conta_contabil[pacote_conta_contabil]
+    )
+
+VAR TblRankAno =
+    ADDCOLUMNS (
+        BasePacotes,
+        ""__ValorAno"",
+            CALCULATE (
+                [Realizado],
+                ALLEXCEPT (
+                    dim_calendario,
+                    dim_calendario[Ano]
+                )
+            )
+    )
+
+VAR Top_N =
+    TOPN (
+        N_Pacotes,
+        TblRankAno,
+        [__ValorAno],
+        DESC
+    )
+
+VAR TopNLista =
+    SELECTCOLUMNS (
+        Top_N,
+        ""Pacote"",
+            dim_conta_contabil[pacote_conta_contabil]
+    )
+
+VAR TotalMes =
+    CALCULATE (
+        [Realizado],
+        REMOVEFILTERS (
+            dim_conta_contabil[pacote_conta_contabil]
+        ),
+        BasePacotes
+    )
+
+VAR TotalTopN_Mes =
+    CALCULATE (
+        [Realizado],
+        TREATAS (
+            TopNLista,
+            dim_conta_contabil[pacote_conta_contabil]
+        )
+    )
+
+RETURN
+    SWITCH (
+        TRUE(),
+
+        PacoteSel = ""OUTROS"",
+            TotalMes - TotalTopN_Mes,
+
+        CONTAINS (
+            TopNLista,
+            [Pacote],
+            PacoteSel
+        ),
+            CALCULATE (
+                [Realizado],
+                TREATAS (
+                    { PacoteSel },
+                    dim_conta_contabil[pacote_conta_contabil]
+                )
+            ),
+
+        BLANK()
+    )",,
+@ 4.Pacotes,TopN Linhas Pacotes,"
+VAR N_Pacotes = 5
+VAR PacoteSel =
+    SELECTEDVALUE ( aux_pacote[pacote_conta_contabil] )
+
+VAR BasePacotes =
+    ALLSELECTED ( dim_conta_contabil[pacote_conta_contabil] )
+
+-- Ranking fixo no ANO (remove mês/dia, mantém Ano e demais filtros da página)
+VAR TblRankAno =
+    ADDCOLUMNS (
+        BasePacotes,
+        ""__ValorAno"",
+            CALCULATE (
+                [Realizado],
+                ALLEXCEPT ( dim_calendario, dim_calendario[Ano] )
+            )
+    )
+
+VAR Top_N =
+    TOPN ( N_Pacotes, TblRankAno, [__ValorAno], DESC )
+
+VAR TopNLista =
+    SELECTCOLUMNS ( Top_N, ""Pacote"", dim_conta_contabil[pacote_conta_contabil] )
+
+-- Total do MÊS (no contexto do ponto do gráfico), limitado ao universo filtrado
+VAR TotalMes =
+    CALCULATE (
+        [Realizado],
+        REMOVEFILTERS ( dim_conta_contabil[pacote_conta_contabil] ),
+        BasePacotes
+    )
+
+VAR TotalTopN_Mes =
+    CALCULATE ( [Realizado], TREATAS ( TopNLista, dim_conta_contabil[pacote_conta_contabil] ) )
+
+RETURN
+SWITCH (
+    TRUE (),
+    PacoteSel = ""OUTROS"", TotalMes - TotalTopN_Mes,
+    CONTAINS ( TopNLista, [Pacote], PacoteSel ),
+        CALCULATE ( [Realizado], TREATAS ( { PacoteSel }, dim_conta_contabil[pacote_conta_contabil] ) ),
+    BLANK ()
+)",,
+@ 1.Overview,Titulo Atingimento Ano,"
+VAR AnoSelecionado =
+    MAXX (
+        VALUES ( dim_calendario[Ano] ),
+        dim_calendario[Ano]
+    )
+RETURN
+    ""Atingimento "" & FORMAT ( AnoSelecionado, ""0"" )",,
+@ 1.Overview,Titulo Evolucao Realizado,"
+VAR AnoRef = MAX ( dim_calendario[Ano] )
+RETURN
+IF (
+    ISBLANK ( AnoRef ),
+    ""Atingimento"",
+    ""Realizado "" & FORMAT ( AnoRef, ""0"" ) & ""-"" & FORMAT ( AnoRef - 1, ""0"" )
+)",,
+@ 1.Overview,Titulo Evolucao Realizado %,"
+VAR AnoRef = MAX ( dim_calendario[Ano] )
+RETURN
+IF (
+    ISBLANK ( AnoRef ),
+    ""Atingimento"",
+    ""Realizado "" & FORMAT ( AnoRef, ""0"" ) & ""-"" & FORMAT ( AnoRef - 1, ""0"" ) & "" (%)""
+)",,
+@ 0.Medidas Basicas,Atingimento Ano,"
+'@ 0.Medidas Basicas'[Realizado] / '@ 0.Medidas Basicas'[Orçado]",,
+@ 0.Medidas Basicas,Evolucao Realizado,"
+[Realizado Ano] - [Realizado Ano Anterior]",,
+@ 0.Medidas Basicas,Evolucao Realizado %,"
+([Realizado Ano] - [Realizado Ano Anterior]) / [Realizado Ano Anterior]",,
+@ 2.Centro de Custos,TopN Centros Desvio Cima,"
+VAR N_Centros = 5
+VAR CentroSel =
+    SELECTEDVALUE ( dim_desc_centro[desc_centro_custos] )
+
+VAR BaseCentros =
+    ALLSELECTED ( dim_desc_centro[desc_centro_custos] )
+
+VAR TblValores =
+    ADDCOLUMNS (
+        BaseCentros,
+        ""__Desvio"", CALCULATE ( [Desvio] )
+    )
+
+VAR ApenasPositivos =
+    FILTER ( TblValores, NOT ISBLANK ( [__Desvio] ) && [__Desvio] > 0 )
+
+VAR Top_N =
+    TOPN ( N_Centros, ApenasPositivos, [__Desvio], DESC )
+
+RETURN
+IF (
+    CONTAINS ( Top_N, dim_desc_centro[desc_centro_custos], CentroSel ),
+    [Desvio],
+    BLANK ()
+)",,
+@ 2.Centro de Custos,TopN Centros Desvio Baixo,"
+VAR N_Centros = 5
+VAR CentroSel =
+    SELECTEDVALUE ( dim_desc_centro[desc_centro_custos] )
+
+VAR BaseCentros =
+    ALLSELECTED ( dim_desc_centro[desc_centro_custos] )
+
+VAR TblValores =
+    ADDCOLUMNS (
+        BaseCentros,
+        ""__Desvio"", CALCULATE ( [Desvio] )
+    )
+
+VAR ApenasNegativos =
+    FILTER ( TblValores, NOT ISBLANK ( [__Desvio] ) && [__Desvio] < 0 )
+
+VAR Top_N =
+    TOPN ( N_Centros, ApenasNegativos, [__Desvio], ASC )   -- mais negativos primeiro
+
+RETURN
+IF (
+    CONTAINS ( Top_N, dim_desc_centro[desc_centro_custos], CentroSel ),
+    [Desvio],
+    BLANK ()
+)",,
+@ 2.Centro de Custos,TopN Centros Realizado,"
+VAR N_Centros = 5
+VAR CentroSel =
+    SELECTEDVALUE ( dim_desc_centro[desc_centro_custos] )
+
+VAR BaseCentros =
+    ALLSELECTED ( dim_desc_centro[desc_centro_custos] )
+
+VAR TblValores =
+    ADDCOLUMNS (
+        BaseCentros,
+        ""__Realizado"", CALCULATE ( [Realizado] )
+    )
+
+VAR ApenasPositivos =
+    FILTER ( TblValores, NOT ISBLANK ( [__Realizado] ) && [__Realizado] > 0 )
+
+VAR Top_N =
+    TOPN ( N_Centros, ApenasPositivos, [__Realizado], DESC )
+
+RETURN
+IF (
+    CONTAINS ( Top_N, dim_desc_centro[desc_centro_custos], CentroSel ),
+    [Realizado],
+    BLANK ()
+)",,
+@ 3.Responsaveis,TopN Responsaveis Desvio Baixo,"
+VAR N_Responsaveis = 5
+VAR ResponsaveisSel =
+    SELECTEDVALUE ( dim_hierarquia_custo[nome_approver] )
+
+VAR BaseResponsaveis =
+    ALLSELECTED ( dim_hierarquia_custo[nome_approver] )
+
+VAR TblValores =
+    ADDCOLUMNS (
+        BaseResponsaveis,
+        ""__Desvio"", CALCULATE ( [Desvio] )
+    )
+
+VAR ApenasNegativos =
+    FILTER ( TblValores, NOT ISBLANK ( [__Desvio] ) && [__Desvio] < 0 )
+
+VAR Top_N =
+    TOPN ( N_Responsaveis, ApenasNegativos, [__Desvio], ASC )   -- mais negativos primeiro
+
+RETURN
+IF (
+    CONTAINS ( Top_N, dim_hierarquia_custo[nome_approver], ResponsaveisSel ),
+    [Desvio],
+    BLANK ()
+)",,
+@ 3.Responsaveis,TopN Responsaveis Desvio Cima,"
+VAR N_Responsaveis = 5
+VAR ResponsaveisSel =
+    SELECTEDVALUE ( dim_hierarquia_custo[nome_approver] )
+
+VAR BaseResponsaveis =
+    ALLSELECTED ( dim_hierarquia_custo[nome_approver] )
+
+VAR TblValores =
+    ADDCOLUMNS (
+        BaseResponsaveis,
+        ""__Desvio"", CALCULATE ( [Desvio] )
+    )
+
+VAR ApenasPositivos =
+    FILTER ( TblValores, NOT ISBLANK ( [__Desvio] ) && [__Desvio] > 0 )
+
+VAR Top_N =
+    TOPN ( N_Responsaveis, ApenasPositivos, [__Desvio], DESC )
+
+RETURN
+IF (
+    CONTAINS ( Top_N, dim_hierarquia_custo[nome_approver], ResponsaveisSel ),
+    [Desvio],
+    BLANK ()
+)",,
+@ 3.Responsaveis,TopN Responsaveis Realizado,"
+VAR N_Responsaveis = 5
+VAR ResponsaveisSel =
+    SELECTEDVALUE ( dim_hierarquia_custo[nome_approver] )
+
+VAR BaseResponsaveios =
+    ALLSELECTED ( dim_hierarquia_custo[nome_approver] )
+
+VAR TblValores =
+    ADDCOLUMNS (
+        BaseResponsaveios,
+        ""__Realizado"", CALCULATE ( [Realizado] )
+    )
+
+VAR ApenasPositivos =
+    FILTER ( TblValores, NOT ISBLANK ( [__Realizado] ) && [__Realizado] > 0 )
+
+VAR Top_N =
+    TOPN ( N_Responsaveis, ApenasPositivos, [__Realizado], DESC )
+
+RETURN
+IF (
+    CONTAINS ( Top_N, dim_hierarquia_custo[nome_approver], ResponsaveisSel ),
+    [Realizado],
+    BLANK ()
+)",,
+@ 5.Pacote Pessoal,TopN Contas Desvio Baixo,"
+VAR N_Contas = 5
+VAR ContasSel =
+    SELECTEDVALUE ( dim_conta_contabil[desc_conta_contabil] )
+
+VAR BaseContas =
+    ALLSELECTED ( dim_conta_contabil[desc_conta_contabil] )
+
+VAR TblValores =
+    ADDCOLUMNS (
+        BaseContas,
+        ""__Desvio"", CALCULATE ( [Desvio] )
+    )
+
+VAR ApenasNegativos =
+    FILTER ( TblValores, NOT ISBLANK ( [__Desvio] ) && [__Desvio] < 0 )
+
+VAR Top_N =
+    TOPN ( N_Contas, ApenasNegativos, [__Desvio], ASC )   -- mais negativos primeiro
+
+RETURN
+IF (
+    CONTAINS ( Top_N, dim_conta_contabil[desc_conta_contabil], ContasSel ),
+    [Desvio],
+    BLANK ()
+)",,
+@ 5.Pacote Pessoal,TopN Contas Desvio Cima,"
+VAR N_Contas = 5
+VAR ContasSel =
+    SELECTEDVALUE ( dim_conta_contabil[desc_conta_contabil] )
+
+VAR BaseContas =
+    ALLSELECTED ( dim_conta_contabil[desc_conta_contabil] )
+
+VAR TblValores =
+    ADDCOLUMNS (
+        BaseContas,
+        ""__Desvio"", CALCULATE ( [Desvio] )
+    )
+
+VAR ApenasPositivos =
+    FILTER ( TblValores, NOT ISBLANK ( [__Desvio] ) && [__Desvio] > 0 )
+
+VAR Top_N =
+    TOPN ( N_Contas, ApenasPositivos, [__Desvio], DESC )
+
+RETURN
+IF (
+    CONTAINS ( Top_N, dim_conta_contabil[desc_conta_contabil], ContasSel ),
+    [Desvio],
+    BLANK ()
+)",,
+@ 5.Pacote Pessoal,TopN Contas Realizado,"
+VAR N_Contas = 5
+VAR ContasSel =
+    SELECTEDVALUE ( dim_conta_contabil[desc_conta_contabil] )
+
+VAR BaseContas =
+    ALLSELECTED ( dim_conta_contabil[desc_conta_contabil] )
+
+VAR TblValores =
+    ADDCOLUMNS (
+        BaseContas,
+        ""__Realizado"", CALCULATE ( [Realizado] )
+    )
+
+VAR ApenasPositivos =
+    FILTER ( TblValores, NOT ISBLANK ( [__Realizado] ) && [__Realizado] > 0 )
+
+VAR Top_N =
+    TOPN ( N_Contas, ApenasPositivos, [__Realizado], DESC )
+
+RETURN
+IF (
+    CONTAINS ( Top_N, dim_conta_contabil[desc_conta_contabil], ContasSel ),
+    [Realizado],
+    BLANK ()
+)",,
+@ 1.Overview,Titulo RxO,"
+VAR AnoSelecionado =
+    MAXX (
+        VALUES ( dim_calendario[Ano] ),
+        dim_calendario[Ano]
+    )
+RETURN
+    ""Realizado vs Orçado dos Meses de "" & FORMAT ( AnoSelecionado, ""0"" )",,
+@ 4.Pacotes,TopN Barras Pacotes Orcado,"
+VAR N_Pacotes = 5
+
+VAR PacoteSel =
+    SELECTEDVALUE ( aux_pacote[pacote_conta_contabil] )
+
+VAR BasePacotes =
+    ALLSELECTED (
+        dim_conta_contabil[pacote_conta_contabil]
+    )
+
+-- O TOP 5 continua sendo definido pelo REALIZADO
+VAR TblRankAno =
+    ADDCOLUMNS (
+        BasePacotes,
+        ""__ValorAno"",
+            CALCULATE (
+                [Realizado],
+                ALLEXCEPT (
+                    dim_calendario,
+                    dim_calendario[Ano]
+                )
+            )
+    )
+
+VAR Top_N =
+    TOPN (
+        N_Pacotes,
+        TblRankAno,
+        [__ValorAno],
+        DESC
+    )
+
+VAR TopNLista =
+    SELECTCOLUMNS (
+        Top_N,
+        ""Pacote"",
+            dim_conta_contabil[pacote_conta_contabil]
+    )
+
+-- Total orçado do mês
+VAR TotalMes =
+    CALCULATE (
+        [Orçado],
+        REMOVEFILTERS (
+            dim_conta_contabil[pacote_conta_contabil]
+        ),
+        BasePacotes
+    )
+
+-- Total orçado dos Top 5
+VAR TotalTopN_Mes =
+    CALCULATE (
+        [Orçado],
+        TREATAS (
+            TopNLista,
+            dim_conta_contabil[pacote_conta_contabil]
+        )
+    )
+
+RETURN
+    SWITCH (
+        TRUE(),
+
+        PacoteSel = ""OUTROS"",
+            TotalMes - TotalTopN_Mes,
+
+        CONTAINS (
+            TopNLista,
+            [Pacote],
+            PacoteSel
+        ),
+            CALCULATE (
+                [Orçado],
+                TREATAS (
+                    { PacoteSel },
+                    dim_conta_contabil[pacote_conta_contabil]
+                )
+            ),
+
+        BLANK()
+    )",,
+@ 0.Medidas Basicas,Status Acesso RLS,"VAR _Usuario = LOWER ( TRIM ( USERPRINCIPALNAME () ) )
+VAR _Admins = {
+    ""lilian.nascimento@minervafoods.com"",
+    ""maria.almeida@minervafoods.com"",
+    ""jeanderson.borba@minervafoods.com"",
+    ""roberto.mendonca@minervafoods.com"",
+    ""thatiana.freire@minervafoods.com"",
+    ""gustavo.franco@minervafoods.com"",
+    ""francielle.justino@minervafoods.com"",
+    ""ana.palazzo@minervafoods.com"",
+    ""luiza.bessa@minervafoods.com"",
+    ""laura.masalskiene@minervafoods.com""
+}
+VAR _EhAdmin = _Usuario IN _Admins
+VAR _QtdCC = CALCULATE ( DISTINCTCOUNT ( Gestores_TabEmp[Centro de Custo] ) )
+RETURN
+IF ( _EhAdmin, ""Administrador (Acesso Total)"", ""Gestor ("" & _QtdCC & "" CCs)"" )",01. GovernanÃ§a e RLS,
+@ 0.Medidas Basicas,Badge Perfil Usuario,"VAR _Usuario = LOWER ( TRIM ( USERPRINCIPALNAME () ) )
+VAR _Status = [Status Acesso RLS]
+RETURN
+""ðŸ‘¤ "" & _Usuario & ""  |  "" & _Status",01. GovernanÃ§a e RLS,
+@ 0.Medidas Basicas,Qtd CCs Liberados,CALCULATE ( DISTINCTCOUNT ( dim_grupo_centro[Cod Objeto Custo] ) ),01. GovernanÃ§a e RLS,
+@ 0.Medidas Basicas,Filtros Ativos Contagem,"VAR _EmpresaFiltro = ISFILTERED ( dim_empresa[cod_empresa] )
+VAR _CCFiltro = ISFILTERED ( dim_grupo_centro[Cod Objeto Custo] )
+VAR _ContaFiltro = ISFILTERED ( dim_conta_contabil[cod_conta_contabil] )
+VAR _PessoaFiltro = ISFILTERED ( dim_pessoas[name_person] )
+VAR _PacoteFiltro = ISFILTERED ( dim_pacote[desc_pacote_conta_contabil] )
+RETURN
+INT ( _EmpresaFiltro ) + INT ( _CCFiltro ) + INT ( _ContaFiltro ) + INT ( _PessoaFiltro ) + INT ( _PacoteFiltro )",03. Filtros e Controle,

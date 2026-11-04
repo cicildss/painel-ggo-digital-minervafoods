@@ -1,0 +1,18 @@
+FromTableName,FromColumnName,ToTableName,ToColumnName,IsActive,Cardinality,CrossFilteringBehavior,FromKeyCount,ToKeyCount,RelyOnReferentialIntegrity
+fato_gestor_centro_custo,id_business,dim_negocio,id_business,1,M:1,Both,18.0,,0
+@fato,Cod Conta Contabil,dim_conta_contabil,cod_conta_contabil,1,M:1,Both,118.0,,0
+@fato,Cod Moeda,dim_moeda,cod_moeda,1,M:1,Both,15.0,,0
+@fato,Cod Empresa,dim_empresa,cod_empresa,1,M:1,Both,17.0,,0
+@fato,id_cod_pais,dim_pais,id_cod_pais,1,M:1,Both,11.0,,0
+@fato,Cod Filial,dim_filial,cod_filial,1,M:1,Both,52.0,,0
+@fato,Cod Operacao,dim_operacao,cod_operacao,1,M:1,Both,94.0,,0
+@fato,Tipo Lancamento,dim_tipo_lancamento,Tipo Lancamento,1,M:1,Both,5.0,,0
+@fato,Cod Objeto Custo,fato_gestor_centro_custo,cost_center,1,M:1,Both,399.0,,0
+fato_gestor_centro_custo,id_macroarea,dim_macro_area,id_macro_area,1,M:1,Both,31.0,,0
+fato_gestor_centro_custo,id_cost_center_type,dim_tipo_centro_custo,id_cost_center_type,1,M:1,Single,6.0,,0
+@fato,Cod Objeto Custo,dim_desc_centro,centro_custos,1,M:1,Both,399.0,,0
+@fato,Cod Objeto Custo,dim_grupo_centro,Cod Objeto Custo,1,M:1,Both,399.0,,0
+dim_desc_centro,Grupo Objeto Custo,dim_negocio_dux,Grupo Objeto Custo,1,M:1,Single,36.0,,0
+Gestores_TabEmp,Centro de Custo,dim_grupo_centro,Cod Objeto Custo,1,M:M,Both,,,0
+dim_pacote,cod_conta_contabil,dim_conta_contabil,cod_conta_contabil,1,1:1,Both,200.0,562.0,0
+fato_gestor_centro_custo,id_approver,dim_pessoas,id_person,1,M:1,Single,182.0,,0

@@ -1,0 +1,31 @@
+TableName,RoleName,RoleDescription,FilterExpression,State,MetadataPermission
+dim_grupo_centro,RLS_Gestores_Centros,,"VAR _UsuarioLogado = LOWER ( TRIM ( USERPRINCIPALNAME () ) )
+
+VAR _AdminsAutorizados = {
+    ""lilian.nascimento@minervafoods.com"",
+    ""maria.almeida@minervafoods.com"",
+    ""jeanderson.borba@minervafoods.com"",
+    ""roberto.mendonca@minervafoods.com"",
+    ""thatiana.freire@minervafoods.com"",
+    ""gustavo.franco@minervafoods.com"",
+    ""francielle.justino@minervafoods.com"",
+    ""ana.palazzo@minervafoods.com"",
+    ""luiza.bessa@minervafoods.com"",
+    ""laura.masalskiene@minervafoods.com""
+}
+
+VAR _EhAdmin = _UsuarioLogado IN _AdminsAutorizados
+
+RETURN
+IF (
+    _EhAdmin,
+    TRUE (),
+    dim_grupo_centro[Cod Objeto Custo] IN 
+    SELECTCOLUMNS (
+        FILTER (
+            Gestores_TabEmp,
+            LOWER ( TRIM ( Gestores_TabEmp[E-mail] ) ) = _UsuarioLogado
+        ),
+        ""CC"", Gestores_TabEmp[Centro de Custo]
+    )
+)",1,0

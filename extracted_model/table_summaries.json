@@ -1,0 +1,578 @@
+{
+  "@ 0.Medidas Basicas": {
+    "columns": [
+      "zBlank"
+    ],
+    "row_count": 1,
+    "dtypes": {
+      "zBlank": "Int64"
+    }
+  },
+  "@ 1.Overview": {
+    "columns": [
+      "zBlank"
+    ],
+    "row_count": 1,
+    "dtypes": {
+      "zBlank": "Int64"
+    }
+  },
+  "@ 2.Centro de Custos": {
+    "columns": [
+      "zBlank"
+    ],
+    "row_count": 1,
+    "dtypes": {
+      "zBlank": "Int64"
+    }
+  },
+  "@ 3.Responsaveis": {
+    "columns": [
+      "zBlank"
+    ],
+    "row_count": 1,
+    "dtypes": {
+      "zBlank": "Int64"
+    }
+  },
+  "@ 4.Pacotes": {
+    "columns": [
+      "zBlank"
+    ],
+    "row_count": 1,
+    "dtypes": {
+      "zBlank": "Int64"
+    }
+  },
+  "@ 5.Pacote Pessoal": {
+    "columns": [
+      "zBlank"
+    ],
+    "row_count": 1,
+    "dtypes": {
+      "zBlank": "Int64"
+    }
+  },
+  "@fato": {
+    "columns": [
+      "Cod Conta Contabil",
+      "Data Contabilizacao",
+      "Documento",
+      "Cod Moeda",
+      "Cod Empresa",
+      "id_cod_pais",
+      "Cod Filial",
+      "Cod Operacao",
+      "Cod Objeto Custo",
+      "Usuario",
+      "Objeto Parceiro",
+      "Documento Referencia",
+      "Operacao CO",
+      "Desc Item",
+      "Tipo Lancamento",
+      "Valor Moeda Lancamento",
+      "Valor Reais",
+      "Denominacao",
+      "Grupo Objeto Custo"
+    ],
+    "row_count": 518279,
+    "dtypes": {
+      "Cod Conta Contabil": "string",
+      "Data Contabilizacao": "datetime64[ns]",
+      "Documento": "string",
+      "Cod Moeda": "string",
+      "Cod Empresa": "string",
+      "id_cod_pais": "Float64",
+      "Cod Filial": "string",
+      "Cod Operacao": "string",
+      "Cod Objeto Custo": "string",
+      "Usuario": "string",
+      "Objeto Parceiro": "string",
+      "Documento Referencia": "string",
+      "Operacao CO": "string",
+      "Desc Item": "string",
+      "Tipo Lancamento": "Int64",
+      "Valor Moeda Lancamento": "Float64",
+      "Valor Reais": "Float64",
+      "Denominacao": "string",
+      "Grupo Objeto Custo": "string"
+    }
+  },
+  "DateTableTemplate_20a29c83-0955-4d62-b652-1c0ccb972fc9": {
+    "columns": [
+      "Date",
+      "Ano",
+      "MonthNo",
+      "Mês",
+      "QuarterNo",
+      "Trimestre",
+      "Dia"
+    ],
+    "row_count": 1,
+    "dtypes": {
+      "Date": "datetime64[ns]",
+      "Ano": "Int64",
+      "MonthNo": "Int64",
+      "Mês": "string",
+      "QuarterNo": "Int64",
+      "Trimestre": "string",
+      "Dia": "Int64"
+    }
+  },
+  "Gestores_TabEmp": {
+    "columns": [
+      "Negócio",
+      "Centro de Custo",
+      "Denominação SAP",
+      "Tipo",
+      "Macroárea",
+      "Hierarquia",
+      "Colaborador",
+      "E-mail"
+    ],
+    "row_count": 2641,
+    "dtypes": {
+      "Negócio": "string",
+      "Centro de Custo": "string",
+      "Denominação SAP": "string",
+      "Tipo": "string",
+      "Macroárea": "string",
+      "Hierarquia": "string",
+      "Colaborador": "string",
+      "E-mail": "string"
+    }
+  },
+  "LocalDateTable_3a675822-9087-4457-8716-c75af85d4391": {
+    "columns": [
+      "Date",
+      "Ano",
+      "MonthNo",
+      "Mês",
+      "QuarterNo",
+      "Trimestre",
+      "Dia"
+    ],
+    "row_count": 730,
+    "dtypes": {
+      "Date": "datetime64[ns]",
+      "Ano": "Int64",
+      "MonthNo": "Int64",
+      "Mês": "string",
+      "QuarterNo": "Int64",
+      "Trimestre": "string",
+      "Dia": "Int64"
+    }
+  },
+  "LocalDateTable_47cef128-202d-4004-9b53-e7b487f28585": {
+    "columns": [
+      "Date",
+      "Ano",
+      "MonthNo",
+      "Mês",
+      "QuarterNo",
+      "Trimestre",
+      "Dia"
+    ],
+    "row_count": 730,
+    "dtypes": {
+      "Date": "datetime64[ns]",
+      "Ano": "Int64",
+      "MonthNo": "Int64",
+      "Mês": "string",
+      "QuarterNo": "Int64",
+      "Trimestre": "string",
+      "Dia": "Int64"
+    }
+  },
+  "LocalDateTable_5d83c662-704a-44f2-b59b-9b846f5abf35": {
+    "columns": [
+      "Date",
+      "Ano",
+      "MonthNo",
+      "Mês",
+      "QuarterNo",
+      "Trimestre",
+      "Dia"
+    ],
+    "row_count": 730,
+    "dtypes": {
+      "Date": "datetime64[ns]",
+      "Ano": "Int64",
+      "MonthNo": "Int64",
+      "Mês": "string",
+      "QuarterNo": "Int64",
+      "Trimestre": "string",
+      "Dia": "Int64"
+    }
+  },
+  "aux_escala_valores": {
+    "columns": [
+      "Opcao",
+      "Fator"
+    ],
+    "row_count": 2,
+    "dtypes": {
+      "Opcao": "string",
+      "Fator": "Int64"
+    }
+  },
+  "aux_pacote": {
+    "columns": [
+      "pacote_conta_contabil"
+    ],
+    "row_count": 29,
+    "dtypes": {
+      "pacote_conta_contabil": "string"
+    }
+  },
+  "dim_calendario": {
+    "columns": [
+      "Date",
+      "Dia",
+      "Mes",
+      "Mes Nome",
+      "Ano",
+      "Trimestre",
+      "Bimestre",
+      "Quadrimestre",
+      "Semestre",
+      "Dia Semana Nome",
+      "Legenda Realizado",
+      "Legenda Orcado"
+    ],
+    "row_count": 730,
+    "dtypes": {
+      "Date": "datetime64[ns]",
+      "Dia": "Int64",
+      "Mes": "Int64",
+      "Mes Nome": "string",
+      "Ano": "Int64",
+      "Trimestre": "string",
+      "Bimestre": "Int64",
+      "Quadrimestre": "Int64",
+      "Semestre": "Int64",
+      "Dia Semana Nome": "string",
+      "Legenda Realizado": "string",
+      "Legenda Orcado": "string"
+    }
+  },
+  "dim_conta_contabil": {
+    "columns": [
+      "cod_conta_contabil",
+      "desc_conta_contabil",
+      "pacote_conta_contabil"
+    ],
+    "row_count": 559,
+    "dtypes": {
+      "cod_conta_contabil": "string",
+      "desc_conta_contabil": "string",
+      "pacote_conta_contabil": "string"
+    }
+  },
+  "dim_desc_centro": {
+    "columns": [
+      "centro_custos",
+      "desc_centro_custos",
+      "ExisteNaFato",
+      "Grupo Objeto Custo"
+    ],
+    "row_count": 19624,
+    "dtypes": {
+      "centro_custos": "string",
+      "desc_centro_custos": "string",
+      "ExisteNaFato": "bool",
+      "Grupo Objeto Custo": "string"
+    }
+  },
+  "dim_empresa": {
+    "columns": [
+      "cod_empresa",
+      "cod_pais",
+      "desc_empresa"
+    ],
+    "row_count": 62,
+    "dtypes": {
+      "cod_empresa": "string",
+      "cod_pais": "string",
+      "desc_empresa": "string"
+    }
+  },
+  "dim_filial": {
+    "columns": [
+      "cod_filial",
+      "desc_filial"
+    ],
+    "row_count": 346,
+    "dtypes": {
+      "cod_filial": "string",
+      "desc_filial": "string"
+    }
+  },
+  "dim_grupo_centro": {
+    "columns": [
+      "Grupo Objeto Custo",
+      "Cod Objeto Custo"
+    ],
+    "row_count": 396,
+    "dtypes": {
+      "Grupo Objeto Custo": "string",
+      "Cod Objeto Custo": "string"
+    }
+  },
+  "dim_hierarquia_custo": {
+    "columns": [
+      "id_clevel",
+      "id_director",
+      "id_exec_manager",
+      "id_manager",
+      "nome_clevel",
+      "nome_director",
+      "nome_exec_manager",
+      "nome_manager",
+      "id_approver",
+      "nome_approver"
+    ],
+    "row_count": 172,
+    "dtypes": {
+      "id_clevel": "Float64",
+      "id_director": "Float64",
+      "id_exec_manager": "Float64",
+      "id_manager": "Float64",
+      "nome_clevel": "string",
+      "nome_director": "string",
+      "nome_exec_manager": "string",
+      "nome_manager": "string",
+      "id_approver": "Float64",
+      "nome_approver": "string"
+    }
+  },
+  "dim_macro_area": {
+    "columns": [
+      "id_macro_area",
+      "desc_macro_area"
+    ],
+    "row_count": 29,
+    "dtypes": {
+      "id_macro_area": "Float64",
+      "desc_macro_area": "string"
+    }
+  },
+  "dim_moeda": {
+    "columns": [
+      "cod_moeda",
+      "desc_moeda",
+      "sgl_moeda"
+    ],
+    "row_count": 39,
+    "dtypes": {
+      "cod_moeda": "Int64",
+      "desc_moeda": "string",
+      "sgl_moeda": "string"
+    }
+  },
+  "dim_negocio": {
+    "columns": [
+      "id_business",
+      "desc_business"
+    ],
+    "row_count": 16,
+    "dtypes": {
+      "id_business": "Float64",
+      "desc_business": "string"
+    }
+  },
+  "dim_negocio_dux": {
+    "columns": [
+      "Grupo Objeto Custo",
+      "Negócio"
+    ],
+    "row_count": 244,
+    "dtypes": {
+      "Grupo Objeto Custo": "string",
+      "Negócio": "string"
+    }
+  },
+  "dim_operacao": {
+    "columns": [
+      "cod_operacao",
+      "desc_operacao"
+    ],
+    "row_count": 2172,
+    "dtypes": {
+      "cod_operacao": "string",
+      "desc_operacao": "string"
+    }
+  },
+  "dim_pacote": {
+    "columns": [
+      "desc_pacote_conta_contabil",
+      "cod_conta_contabil"
+    ],
+    "row_count": 197,
+    "dtypes": {
+      "desc_pacote_conta_contabil": "string",
+      "cod_conta_contabil": "string"
+    }
+  },
+  "dim_pais": {
+    "columns": [
+      "id_cod_pais",
+      "codigo",
+      "desc_pais"
+    ],
+    "row_count": 192,
+    "dtypes": {
+      "id_cod_pais": "Int64",
+      "codigo": "string",
+      "desc_pais": "string"
+    }
+  },
+  "dim_pessoas": {
+    "columns": [
+      "id_person",
+      "name_person"
+    ],
+    "row_count": 179,
+    "dtypes": {
+      "id_person": "Float64",
+      "name_person": "string"
+    }
+  },
+  "dim_tipo_centro_custo": {
+    "columns": [
+      "id_cost_center_type",
+      "desc_cost_center_type"
+    ],
+    "row_count": 3,
+    "dtypes": {
+      "id_cost_center_type": "Float64",
+      "desc_cost_center_type": "string"
+    }
+  },
+  "dim_tipo_lancamento": {
+    "columns": [
+      "Tipo Lancamento",
+      "Descricao Lancamento",
+      "Legenda"
+    ],
+    "row_count": 2,
+    "dtypes": {
+      "Tipo Lancamento": "Int64",
+      "Descricao Lancamento": "string",
+      "Legenda": "string"
+    }
+  },
+  "fato_gestor_centro_custo": {
+    "columns": [
+      "id_business",
+      "cost_center",
+      "id_manager",
+      "id_executive_manager",
+      "id_director",
+      "id_clevel",
+      "id_approver",
+      "id_macroarea",
+      "id_cost_center_type"
+    ],
+    "row_count": 970,
+    "dtypes": {
+      "id_business": "Float64",
+      "cost_center": "string",
+      "id_manager": "Float64",
+      "id_executive_manager": "Float64",
+      "id_director": "Float64",
+      "id_clevel": "Float64",
+      "id_approver": "Float64",
+      "id_macroarea": "Float64",
+      "id_cost_center_type": "Float64"
+    }
+  },
+  "fato_ggo_orcado": {
+    "columns": [
+      "Data Contabilizacao",
+      "Documento",
+      "Cod Moeda",
+      "id_cod_pais",
+      "Cod Filial",
+      "Cod Operacao",
+      "Cod Objeto Custo",
+      "Usuario",
+      "Objeto Parceiro",
+      "Documento Referencia",
+      "Operacao CO",
+      "Desc Item",
+      "Tipo Lancamento",
+      "Valor Moeda Lancamento",
+      "Valor Reais",
+      "Cod Empresa",
+      "Cod Conta Contabil",
+      "Denominacao"
+    ],
+    "row_count": 261573,
+    "dtypes": {
+      "Data Contabilizacao": "datetime64[ns]",
+      "Documento": "Int64",
+      "Cod Moeda": "string",
+      "id_cod_pais": "Int64",
+      "Cod Filial": "string",
+      "Cod Operacao": "string",
+      "Cod Objeto Custo": "string",
+      "Usuario": "string",
+      "Objeto Parceiro": "string",
+      "Documento Referencia": "string",
+      "Operacao CO": "string",
+      "Desc Item": "string",
+      "Tipo Lancamento": "Int64",
+      "Valor Moeda Lancamento": "Float64",
+      "Valor Reais": "Float64",
+      "Cod Empresa": "Int64",
+      "Cod Conta Contabil": "Int64",
+      "Denominacao": "string"
+    }
+  },
+  "fato_ggo_realizado": {
+    "columns": [
+      "Cod Conta Contabil",
+      "Data Contabilizacao",
+      "Documento",
+      "Cod Moeda",
+      "Cod Empresa",
+      "id_cod_pais",
+      "Cod Filial",
+      "Cod Operacao",
+      "Cod Objeto Custo",
+      "Usuario",
+      "Objeto Parceiro",
+      "Documento Referencia",
+      "Operacao CO",
+      "Desc Item",
+      "Tipo Lancamento",
+      "Valor Moeda Lancamento",
+      "Valor Reais",
+      "Denominacao",
+      "Grupo Objeto Custo"
+    ],
+    "row_count": 256706,
+    "dtypes": {
+      "Cod Conta Contabil": "string",
+      "Data Contabilizacao": "datetime64[ns]",
+      "Documento": "string",
+      "Cod Moeda": "string",
+      "Cod Empresa": "string",
+      "id_cod_pais": "Int64",
+      "Cod Filial": "string",
+      "Cod Operacao": "string",
+      "Cod Objeto Custo": "string",
+      "Usuario": "string",
+      "Objeto Parceiro": "string",
+      "Documento Referencia": "string",
+      "Operacao CO": "string",
+      "Desc Item": "string",
+      "Tipo Lancamento": "Int64",
+      "Valor Moeda Lancamento": "Float64",
+      "Valor Reais": "Float64",
+      "Denominacao": "string",
+      "Grupo Objeto Custo": "string"
+    }
+  }
+}
