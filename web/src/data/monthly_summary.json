@@ -1,0 +1,218 @@
+[
+  {
+    "year": 2025,
+    "month": 1,
+    "month_name": "Jan",
+    "orcado": 48232515.91,
+    "realizado": 59826256.97,
+    "desvio": 11593741.06,
+    "desvio_pct": 24.04
+  },
+  {
+    "year": 2025,
+    "month": 2,
+    "month_name": "Fev",
+    "orcado": 50504323.94,
+    "realizado": 53829281.43,
+    "desvio": 3324957.49,
+    "desvio_pct": 6.58
+  },
+  {
+    "year": 2025,
+    "month": 3,
+    "month_name": "Mar",
+    "orcado": 63050735.83,
+    "realizado": 59954686.41,
+    "desvio": -3096049.42,
+    "desvio_pct": -4.91
+  },
+  {
+    "year": 2025,
+    "month": 4,
+    "month_name": "Abr",
+    "orcado": 119411631.32,
+    "realizado": 117331552.35,
+    "desvio": -2080078.97,
+    "desvio_pct": -1.74
+  },
+  {
+    "year": 2025,
+    "month": 5,
+    "month_name": "Mai",
+    "orcado": 52070471.93,
+    "realizado": 54112317.41,
+    "desvio": 2041845.48,
+    "desvio_pct": 3.92
+  },
+  {
+    "year": 2025,
+    "month": 6,
+    "month_name": "Jun",
+    "orcado": 151903737.79,
+    "realizado": 65369510.22,
+    "desvio": -86534227.57,
+    "desvio_pct": -56.97
+  },
+  {
+    "year": 2025,
+    "month": 7,
+    "month_name": "Jul",
+    "orcado": 55184811.8,
+    "realizado": 101559411.07,
+    "desvio": 46374599.27,
+    "desvio_pct": 84.04
+  },
+  {
+    "year": 2025,
+    "month": 8,
+    "month_name": "Ago",
+    "orcado": 55604188.0,
+    "realizado": 60564853.9,
+    "desvio": 4960665.9,
+    "desvio_pct": 8.92
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "month_name": "Set",
+    "orcado": 57437821.0,
+    "realizado": 63633141.75,
+    "desvio": 6195320.75,
+    "desvio_pct": 10.79
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "month_name": "Out",
+    "orcado": 77912148.1,
+    "realizado": 87452595.4,
+    "desvio": 9540447.3,
+    "desvio_pct": 12.25
+  },
+  {
+    "year": 2025,
+    "month": 11,
+    "month_name": "Nov",
+    "orcado": 56751311.0,
+    "realizado": 64916635.36,
+    "desvio": 8165324.36,
+    "desvio_pct": 14.39
+  },
+  {
+    "year": 2025,
+    "month": 12,
+    "month_name": "Dez",
+    "orcado": 70332320.0,
+    "realizado": 112479592.06,
+    "desvio": 42147272.06,
+    "desvio_pct": 59.93
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "month_name": "Jan",
+    "orcado": 66893776.75,
+    "realizado": 62802462.21,
+    "desvio": -4091314.54,
+    "desvio_pct": -6.12
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "month_name": "Fev",
+    "orcado": 65835278.25,
+    "realizado": 92455843.63,
+    "desvio": 26620565.38,
+    "desvio_pct": 40.44
+  },
+  {
+    "year": 2026,
+    "month": 3,
+    "month_name": "Mar",
+    "orcado": 85909541.19,
+    "realizado": 65632624.78,
+    "desvio": -20276916.41,
+    "desvio_pct": -23.6
+  },
+  {
+    "year": 2026,
+    "month": 4,
+    "month_name": "Abr",
+    "orcado": 113334638.49,
+    "realizado": 86041770.34,
+    "desvio": -27292868.15,
+    "desvio_pct": -24.08
+  },
+  {
+    "year": 2026,
+    "month": 5,
+    "month_name": "Mai",
+    "orcado": 72049963.97,
+    "realizado": 64198186.79,
+    "desvio": -7851777.18,
+    "desvio_pct": -10.9
+  },
+  {
+    "year": 2026,
+    "month": 6,
+    "month_name": "Jun",
+    "orcado": 82055164.89,
+    "realizado": 74095333.68,
+    "desvio": -7959831.21,
+    "desvio_pct": -9.7
+  },
+  {
+    "year": 2026,
+    "month": 7,
+    "month_name": "Jul",
+    "orcado": 108508874.57,
+    "realizado": 93551529.53,
+    "desvio": -14957345.04,
+    "desvio_pct": -13.78
+  },
+  {
+    "year": 2026,
+    "month": 8,
+    "month_name": "Ago",
+    "orcado": 89055183.17,
+    "realizado": 35462356.31,
+    "desvio": -53592826.87,
+    "desvio_pct": -60.18
+  },
+  {
+    "year": 2026,
+    "month": 9,
+    "month_name": "Set",
+    "orcado": 91794514.23,
+    "realizado": 11228829.47,
+    "desvio": -80565684.76,
+    "desvio_pct": -87.77
+  },
+  {
+    "year": 2026,
+    "month": 10,
+    "month_name": "Out",
+    "orcado": 69967301.46,
+    "realizado": 10973104.2,
+    "desvio": -58994197.26,
+    "desvio_pct": -84.32
+  },
+  {
+    "year": 2026,
+    "month": 11,
+    "month_name": "Nov",
+    "orcado": 67689286.46,
+    "realizado": 10973104.2,
+    "desvio": -56716182.26,
+    "desvio_pct": -83.79
+  },
+  {
+    "year": 2026,
+    "month": 12,
+    "month_name": "Dez",
+    "orcado": 110070521.93,
+    "realizado": 10973104.19,
+    "desvio": -99097417.74,
+    "desvio_pct": -90.03
+  }
+]

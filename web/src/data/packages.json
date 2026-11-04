@@ -1,0 +1,170 @@
+[
+  {
+    "package": "PESSOAL FOLHA",
+    "type": "Folha",
+    "orcado": 592111619.1,
+    "realizado": 320624577.67,
+    "desvio": -271487041.43,
+    "desvio_pct": -45.85
+  },
+  {
+    "package": "GASTOS NÃO DEDUTIVEIS",
+    "type": "Não Folha",
+    "orcado": 2250000.0,
+    "realizado": 68202316.26,
+    "desvio": 65952316.26,
+    "desvio_pct": 2931.21
+  },
+  {
+    "package": "SERVICOS",
+    "type": "Não Folha",
+    "orcado": 89481606.02,
+    "realizado": 41511653.51,
+    "desvio": -47969952.51,
+    "desvio_pct": -53.61
+  },
+  {
+    "package": "TECNOLOGIA",
+    "type": "Não Folha",
+    "orcado": 82327548.29,
+    "realizado": 37688321.85,
+    "desvio": -44639226.44,
+    "desvio_pct": -54.22
+  },
+  {
+    "package": "VIAGENS",
+    "type": "Não Folha",
+    "orcado": 63129243.12,
+    "realizado": 36434014.2,
+    "desvio": -26695228.92,
+    "desvio_pct": -42.29
+  },
+  {
+    "package": "PROMOCAO E PROPAGANDA",
+    "type": "Não Folha",
+    "orcado": 110890408.13,
+    "realizado": 32743094.27,
+    "desvio": -78147313.86,
+    "desvio_pct": -70.47
+  },
+  {
+    "package": "IMPOSTOS, TAXAS E MULTAS",
+    "type": "Não Folha",
+    "orcado": 4810190.77,
+    "realizado": 32568040.79,
+    "desvio": 27757850.02,
+    "desvio_pct": 577.06
+  },
+  {
+    "package": "ALUGUEIS",
+    "type": "Não Folha",
+    "orcado": 20915441.05,
+    "realizado": 14307785.58,
+    "desvio": -6607655.47,
+    "desvio_pct": -31.59
+  },
+  {
+    "package": "ASSOCIACOES/ASSINATURA",
+    "type": "Não Folha",
+    "orcado": 14283203.85,
+    "realizado": 8792832.94,
+    "desvio": -5490370.91,
+    "desvio_pct": -38.44
+  },
+  {
+    "package": "VEICULOS",
+    "type": "Não Folha",
+    "orcado": 9737058.98,
+    "realizado": 5962176.06,
+    "desvio": -3774882.92,
+    "desvio_pct": -38.77
+  },
+  {
+    "package": "TRANSPORTE/FRETE",
+    "type": "Não Folha",
+    "orcado": 645557.08,
+    "realizado": 3747710.34,
+    "desvio": 3102153.26,
+    "desvio_pct": 480.54
+  },
+  {
+    "package": "OUTRAS DESPESAS",
+    "type": "Não Folha",
+    "orcado": 2314596.0,
+    "realizado": 3597377.23,
+    "desvio": 1282781.23,
+    "desvio_pct": 55.42
+  },
+  {
+    "package": "SEGUROS",
+    "type": "Não Folha",
+    "orcado": 6526756.11,
+    "realizado": 3381461.98,
+    "desvio": -3145294.13,
+    "desvio_pct": -48.19
+  },
+  {
+    "package": "PESSOAL FOLHA GESTÃO",
+    "type": "Folha",
+    "orcado": 24627.45,
+    "realizado": 3114243.65,
+    "desvio": 3089616.2,
+    "desvio_pct": 12545.42
+  },
+  {
+    "package": "PESSOAL",
+    "type": "Folha",
+    "orcado": 7911367.01,
+    "realizado": 2521223.05,
+    "desvio": -5390143.96,
+    "desvio_pct": -68.13
+  },
+  {
+    "package": "COMUNICACAO",
+    "type": "Não Folha",
+    "orcado": 3209916.6,
+    "realizado": 1392128.34,
+    "desvio": -1817788.26,
+    "desvio_pct": -56.63
+  },
+  {
+    "package": "CONSUMO",
+    "type": "Não Folha",
+    "orcado": 3526939.45,
+    "realizado": 1368947.73,
+    "desvio": -2157991.72,
+    "desvio_pct": -61.19
+  },
+  {
+    "package": "MANUTENCAO",
+    "type": "Não Folha",
+    "orcado": 1603621.55,
+    "realizado": 933072.1,
+    "desvio": -670549.45,
+    "desvio_pct": -41.81
+  },
+  {
+    "package": "ENERGIA",
+    "type": "Não Folha",
+    "orcado": 1514524.81,
+    "realizado": 741068.9,
+    "desvio": -773455.91,
+    "desvio_pct": -51.07
+  },
+  {
+    "package": "DESPESAS PROCESSUAIS",
+    "type": "Não Folha",
+    "orcado": 0.0,
+    "realizado": 228539.33,
+    "desvio": 228539.33,
+    "desvio_pct": 0
+  },
+  {
+    "package": "LABORATORIO",
+    "type": "Não Folha",
+    "orcado": 5949820.0,
+    "realizado": -1472336.46,
+    "desvio": -7422156.46,
+    "desvio_pct": -124.75
+  }
+]

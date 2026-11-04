@@ -124,3 +124,4 @@ IF (
   - `#e84752` e `#bf404d` (Vermelho Alerta Minerva / Desvios desfavoráveis)
 - **Tipografia e Estilo**:
   - Design limpo, focado em legibilidade corporativa, espaçamento moderno, cards KPI com indicadores de status e gráficos de alta precisão.
+
