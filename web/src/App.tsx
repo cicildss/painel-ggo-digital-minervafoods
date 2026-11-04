@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react';
-import { AuthProvider, useAuth } from './context/AuthContext';
+import { AuthProvider } from './context/AuthContext';
+import { useAuth } from './hooks/useAuth';
 import { LoginScreen } from './components/LoginScreen';
 import { Header } from './components/Header';
 import { OverviewView } from './components/OverviewView';

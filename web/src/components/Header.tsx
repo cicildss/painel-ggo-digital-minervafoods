@@ -1,6 +1,6 @@
 import React from 'react';
 import { DollarSign, BarChart3, TrendingUp, Layers, Database, LogOut, ShieldCheck, Lock } from 'lucide-react';
-import { useAuth } from '../context/AuthContext';
+import { useAuth } from '../hooks/useAuth';
 
 interface HeaderProps {
   activeTab: string;
