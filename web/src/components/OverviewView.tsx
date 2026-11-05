@@ -24,7 +24,8 @@ import {
   BarChart2,
   ArrowUpRight,
   ArrowDownRight,
-  MousePointerClick
+  MousePointerClick,
+  Sparkles
 } from 'lucide-react';
 import { StatCard } from './StatCard';
 import { ExecutiveGauge } from './ExecutiveGauge';
@@ -131,6 +132,41 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
 
   return (
     <div className="space-y-6 animate-fade-in">
+      {/* Executive Narrative Briefing Bar */}
+      <div
+        className={`p-4 rounded-xl border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs shadow-xs transition-all ${
+          isDark
+            ? 'bg-gradient-to-r from-[#18222f] via-[#1c2837] to-[#18222f] border-slate-700/80 text-slate-200'
+            : 'bg-gradient-to-r from-blue-50/70 via-slate-50 to-white border-slate-200 text-slate-700'
+        }`}
+      >
+        <div className="flex items-start sm:items-center space-x-3">
+          <div className="p-2 rounded-lg bg-[#385463]/15 text-[#385463] dark:text-[#7bb0ce] shrink-0">
+            <Sparkles className="w-4 h-4" />
+          </div>
+          <div className="leading-relaxed">
+            <span className="font-extrabold text-slate-900 dark:text-white uppercase tracking-wider text-[11px] block sm:inline mr-2">
+              Resumo Executivo da Controladoria:
+            </span>
+            <span>
+              Gastos operacionais acumulados em <strong className="font-bold">{formatCurrency(totalRealizado)}</strong> (
+              <strong className="font-bold">{atingimentoPct.toFixed(1)}%</strong> da meta orçada de {formatCurrency(totalOrcado)}).
+              {totalDesvio > 0 ? (
+                <> A companhia opera com <span className="font-extrabold text-[#e84752]">pressão de +{formatCurrency(totalDesvio)}</span> acima do orçado, com {centrosEstouroCount} centros demandando acompanhamento.</>
+              ) : (
+                <> A companhia opera com <span className="font-extrabold text-emerald-500">eficiência de {formatCurrency(Math.abs(totalDesvio))}</span> abaixo do orçamento corporativo.</>
+              )}
+            </span>
+          </div>
+        </div>
+
+        <div className="shrink-0 flex items-center space-x-2 w-full sm:w-auto justify-end pt-1 sm:pt-0">
+          <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-white/70 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
+            {costCenters.length} Centros Analisados
+          </span>
+        </div>
+      </div>
+
       {/* KPI Cards Row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 stagger-children">
         <StatCard

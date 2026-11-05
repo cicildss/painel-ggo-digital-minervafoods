@@ -4,6 +4,7 @@ import {
   TrendingUp,
   Layers,
   Database,
+  Users,
   LogOut,
   ShieldCheck,
   Lock
@@ -25,6 +26,7 @@ export const Header: React.FC<HeaderProps> = ({
     { id: 'overview', label: 'Cockpit Executivo', icon: TrendingUp },
     { id: 'cost_centers', label: 'Centros de Custo', icon: BarChart3 },
     { id: 'packages', label: 'Pacotes de Gastos', icon: Layers },
+    { id: 'managers', label: 'Gestores & Liderança', icon: Users },
     { id: 'analytics', label: 'Base Analítica & Auditoria', icon: Database },
   ];
 

@@ -7,8 +7,10 @@ import {
   ChevronLeft,
   ChevronRight,
   ArrowUpDown,
-  Filter
+  Filter,
+  FileSpreadsheet
 } from 'lucide-react';
+import * as XLSX from 'xlsx';
 import type { CostCenterRecord } from '../types';
 import type { DrillDownItem } from './DetailModal';
 
@@ -130,6 +132,27 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({
     }
   };
 
+  const exportToExcel = () => {
+    const exportData = filtered.map((cc) => ({
+      'Código': cc.code,
+      'Descrição': cc.description,
+      'Gestor': cc.gestor,
+      'E-mail Gestor': cc.email_gestor,
+      'Macroárea': cc.macroarea,
+      'Negócio': cc.negocio,
+      'Orçado (R$)': cc.orcado,
+      'Realizado (R$)': cc.realizado,
+      'Desvio Nominal (R$)': cc.desvio,
+      'Variação (%)': Number(cc.desvio_pct.toFixed(2)),
+      'Status': cc.desvio > 0 ? 'Acima do Orçado' : 'Dentro/Economia'
+    }));
+
+    const ws = XLSX.utils.json_to_sheet(exportData);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Centros_de_Custo');
+    XLSX.writeFile(wb, `GGO_Minerva_CentrosCusto_${new Date().toISOString().slice(0, 10)}.xlsx`);
+  };
+
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Summary Cards */}
@@ -245,53 +268,64 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({
           </div>
         </div>
 
-        {/* Status switch buttons */}
-        <div
-          className={`flex items-center space-x-1 p-1 rounded-lg ${
-            isDark ? 'bg-slate-800' : 'bg-slate-100'
-          }`}
-        >
-          <button
-            type="button"
-            onClick={() => {
-              setStatusFilter('ALL');
-              setPage(1);
-            }}
-            className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
-              statusFilter === 'ALL'
-                ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
-                : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+        {/* Right side: Status switch buttons & Excel Export */}
+        <div className="flex flex-wrap items-center gap-2.5 ml-auto">
+          <div
+            className={`flex items-center space-x-1 p-1 rounded-lg ${
+              isDark ? 'bg-slate-800' : 'bg-slate-100'
             }`}
           >
-            Todos ({filtered.length})
-          </button>
+            <button
+              type="button"
+              onClick={() => {
+                setStatusFilter('ALL');
+                setPage(1);
+              }}
+              className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
+                statusFilter === 'ALL'
+                  ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
+                  : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+              }`}
+            >
+              Todos ({filtered.length})
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setStatusFilter('ACIMA');
+                setPage(1);
+              }}
+              className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
+                statusFilter === 'ACIMA'
+                  ? 'bg-white dark:bg-slate-700 text-rose-600 dark:text-rose-400 shadow-xs'
+                  : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+              }`}
+            >
+              Estouro
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setStatusFilter('ABAIXO');
+                setPage(1);
+              }}
+              className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
+                statusFilter === 'ABAIXO'
+                  ? 'bg-white dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 shadow-xs'
+                  : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+              }`}
+            >
+              Economia
+            </button>
+          </div>
+
           <button
             type="button"
-            onClick={() => {
-              setStatusFilter('ACIMA');
-              setPage(1);
-            }}
-            className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
-              statusFilter === 'ACIMA'
-                ? 'bg-white dark:bg-slate-700 text-rose-600 dark:text-rose-400 shadow-xs'
-                : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
-            }`}
+            onClick={exportToExcel}
+            className="flex items-center space-x-1.5 px-3 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition-all shadow-sm cursor-pointer"
           >
-            Estouro
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              setStatusFilter('ABAIXO');
-              setPage(1);
-            }}
-            className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
-              statusFilter === 'ABAIXO'
-                ? 'bg-white dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 shadow-xs'
-                : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
-            }`}
-          >
-            Economia
+            <FileSpreadsheet className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Exportar Excel</span>
           </button>
         </div>
       </div>

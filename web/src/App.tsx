@@ -7,6 +7,7 @@ import { FilterRibbon } from './components/FilterRibbon';
 import { OverviewView } from './components/OverviewView';
 import { CostCentersView } from './components/CostCentersView';
 import { PackagesView } from './components/PackagesView';
+import { ManagersView } from './components/ManagersView';
 import { AnalyticsView } from './components/AnalyticsView';
 import { DetailModal, type DrillDownItem } from './components/DetailModal';
 
@@ -225,6 +226,15 @@ function DashboardContent() {
         {activeTab === 'packages' && (
           <PackagesView
             packages={filteredPackages}
+            scale={scale}
+            theme={theme}
+            onSelectDrillDown={setDrillDownItem}
+          />
+        )}
+
+        {activeTab === 'managers' && (
+          <ManagersView
+            costCenters={filteredCostCenters}
             scale={scale}
             theme={theme}
             onSelectDrillDown={setDrillDownItem}

@@ -9,7 +9,8 @@ import {
   Tooltip,
   Legend
 } from 'recharts';
-import { Layers, Users, Briefcase, BarChart3, MousePointerClick } from 'lucide-react';
+import { Layers, Users, Briefcase, BarChart3, MousePointerClick, FileSpreadsheet } from 'lucide-react';
+import * as XLSX from 'xlsx';
 import type { PackageRecord } from '../types';
 import type { DrillDownItem } from './DetailModal';
 
@@ -74,6 +75,23 @@ export const PackagesView: React.FC<PackagesViewProps> = ({
         desvio_pct: pkg.desvio_pct
       });
     }
+  };
+
+  const exportToExcel = () => {
+    const exportData = packages.map((p) => ({
+      'Pacote de Gastos': p.package,
+      'Classificação': p.type,
+      'Orçado (R$)': p.orcado,
+      'Realizado (R$)': p.realizado,
+      'Desvio Nominal (R$)': p.desvio,
+      'Variação (%)': Number(p.desvio_pct.toFixed(2)),
+      'Status': p.desvio > 0 ? 'Acima do Orçado' : 'Dentro/Economia'
+    }));
+
+    const ws = XLSX.utils.json_to_sheet(exportData);
+    const wb = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(wb, ws, 'Pacotes_de_Gastos');
+    XLSX.writeFile(wb, `GGO_Minerva_Pacotes_${new Date().toISOString().slice(0, 10)}.xlsx`);
   };
 
   return (
@@ -216,22 +234,34 @@ export const PackagesView: React.FC<PackagesViewProps> = ({
         }`}
       >
         <div
-          className={`p-4 border-b flex items-center justify-between ${
+          className={`p-4 border-b flex flex-wrap gap-2 items-center justify-between ${
             isDark ? 'bg-[#141b25] border-slate-700' : 'bg-slate-50 border-slate-200'
           }`}
         >
-          <h4
-            className={`text-xs font-bold uppercase tracking-wider ${
-              isDark ? 'text-slate-200' : 'text-slate-800'
-            }`}
+          <div>
+            <h4
+              className={`text-xs font-bold uppercase tracking-wider ${
+                isDark ? 'text-slate-200' : 'text-slate-800'
+              }`}
+            >
+              Detalhamento Orçamentário por Pacote
+            </h4>
+            <span className="text-[10px] text-slate-400 flex items-center space-x-1 mt-0.5">
+              <MousePointerClick className="w-3.5 h-3.5" />
+              <span>Clique no pacote para ver contas contábeis</span>
+            </span>
+          </div>
+
+          <button
+            type="button"
+            onClick={exportToExcel}
+            className="flex items-center space-x-1.5 px-3 py-1.5 bg-emerald-600 hover:bg-emerald-700 text-white rounded-lg text-xs font-bold transition-all shadow-sm cursor-pointer ml-auto"
           >
-            Detalhamento Orçamentário por Pacote
-          </h4>
-          <span className="text-[10px] text-slate-400 flex items-center space-x-1">
-            <MousePointerClick className="w-3.5 h-3.5" />
-            <span>Clique no pacote para ver contas contábeis</span>
-          </span>
+            <FileSpreadsheet className="w-3.5 h-3.5" />
+            <span>Exportar Pacotes para Excel</span>
+          </button>
         </div>
+
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
             <thead
