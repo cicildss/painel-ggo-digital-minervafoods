@@ -40,13 +40,13 @@ function DashboardContent() {
   const [selectedMonth, setSelectedMonth] = useState<number | 'ALL'>('ALL');
   const [viewMode, setViewMode] = useState<'YTD' | 'MONTH'>('YTD');
 
-  // Multi-Level Organizational Filters
-  const [selectedBusiness, setSelectedBusiness] = useState<string>('ALL');
-  const [selectedDirector, setSelectedDirector] = useState<string>('ALL');
-  const [selectedGerente, setSelectedGerente] = useState<string>('ALL');
-  const [selectedGestor, setSelectedGestor] = useState<string>('ALL');
-  const [selectedCostCenter, setSelectedCostCenter] = useState<string>('ALL');
-  const [selectedMacro, setSelectedMacro] = useState<string>('ALL');
+  // Multi-Select Searchable Organizational Filters (arrays)
+  const [selectedBusinesses, setSelectedBusinesses] = useState<string[]>([]);
+  const [selectedDirectors, setSelectedDirectors] = useState<string[]>([]);
+  const [selectedGerentes, setSelectedGerentes] = useState<string[]>([]);
+  const [selectedGestores, setSelectedGestores] = useState<string[]>([]);
+  const [selectedCostCenters, setSelectedCostCenters] = useState<string[]>([]);
+  const [selectedMacros, setSelectedMacros] = useState<string[]>([]);
 
   const [drillDownItem, setDrillDownItem] = useState<DrillDownItem | null>(null);
   const [isSyncing, setIsSyncing] = useState<boolean>(false);
@@ -81,31 +81,31 @@ function DashboardContent() {
 
   // Reset all organizational filters
   const handleResetFilters = useCallback(() => {
-    setSelectedBusiness('ALL');
-    setSelectedDirector('ALL');
-    setSelectedGerente('ALL');
-    setSelectedGestor('ALL');
-    setSelectedCostCenter('ALL');
-    setSelectedMacro('ALL');
+    setSelectedBusinesses([]);
+    setSelectedDirectors([]);
+    setSelectedGerentes([]);
+    setSelectedGestores([]);
+    setSelectedCostCenters([]);
+    setSelectedMacros([]);
   }, []);
 
   // Count active filters
   const activeFilterCount = useMemo(() => {
-    let count = 0;
-    if (selectedBusiness !== 'ALL') count++;
-    if (selectedDirector !== 'ALL') count++;
-    if (selectedGerente !== 'ALL') count++;
-    if (selectedGestor !== 'ALL') count++;
-    if (selectedCostCenter !== 'ALL') count++;
-    if (selectedMacro !== 'ALL') count++;
-    return count;
+    return (
+      selectedBusinesses.length +
+      selectedDirectors.length +
+      selectedGerentes.length +
+      selectedGestores.length +
+      selectedCostCenters.length +
+      selectedMacros.length
+    );
   }, [
-    selectedBusiness,
-    selectedDirector,
-    selectedGerente,
-    selectedGestor,
-    selectedCostCenter,
-    selectedMacro
+    selectedBusinesses,
+    selectedDirectors,
+    selectedGerentes,
+    selectedGestores,
+    selectedCostCenters,
+    selectedMacros
   ]);
 
   // Available options for dropdowns
@@ -143,78 +143,78 @@ function DashboardContent() {
   const isUserAdmin = user?.hasFullAccess ?? false;
   const userAllowedCCs = user?.costCenters ?? [];
 
-  // Filtered Cost Centers (RLS + Multi-Dimensional Hierarchy)
+  // Filtered Cost Centers (RLS + Searchable Multi-Select Hierarchy)
   const filteredCostCenters = useMemo(() => {
     let result = initialCostCenters;
     if (!isUserAdmin) {
       result = result.filter((cc) => userAllowedCCs.includes(cc.code));
     }
-    if (selectedBusiness !== 'ALL') {
-      result = result.filter((cc) => cc.negocio === selectedBusiness);
+    if (selectedBusinesses.length > 0) {
+      result = result.filter((cc) => cc.negocio && selectedBusinesses.includes(cc.negocio));
     }
-    if (selectedDirector !== 'ALL') {
-      result = result.filter((cc) => cc.diretor === selectedDirector);
+    if (selectedDirectors.length > 0) {
+      result = result.filter((cc) => cc.diretor && selectedDirectors.includes(cc.diretor));
     }
-    if (selectedGerente !== 'ALL') {
-      result = result.filter((cc) => cc.gerente === selectedGerente);
+    if (selectedGerentes.length > 0) {
+      result = result.filter((cc) => cc.gerente && selectedGerentes.includes(cc.gerente));
     }
-    if (selectedGestor !== 'ALL') {
-      result = result.filter((cc) => cc.gestor === selectedGestor);
+    if (selectedGestores.length > 0) {
+      result = result.filter((cc) => cc.gestor && selectedGestores.includes(cc.gestor));
     }
-    if (selectedCostCenter !== 'ALL') {
-      result = result.filter((cc) => cc.code === selectedCostCenter);
+    if (selectedCostCenters.length > 0) {
+      result = result.filter((cc) => selectedCostCenters.includes(cc.code));
     }
-    if (selectedMacro !== 'ALL') {
-      result = result.filter((cc) => cc.macroarea === selectedMacro);
+    if (selectedMacros.length > 0) {
+      result = result.filter((cc) => cc.macroarea && selectedMacros.includes(cc.macroarea));
     }
     return result;
   }, [
     isUserAdmin,
     userAllowedCCs,
     initialCostCenters,
-    selectedBusiness,
-    selectedDirector,
-    selectedGerente,
-    selectedGestor,
-    selectedCostCenter,
-    selectedMacro
+    selectedBusinesses,
+    selectedDirectors,
+    selectedGerentes,
+    selectedGestores,
+    selectedCostCenters,
+    selectedMacros
   ]);
 
-  // Filtered Analytics (RLS + Multi-Dimensional Hierarchy)
+  // Filtered Analytics (RLS + Searchable Multi-Select Hierarchy)
   const filteredAnalytics = useMemo(() => {
     let result = initialAnalytics;
     if (!isUserAdmin) {
       result = result.filter((r) => userAllowedCCs.includes(r.centro_custo));
     }
-    if (selectedBusiness !== 'ALL') {
-      result = result.filter((r) => r.negocio === selectedBusiness);
+    if (selectedBusinesses.length > 0) {
+      result = result.filter((r) => r.negocio && selectedBusinesses.includes(r.negocio));
     }
-    if (selectedDirector !== 'ALL') {
-      result = result.filter((r) => r.diretor === selectedDirector);
+    if (selectedDirectors.length > 0) {
+      result = result.filter((r) => r.diretor && selectedDirectors.includes(r.diretor));
     }
-    if (selectedGerente !== 'ALL') {
-      result = result.filter((r) => r.gerente === selectedGerente);
+    if (selectedGerentes.length > 0) {
+      result = result.filter((r) => r.gerente && selectedGerentes.includes(r.gerente));
     }
-    if (selectedGestor !== 'ALL') {
-      result = result.filter((r) => r.gestor === selectedGestor);
+    if (selectedGestores.length > 0) {
+      result = result.filter((r) => r.gestor && selectedGestores.includes(r.gestor));
     }
-    if (selectedCostCenter !== 'ALL') {
-      result = result.filter((r) => r.centro_custo === selectedCostCenter);
+    if (selectedCostCenters.length > 0) {
+      result = result.filter((r) => selectedCostCenters.includes(r.centro_custo));
     }
-    if (selectedMacro !== 'ALL') {
-      result = result.filter((r) => r.macroarea === selectedMacro);
+    if (selectedMacros.length > 0) {
+      result = result.filter((r) => r.macroarea && selectedMacros.includes(r.macroarea));
     }
     return result;
   }, [
     isUserAdmin,
     userAllowedCCs,
     initialAnalytics,
-    selectedBusiness,
-    selectedDirector,
-    selectedGerente,
-    selectedGestor,
-    selectedCostCenter,
-    selectedMacro
+    selectedBusinesses,
+    selectedDirectors,
+    selectedGerentes,
+    selectedGestores,
+    selectedCostCenters,
+    selectedMacros
   ]);
 
   // Filtered Monthly Summary (Year + Month/YTD + Dynamic Scope Scaling)
@@ -313,7 +313,7 @@ function DashboardContent() {
         setActiveTab={setActiveTab}
       />
 
-      {/* Global Filter Ribbon with Hierarchical Organizational Filtering */}
+      {/* Global Filter Ribbon with Searchable Multi-Select Filtering */}
       <FilterRibbon
         selectedYear={selectedYear}
         setSelectedYear={setSelectedYear}
@@ -323,23 +323,23 @@ function DashboardContent() {
         availableMonths={metadata.months}
         viewMode={viewMode}
         setViewMode={setViewMode}
-        selectedBusiness={selectedBusiness}
-        setSelectedBusiness={setSelectedBusiness}
+        selectedBusinesses={selectedBusinesses}
+        setSelectedBusinesses={setSelectedBusinesses}
         availableBusinesses={availableBusinesses}
-        selectedDirector={selectedDirector}
-        setSelectedDirector={setSelectedDirector}
+        selectedDirectors={selectedDirectors}
+        setSelectedDirectors={setSelectedDirectors}
         availableDirectors={availableDirectors}
-        selectedGerente={selectedGerente}
-        setSelectedGerente={setSelectedGerente}
+        selectedGerentes={selectedGerentes}
+        setSelectedGerentes={setSelectedGerentes}
         availableGerentes={availableGerentes}
-        selectedGestor={selectedGestor}
-        setSelectedGestor={setSelectedGestor}
+        selectedGestores={selectedGestores}
+        setSelectedGestores={setSelectedGestores}
         availableGestores={availableGestores}
-        selectedCostCenter={selectedCostCenter}
-        setSelectedCostCenter={setSelectedCostCenter}
+        selectedCostCenters={selectedCostCenters}
+        setSelectedCostCenters={setSelectedCostCenters}
         availableCostCenters={availableCostCentersList}
-        selectedMacro={selectedMacro}
-        setSelectedMacro={setSelectedMacro}
+        selectedMacros={selectedMacros}
+        setSelectedMacros={setSelectedMacros}
         availableMacros={availableMacros}
         onResetFilters={handleResetFilters}
         activeFilterCount={activeFilterCount}
