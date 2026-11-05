@@ -1,6 +1,15 @@
-import React, { useState } from 'react';
-import { ResponsiveContainer, BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Legend } from 'recharts';
-import { Layers, Users2, Briefcase, ArrowUpRight, ArrowDownRight } from 'lucide-react';
+import React, { useMemo } from 'react';
+import {
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip,
+  Legend
+} from 'recharts';
+import { Layers, Users, Briefcase, BarChart3 } from 'lucide-react';
 import type { PackageRecord } from '../types';
 
 interface PackagesViewProps {
@@ -9,185 +18,209 @@ interface PackagesViewProps {
 }
 
 export const PackagesView: React.FC<PackagesViewProps> = ({ packages, scale }) => {
-  const [filterType, setFilterType] = useState<'ALL' | 'Folha' | 'Não Folha'>('ALL');
-
   const scaleDivisor = scale === 'BRL_1000' ? 1000 : 1;
   const scaleSuffix = scale === 'BRL_1000' ? ' mil' : '';
 
   const formatCurrency = (val: number) => {
     const scaled = val / scaleDivisor;
-    return new Intl.NumberFormat('pt-BR', {
-      style: 'currency',
-      currency: 'BRL',
-      maximumFractionDigits: scale === 'BRL_1000' ? 1 : 0
-    }).format(scaled) + scaleSuffix;
+    return (
+      new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+        maximumFractionDigits: scale === 'BRL_1000' ? 1 : 0
+      }).format(scaled) + scaleSuffix
+    );
   };
 
-  const filtered = packages.filter((p) => filterType === 'ALL' || p.type === filterType);
+  // Aggregates
+  const totalRealizado = packages.reduce((acc, p) => acc + p.realizado, 0);
 
-  const chartData = filtered.map((p) => ({
-    name: p.package.length > 20 ? p.package.substring(0, 18) + '...' : p.package,
-    Orçado: Math.round(p.orcado / scaleDivisor),
-    Realizado: Math.round(p.realizado / scaleDivisor),
-  }));
+  const folhaPackages = packages.filter((p) => p.type === 'Folha');
+  const folhaRealizado = folhaPackages.reduce((acc, p) => acc + p.realizado, 0);
 
-  const folhaTotal = packages.filter((p) => p.type === 'Folha').reduce((acc, p) => acc + p.realizado, 0);
-  const naoFolhaTotal = packages.filter((p) => p.type === 'Não Folha').reduce((acc, p) => acc + p.realizado, 0);
+  const operPackages = packages.filter((p) => p.type === 'Não Folha');
+  const operRealizado = operPackages.reduce((acc, p) => acc + p.realizado, 0);
+
+  // Sorted chart data
+  const chartData = useMemo(() => {
+    return [...packages]
+      .sort((a, b) => b.realizado - a.realizado)
+      .map((p) => ({
+        name: p.package,
+        Orçado: Math.round(p.orcado / scaleDivisor),
+        Realizado: Math.round(p.realizado / scaleDivisor),
+        type: p.type
+      }));
+  }, [packages, scaleDivisor]);
 
   return (
-    <div className="space-y-6">
-      {/* Category Summary Header Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div
-          onClick={() => setFilterType('ALL')}
-          className={`p-5 rounded-xl border cursor-pointer transition-all ${
-            filterType === 'ALL'
-              ? 'bg-[#1c2630] text-white border-[#385463] shadow-md ring-2 ring-[#e84752]'
-              : 'bg-white text-slate-800 border-slate-200 hover:border-slate-300 shadow-xs'
-          }`}
-        >
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Todos os Pacotes</span>
-            <Layers className={`w-4 h-4 ${filterType === 'ALL' ? 'text-[#e3e0b0]' : 'text-slate-400'}`} />
+    <div className="space-y-6 animate-fade-in">
+      {/* Summary Cards */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 stagger-children">
+        <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex items-center justify-between">
+          <div>
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+              Total de Pacotes
+            </span>
+            <h3 className="text-2xl font-extrabold text-slate-900 mt-1">
+              {formatCurrency(totalRealizado)}
+            </h3>
+            <p className="text-xs text-slate-500 font-medium mt-0.5">
+              {packages.length} pacotes orçamentários monitorados
+            </p>
           </div>
-          <div className="mt-2 text-2xl font-extrabold">
-            {formatCurrency(folhaTotal + naoFolhaTotal)}
+          <div className="p-3 rounded-xl bg-blue-50 text-[#385463]">
+            <Layers className="w-5 h-5" />
           </div>
-          <p className={`text-xs mt-1 ${filterType === 'ALL' ? 'text-slate-300' : 'text-slate-500'}`}>
-            Consolidação geral ({packages.length} pacotes ativos)
-          </p>
         </div>
 
-        <div
-          onClick={() => setFilterType('Folha')}
-          className={`p-5 rounded-xl border cursor-pointer transition-all ${
-            filterType === 'Folha'
-              ? 'bg-[#1c2630] text-white border-[#385463] shadow-md ring-2 ring-[#e84752]'
-              : 'bg-white text-slate-800 border-slate-200 hover:border-slate-300 shadow-xs'
-          }`}
-        >
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Pacotes Folha (Pessoal)</span>
-            <Users2 className={`w-4 h-4 ${filterType === 'Folha' ? 'text-[#e3e0b0]' : 'text-slate-400'}`} />
+        <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex items-center justify-between">
+          <div>
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+              Folha & Benefícios
+            </span>
+            <h3 className="text-2xl font-extrabold text-[#385463] mt-1">
+              {formatCurrency(folhaRealizado)}
+            </h3>
+            <p className="text-xs text-slate-500 font-medium mt-0.5">
+              {folhaPackages.length} pacotes de pessoal
+            </p>
           </div>
-          <div className="mt-2 text-2xl font-extrabold text-[#385463]">
-            {formatCurrency(folhaTotal)}
+          <div className="p-3 rounded-xl bg-slate-100 text-[#385463]">
+            <Users className="w-5 h-5" />
           </div>
-          <p className={`text-xs mt-1 ${filterType === 'Folha' ? 'text-slate-300' : 'text-slate-500'}`}>
-            Salários, horas extras, benefícios e encargos
-          </p>
         </div>
 
-        <div
-          onClick={() => setFilterType('Não Folha')}
-          className={`p-5 rounded-xl border cursor-pointer transition-all ${
-            filterType === 'Não Folha'
-              ? 'bg-[#1c2630] text-white border-[#385463] shadow-md ring-2 ring-[#e84752]'
-              : 'bg-white text-slate-800 border-slate-200 hover:border-slate-300 shadow-xs'
-          }`}
-        >
-          <div className="flex items-center justify-between">
-            <span className="text-[11px] font-bold uppercase tracking-wider text-slate-400">Pacotes Não Folha (Operação)</span>
-            <Briefcase className={`w-4 h-4 ${filterType === 'Não Folha' ? 'text-[#e3e0b0]' : 'text-slate-400'}`} />
+        <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex items-center justify-between">
+          <div>
+            <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
+              Não Folha (Operação)
+            </span>
+            <h3 className="text-2xl font-extrabold text-[#24303b] mt-1">
+              {formatCurrency(operRealizado)}
+            </h3>
+            <p className="text-xs text-slate-500 font-medium mt-0.5">
+              {operPackages.length} pacotes operacionais
+            </p>
           </div>
-          <div className="mt-2 text-2xl font-extrabold text-[#24303b]">
-            {formatCurrency(naoFolhaTotal)}
+          <div className="p-3 rounded-xl bg-rose-50 text-[#e84752]">
+            <Briefcase className="w-5 h-5" />
           </div>
-          <p className={`text-xs mt-1 ${filterType === 'Não Folha' ? 'text-slate-300' : 'text-slate-500'}`}>
-            Serviços, materiais, fretes, viagens e manutenção
-          </p>
         </div>
       </div>
 
-      {/* Comparison Chart */}
-      <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs">
-        <div className="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
+      {/* Horizontal Bar Chart */}
+      <div className="bg-white rounded-xl border border-slate-200/90 p-5 sm:p-6 shadow-xs">
+        <div className="flex items-center space-x-2 pb-4 border-b border-slate-100">
+          <BarChart3 className="w-4 h-4 text-[#385463]" />
           <div>
-            <h4 className="text-sm font-bold text-slate-800 uppercase tracking-wider">
-              Execução por Pacote: Realizado vs Orçado
+            <h4 className="text-xs sm:text-sm font-bold text-slate-800 uppercase tracking-wider">
+              Comparativo por Pacote de Gastos
             </h4>
-            <p className="text-xs text-slate-400">Distribuição financeira por categoria contábil</p>
+            <p className="text-xs text-slate-400 mt-0.5">
+              Orçado vs Realizado por pacote ordenado pelo maior valor realizado
+            </p>
           </div>
         </div>
 
-        <div className="h-72 w-full">
+        <div className="h-[460px] w-full pt-4">
           <ResponsiveContainer width="100%" height="100%">
-            <BarChart data={chartData} margin={{ top: 10, right: 10, left: 10, bottom: 30 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" vertical={false} />
-              <XAxis dataKey="name" stroke="#94a3b8" fontSize={11} angle={-15} textAnchor="end" tickLine={false} />
-              <YAxis stroke="#94a3b8" fontSize={11} tickLine={false} tickFormatter={(val) => `${val.toLocaleString('pt-BR')}`} />
+            <BarChart
+              layout="vertical"
+              data={chartData}
+              margin={{ top: 10, right: 20, left: 20, bottom: 0 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" horizontal={false} />
+              <XAxis
+                type="number"
+                stroke="#94a3b8"
+                fontSize={11}
+                tickLine={false}
+                tickFormatter={(val) => `${val.toLocaleString('pt-BR')}`}
+              />
+              <YAxis
+                type="category"
+                dataKey="name"
+                stroke="#64748b"
+                fontSize={11}
+                tickLine={false}
+                width={190}
+              />
               <Tooltip
                 formatter={(val: any) => [`R$ ${Number(val).toLocaleString('pt-BR')}`, '']}
-                contentStyle={{ backgroundColor: '#ffffff', borderColor: '#e2e8f0', borderRadius: '8px', fontSize: '12px' }}
+                contentStyle={{
+                  backgroundColor: '#ffffff',
+                  borderColor: '#e2e8f0',
+                  borderRadius: '8px',
+                  fontSize: '12px',
+                  boxShadow: '0 4px 6px -1px rgb(0 0 0 / 0.1)'
+                }}
               />
-              <Legend wrapperStyle={{ fontSize: '12px', paddingTop: '10px' }} />
-              <Bar dataKey="Orçado" fill="#385463" opacity={0.65} radius={[4, 4, 0, 0]} />
-              <Bar dataKey="Realizado" fill="#24303b" radius={[4, 4, 0, 0]} />
+              <Legend wrapperStyle={{ fontSize: '12px', paddingTop: '8px' }} />
+              <Bar dataKey="Orçado" fill="#385463" opacity={0.65} radius={[0, 4, 4, 0]} />
+              <Bar dataKey="Realizado" fill="#24303b" radius={[0, 4, 4, 0]} />
             </BarChart>
           </ResponsiveContainer>
         </div>
       </div>
 
-      {/* Packages Table */}
-      <div className="bg-white rounded-xl border border-slate-200/90 shadow-xs overflow-hidden">
+      {/* Detailed Table */}
+      <div className="bg-white rounded-xl border border-slate-200/90 overflow-hidden shadow-xs">
+        <div className="p-4 bg-slate-50 border-b border-slate-200">
+          <h4 className="text-xs font-bold text-slate-800 uppercase tracking-wider">
+            Detalhamento Orçamentário por Pacote
+          </h4>
+        </div>
         <div className="overflow-x-auto">
-          <table className="w-full text-xs text-left">
-            <thead className="bg-[#1c2630] text-white font-semibold">
+          <table className="w-full text-left text-xs">
+            <thead className="bg-slate-50 border-b border-slate-200 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
               <tr>
-                <th className="py-3 px-3.5">Nome do Pacote</th>
-                <th className="py-3 px-3.5">Classificação</th>
-                <th className="py-3 px-3.5 text-right">Orçado</th>
-                <th className="py-3 px-3.5 text-right">Realizado</th>
-                <th className="py-3 px-3.5 text-right">Desvio ($)</th>
-                <th className="py-3 px-3.5 text-right">Desvio (%)</th>
-                <th className="py-3 px-3.5 text-center">Situação</th>
+                <th className="py-3 px-4">Pacote de Gastos</th>
+                <th className="py-3 px-4">Classificação</th>
+                <th className="py-3 px-4 text-right">Orçado</th>
+                <th className="py-3 px-4 text-right">Realizado</th>
+                <th className="py-3 px-4 text-right">Desvio (R$)</th>
+                <th className="py-3 px-4 text-right">Var (%)</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100 font-medium">
-              {filtered.map((pkg) => {
-                const isOver = pkg.desvio > 0;
+            <tbody className="divide-y divide-slate-100">
+              {packages.map((p) => {
+                const isOver = p.desvio > 0;
                 return (
-                  <tr key={pkg.package} className="hover:bg-slate-50/80 transition-colors">
-                    <td className="py-3 px-3.5 font-extrabold text-slate-800">{pkg.package}</td>
-                    <td className="py-3 px-3.5">
+                  <tr key={p.package} className="hover:bg-slate-50/70 transition-colors">
+                    <td className="py-2.5 px-4 font-bold text-slate-800">{p.package}</td>
+                    <td className="py-2.5 px-4">
                       <span
-                        className={`px-2 py-0.5 rounded text-[10px] font-bold ${
-                          pkg.type === 'Folha'
-                            ? 'bg-blue-100 text-blue-800 border border-blue-200'
-                            : 'bg-slate-100 text-slate-800 border border-slate-200'
+                        className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-bold ${
+                          p.type === 'Folha'
+                            ? 'bg-blue-50 text-[#385463] border border-blue-200'
+                            : 'bg-slate-100 text-slate-700 border border-slate-200'
                         }`}
                       >
-                        {pkg.type}
+                        {p.type}
                       </span>
                     </td>
-                    <td className="py-3 px-3.5 text-right text-slate-600">{formatCurrency(pkg.orcado)}</td>
-                    <td className="py-3 px-3.5 text-right font-extrabold text-slate-900">{formatCurrency(pkg.realizado)}</td>
-                    <td className={`py-3 px-3.5 text-right font-extrabold ${isOver ? 'text-[#e84752]' : 'text-emerald-600'}`}>
-                      {pkg.desvio > 0 ? '+' : ''}{formatCurrency(pkg.desvio)}
+                    <td className="py-2.5 px-4 text-right font-medium text-slate-600">
+                      {formatCurrency(p.orcado)}
                     </td>
-                    <td className={`py-3 px-3.5 text-right font-bold ${isOver ? 'text-[#e84752]' : 'text-emerald-600'}`}>
-                      {pkg.desvio_pct > 0 ? '+' : ''}{pkg.desvio_pct.toFixed(1)}%
+                    <td className="py-2.5 px-4 text-right font-bold text-slate-900">
+                      {formatCurrency(p.realizado)}
                     </td>
-                    <td className="py-3 px-3.5 text-center">
-                      <span
-                        className={`inline-flex items-center text-[11px] font-bold px-2.5 py-0.5 rounded-full ${
-                          isOver
-                            ? 'bg-rose-50 text-rose-700 border border-rose-200'
-                            : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
-                        }`}
-                      >
-                        {isOver ? (
-                          <>
-                            <ArrowUpRight className="w-3 h-3 mr-0.5 text-rose-600" />
-                            Acima da Meta
-                          </>
-                        ) : (
-                          <>
-                            <ArrowDownRight className="w-3 h-3 mr-0.5 text-emerald-600" />
-                            Economia
-                          </>
-                        )}
-                      </span>
+                    <td
+                      className={`py-2.5 px-4 text-right font-extrabold ${
+                        isOver ? 'text-[#e84752]' : 'text-emerald-600'
+                      }`}
+                    >
+                      {isOver ? '+' : ''}
+                      {formatCurrency(p.desvio)}
+                    </td>
+                    <td
+                      className={`py-2.5 px-4 text-right font-bold ${
+                        isOver ? 'text-[#e84752]' : 'text-emerald-600'
+                      }`}
+                    >
+                      {p.desvio_pct >= 0 ? '+' : ''}
+                      {p.desvio_pct.toFixed(1)}%
                     </td>
                   </tr>
                 );
