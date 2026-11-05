@@ -13,6 +13,7 @@ import {
 import * as XLSX from 'xlsx';
 import type { CostCenterRecord } from '../types';
 import type { DrillDownItem } from './DetailModal';
+import { EmptyState } from './EmptyState';
 
 interface CostCentersViewProps {
   costCenters: CostCenterRecord[];
@@ -501,8 +502,13 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({
               })}
               {paginated.length === 0 && (
                 <tr>
-                  <td colSpan={9} className="py-8 text-center text-xs text-slate-400">
-                    Nenhum centro de custo encontrado com os filtros selecionados.
+                  <td colSpan={9} className="py-2 px-4">
+                    <EmptyState
+                      variant="search"
+                      title="Nenhum centro de custo encontrado"
+                      description="Tente ajustar o termo de busca, macroárea ou filtro de status."
+                      theme={theme}
+                    />
                   </td>
                 </tr>
               )}

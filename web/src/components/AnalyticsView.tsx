@@ -11,6 +11,7 @@ import {
 } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import type { AnalyticsRecord } from '../types';
+import { EmptyState } from './EmptyState';
 
 interface AnalyticsViewProps {
   records: AnalyticsRecord[];
@@ -311,8 +312,13 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({
               ))}
               {paginated.length === 0 && (
                 <tr>
-                  <td colSpan={9} className="py-8 text-center text-xs text-slate-400">
-                    Nenhum registro encontrado com os filtros selecionados.
+                  <td colSpan={9} className="py-2 px-4">
+                    <EmptyState
+                      variant="search"
+                      title="Nenhum registro encontrado"
+                      description="Tente ajustar o termo de busca ou o filtro de tipo (Orçado/Realizado)."
+                      theme={theme}
+                    />
                   </td>
                 </tr>
               )}

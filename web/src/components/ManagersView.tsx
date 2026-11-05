@@ -15,6 +15,7 @@ import {
 import * as XLSX from 'xlsx';
 import type { CostCenterRecord } from '../types';
 import type { DrillDownItem } from './DetailModal';
+import { EmptyState } from './EmptyState';
 
 interface ManagersViewProps {
   costCenters: CostCenterRecord[];
@@ -674,8 +675,13 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
               })}
               {paginated.length === 0 && (
                 <tr>
-                  <td colSpan={8} className="py-8 text-center text-xs text-slate-400">
-                    Nenhum gestor encontrado com os filtros selecionados.
+                  <td colSpan={8} className="py-2 px-4">
+                    <EmptyState
+                      variant="search"
+                      title="Nenhum gestor encontrado"
+                      description="Tente ajustar o termo de busca ou filtro de status de orçamento."
+                      theme={theme}
+                    />
                   </td>
                 </tr>
               )}

@@ -112,6 +112,15 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
 
   const centrosEstouroCount = costCenters.filter((c) => c.desvio > 0).length;
 
+  // Run-Rate Forecast
+  const mesesExecutados = monthlyData.filter((m) => m.realizado > 0).length;
+  const mediaRealMensal = mesesExecutados > 0 ? totalRealizado / mesesExecutados : 0;
+  const projecao12M = mediaRealMensal * 12;
+  const orcadoAnual12M = mesesExecutados > 0
+    ? (totalOrcado / mesesExecutados) * 12
+    : totalOrcado;
+  const gapProjecao = projecao12M - orcadoAnual12M;
+
   const handleOpenCC = (cc: CostCenterRecord) => {
     if (onSelectDrillDown) {
       onSelectDrillDown({
@@ -358,6 +367,103 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
           totalCentros={costCenters.length}
           isDark={isDark}
         />
+      </div>
+
+      {/* Row 2.5: Run-Rate Forecast */}
+      <div className="animate-slide-up">
+        {/* Run-Rate Forecast Card */}
+        <div className={`rounded-xl border p-5 sm:p-6 shadow-xs transition-all ${
+          isDark ? 'bg-[#18222f] border-slate-700/80' : 'bg-white border-slate-200/90'
+        }`}>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between pb-4 border-b border-slate-100 dark:border-slate-800 gap-3">
+            <div className="flex items-center space-x-2">
+              <div className="p-1.5 rounded-lg bg-violet-500/10 border border-violet-500/20 text-violet-500">
+                <TrendingUp className="w-4 h-4" />
+              </div>
+              <div>
+                <h4 className={`text-xs font-bold uppercase tracking-wider ${isDark ? 'text-slate-200' : 'text-slate-800'}`}>
+                  Projeção de Fechamento Anual (Run-Rate)
+                </h4>
+                <p className="text-[10px] text-slate-400 mt-0.5">
+                  Estimativa de encerramento com base na média dos meses executados
+                </p>
+              </div>
+            </div>
+            <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full border ${
+              isDark ? 'bg-slate-800 border-slate-700 text-slate-300' : 'bg-slate-50 border-slate-200 text-slate-600'
+            }`}>
+              {mesesExecutados} de 12 meses executados
+            </span>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-4">
+            {/* Média Mensal */}
+            <div className={`rounded-lg p-3.5 ${isDark ? 'bg-slate-800/50' : 'bg-slate-50'}`}>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Média Mensal Real.</div>
+              <div className={`text-base font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                {mesesExecutados > 0 ? formatCurrency(totalRealizado / mesesExecutados) : '—'}
+              </div>
+            </div>
+
+            {/* Projeção 12M */}
+            <div className={`rounded-lg p-3.5 border ${
+              projecao12M > orcadoAnual12M
+                ? 'border-rose-500/30 bg-rose-500/5'
+                : 'border-emerald-500/30 bg-emerald-500/5'
+            }`}>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Projeção 12M</div>
+              <div className={`text-base font-extrabold ${
+                projecao12M > orcadoAnual12M ? 'text-rose-500' : 'text-emerald-500'
+              }`}>
+                {mesesExecutados > 0 ? formatCurrency(projecao12M) : '—'}
+              </div>
+            </div>
+
+            {/* Orçado Anual */}
+            <div className={`rounded-lg p-3.5 ${isDark ? 'bg-slate-800/50' : 'bg-slate-50'}`}>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Orçado Anual Ref.</div>
+              <div className={`text-base font-extrabold ${isDark ? 'text-white' : 'text-slate-900'}`}>
+                {formatCurrency(orcadoAnual12M)}
+              </div>
+            </div>
+
+            {/* Gap de Projeção */}
+            <div className={`rounded-lg p-3.5 border ${
+              gapProjecao > 0
+                ? 'border-rose-500/30 bg-rose-500/5'
+                : 'border-emerald-500/30 bg-emerald-500/5'
+            }`}>
+              <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 mb-1">Gap Projetado</div>
+              <div className={`text-base font-extrabold ${gapProjecao > 0 ? 'text-rose-500' : 'text-emerald-500'}`}>
+                {mesesExecutados > 0
+                  ? `${gapProjecao >= 0 ? '+' : ''}${formatCurrency(gapProjecao)}`
+                  : '—'}
+              </div>
+              <div className={`text-[10px] font-semibold mt-0.5 ${gapProjecao > 0 ? 'text-rose-400' : 'text-emerald-400'}`}>
+                {mesesExecutados > 0
+                  ? (gapProjecao > 0 ? '▲ Risco de estouro' : '▼ Economia projetada')
+                  : ''}
+              </div>
+            </div>
+          </div>
+
+          {/* Progress bar */}
+          <div className="mt-4">
+            <div className="flex justify-between text-[10px] text-slate-400 mb-1.5">
+              <span>Progresso do ano</span>
+              <span className="font-bold">{((mesesExecutados / 12) * 100).toFixed(0)}%</span>
+            </div>
+            <div className={`w-full h-2 rounded-full overflow-hidden ${isDark ? 'bg-slate-700' : 'bg-slate-200'}`}>
+              <div
+                className="h-full rounded-full transition-all duration-700"
+                style={{
+                  width: `${(mesesExecutados / 12) * 100}%`,
+                  backgroundColor: projecao12M > orcadoAnual12M ? '#e84752' : '#10b981'
+                }}
+              />
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Row 3: Spend Donut + Rankings */}

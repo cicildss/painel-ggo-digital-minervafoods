@@ -13,6 +13,7 @@ import { Layers, Users, Briefcase, BarChart3, MousePointerClick, FileSpreadsheet
 import * as XLSX from 'xlsx';
 import type { PackageRecord } from '../types';
 import type { DrillDownItem } from './DetailModal';
+import { EmptyState } from './EmptyState';
 
 interface PackagesViewProps {
   packages: PackageRecord[];
@@ -341,6 +342,16 @@ export const PackagesView: React.FC<PackagesViewProps> = ({
               })}
             </tbody>
           </table>
+          {packages.length === 0 && (
+            <div className="p-6">
+              <EmptyState
+                variant="data"
+                title="Sem pacotes de gastos disponíveis"
+                description="Nenhum pacote foi encontrado no escopo dos filtros globais selecionados."
+                theme={theme}
+              />
+            </div>
+          )}
         </div>
       </div>
     </div>
