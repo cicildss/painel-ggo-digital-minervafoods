@@ -134,7 +134,7 @@ export const FilterRibbon: React.FC<FilterRibbonProps> = ({
 
   return (
     <div
-      className={`border-b transition-colors shadow-xs ${
+      className={`relative z-30 border-b transition-colors shadow-xs ${
         isDark
           ? 'bg-[#141b25] border-slate-800 text-slate-200'
           : 'bg-white border-slate-200/80 text-slate-700'
@@ -386,6 +386,7 @@ export const FilterRibbon: React.FC<FilterRibbonProps> = ({
                 onChange={setSelectedGestores}
                 placeholder="Todos Gestores"
                 theme={theme}
+                align="right"
               />
 
               {/* 5. Centro de Custo */}
@@ -397,6 +398,7 @@ export const FilterRibbon: React.FC<FilterRibbonProps> = ({
                 onChange={setSelectedCostCenters}
                 placeholder="Todos Centros"
                 theme={theme}
+                align="right"
               />
 
               {/* 6. Macroárea */}
@@ -408,6 +410,7 @@ export const FilterRibbon: React.FC<FilterRibbonProps> = ({
                 onChange={setSelectedMacros}
                 placeholder="Todas Macroáreas"
                 theme={theme}
+                align="right"
               />
             </div>
 
