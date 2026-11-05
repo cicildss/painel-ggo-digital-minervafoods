@@ -10,16 +10,25 @@ import {
   Filter
 } from 'lucide-react';
 import type { CostCenterRecord } from '../types';
+import type { DrillDownItem } from './DetailModal';
 
 interface CostCentersViewProps {
   costCenters: CostCenterRecord[];
   scale: 'BRL' | 'BRL_1000';
+  theme?: 'light' | 'dark';
+  onSelectDrillDown?: (item: DrillDownItem) => void;
 }
 
 type SortField = 'code' | 'description' | 'gestor' | 'macroarea' | 'orcado' | 'realizado' | 'desvio' | 'desvio_pct';
 type SortOrder = 'asc' | 'desc';
 
-export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, scale }) => {
+export const CostCentersView: React.FC<CostCentersViewProps> = ({
+  costCenters,
+  scale,
+  theme = 'light',
+  onSelectDrillDown
+}) => {
+  const isDark = theme === 'dark';
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedMacro, setSelectedMacro] = useState('ALL');
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'ACIMA' | 'ABAIXO'>('ALL');
@@ -103,58 +112,92 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
   const acimaCount = costCenters.filter((c) => c.desvio > 0).length;
   const abaixoCount = costCenters.filter((c) => c.desvio <= 0).length;
 
+  const handleRowClick = (cc: CostCenterRecord) => {
+    if (onSelectDrillDown) {
+      onSelectDrillDown({
+        type: 'cost_center',
+        id: cc.code,
+        title: cc.description,
+        orcado: cc.orcado,
+        realizado: cc.realizado,
+        desvio: cc.desvio,
+        desvio_pct: cc.desvio_pct,
+        gestor: cc.gestor,
+        email_gestor: cc.email_gestor,
+        macroarea: cc.macroarea,
+        negocio: cc.negocio
+      });
+    }
+  };
+
   return (
     <div className="space-y-6 animate-fade-in">
       {/* Summary Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 stagger-children">
-        <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex items-center justify-between">
+        <div
+          className={`rounded-xl border p-5 shadow-xs flex items-center justify-between transition-all ${
+            isDark ? 'bg-[#18222f] border-slate-700/80 text-white' : 'bg-white border-slate-200/90'
+          }`}
+        >
           <div>
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
               Total de Centros
             </span>
-            <h3 className="text-2xl font-extrabold text-slate-900 mt-1">{totalCount}</h3>
-            <p className="text-xs text-slate-500 font-medium mt-0.5">
+            <h3 className="text-2xl font-extrabold mt-1">{totalCount}</h3>
+            <p className="text-xs text-slate-400 font-medium mt-0.5">
               centros de custo no escopo
             </p>
           </div>
-          <div className="p-3 rounded-xl bg-blue-50 text-[#385463]">
+          <div className="p-3 rounded-xl bg-blue-500/10 text-blue-500">
             <Building2 className="w-5 h-5" />
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex items-center justify-between">
+        <div
+          className={`rounded-xl border p-5 shadow-xs flex items-center justify-between transition-all ${
+            isDark ? 'bg-[#18222f] border-slate-700/80 text-white' : 'bg-white border-slate-200/90'
+          }`}
+        >
           <div>
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
               Acima do Orçado
             </span>
-            <h3 className="text-2xl font-extrabold text-rose-600 mt-1">{acimaCount}</h3>
-            <p className="text-xs text-slate-500 font-medium mt-0.5">
+            <h3 className="text-2xl font-extrabold text-[#e84752] mt-1">{acimaCount}</h3>
+            <p className="text-xs text-slate-400 font-medium mt-0.5">
               centros com desvio desfavorável
             </p>
           </div>
-          <div className="p-3 rounded-xl bg-rose-50 text-rose-600">
+          <div className="p-3 rounded-xl bg-rose-500/10 text-rose-500">
             <TrendingUp className="w-5 h-5" />
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex items-center justify-between">
+        <div
+          className={`rounded-xl border p-5 shadow-xs flex items-center justify-between transition-all ${
+            isDark ? 'bg-[#18222f] border-slate-700/80 text-white' : 'bg-white border-slate-200/90'
+          }`}
+        >
           <div>
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
               Dentro / Economia
             </span>
-            <h3 className="text-2xl font-extrabold text-emerald-600 mt-1">{abaixoCount}</h3>
-            <p className="text-xs text-slate-500 font-medium mt-0.5">
+            <h3 className="text-2xl font-extrabold text-emerald-500 mt-1">{abaixoCount}</h3>
+            <p className="text-xs text-slate-400 font-medium mt-0.5">
               centros com meta sob controle
             </p>
           </div>
-          <div className="p-3 rounded-xl bg-emerald-50 text-emerald-600">
+          <div className="p-3 rounded-xl bg-emerald-500/10 text-emerald-500">
             <CheckCircle2 className="w-5 h-5" />
           </div>
         </div>
       </div>
 
       {/* Filter and Search Bar */}
-      <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs flex flex-wrap gap-3 items-center justify-between">
+      <div
+        className={`rounded-xl border p-4 shadow-xs flex flex-wrap gap-3 items-center justify-between transition-all ${
+          isDark ? 'bg-[#18222f] border-slate-700/80' : 'bg-white border-slate-200/90'
+        }`}
+      >
         <div className="flex flex-wrap items-center gap-3 flex-1 min-w-[280px]">
           {/* Search */}
           <div className="relative flex-1 min-w-[200px] max-w-md">
@@ -169,24 +212,32 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
                 setSearchTerm(e.target.value);
                 setPage(1);
               }}
-              className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#385463]/30 font-medium"
+              className={`w-full pl-9 pr-3 py-2 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#385463]/40 border ${
+                isDark
+                  ? 'bg-slate-800 border-slate-700 text-white placeholder-slate-500'
+                  : 'bg-slate-50 border-slate-200 text-slate-800 placeholder-slate-400'
+              }`}
             />
           </div>
 
           {/* Macroarea dropdown */}
-          <div className="flex items-center space-x-1.5 text-xs text-slate-600">
-            <Filter className="w-3.5 h-3.5 text-slate-400" />
+          <div className="flex items-center space-x-1.5 text-xs text-slate-400">
+            <Filter className="w-3.5 h-3.5" />
             <select
               value={selectedMacro}
               onChange={(e) => {
                 setSelectedMacro(e.target.value);
                 setPage(1);
               }}
-              className="bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-2 text-xs text-slate-700 font-semibold focus:outline-none"
+              className={`border rounded-lg px-2.5 py-2 text-xs font-semibold focus:outline-none ${
+                isDark
+                  ? 'bg-slate-800 border-slate-700 text-slate-200'
+                  : 'bg-slate-50 border-slate-200 text-slate-700'
+              }`}
             >
               <option value="ALL">Todas as Macroáreas</option>
               {macroareas.map((m) => (
-                <option key={m} value={m}>
+                <option key={m} value={m} className={isDark ? 'bg-[#18222f]' : 'bg-white'}>
                   {m}
                 </option>
               ))}
@@ -195,7 +246,11 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
         </div>
 
         {/* Status switch buttons */}
-        <div className="flex items-center space-x-1 bg-slate-100 p-1 rounded-lg">
+        <div
+          className={`flex items-center space-x-1 p-1 rounded-lg ${
+            isDark ? 'bg-slate-800' : 'bg-slate-100'
+          }`}
+        >
           <button
             type="button"
             onClick={() => {
@@ -204,8 +259,8 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
             }}
             className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
               statusFilter === 'ALL'
-                ? 'bg-white text-slate-900 shadow-xs'
-                : 'text-slate-500 hover:text-slate-800'
+                ? 'bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-xs'
+                : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
             }`}
           >
             Todos ({filtered.length})
@@ -218,8 +273,8 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
             }}
             className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
               statusFilter === 'ACIMA'
-                ? 'bg-white text-rose-700 shadow-xs'
-                : 'text-slate-500 hover:text-slate-800'
+                ? 'bg-white dark:bg-slate-700 text-rose-600 dark:text-rose-400 shadow-xs'
+                : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
             }`}
           >
             Estouro
@@ -232,8 +287,8 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
             }}
             className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
               statusFilter === 'ABAIXO'
-                ? 'bg-white text-emerald-700 shadow-xs'
-                : 'text-slate-500 hover:text-slate-800'
+                ? 'bg-white dark:bg-slate-700 text-emerald-600 dark:text-emerald-400 shadow-xs'
+                : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
             }`}
           >
             Economia
@@ -242,14 +297,24 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
       </div>
 
       {/* Main Table */}
-      <div className="bg-white rounded-xl border border-slate-200/90 overflow-hidden shadow-xs">
+      <div
+        className={`rounded-xl border overflow-hidden shadow-xs transition-all ${
+          isDark ? 'bg-[#18222f] border-slate-700/80' : 'bg-white border-slate-200/90'
+        }`}
+      >
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-slate-50 border-b border-slate-200 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+            <thead
+              className={`border-b text-[11px] font-bold uppercase tracking-wider ${
+                isDark
+                  ? 'bg-[#141b25] border-slate-700 text-slate-400'
+                  : 'bg-slate-50 border-slate-200 text-slate-500'
+              }`}
+            >
               <tr>
                 <th
                   onClick={() => handleSort('code')}
-                  className="py-3 px-4 cursor-pointer hover:bg-slate-100/70"
+                  className="py-3 px-4 cursor-pointer hover:opacity-80"
                 >
                   <div className="flex items-center space-x-1">
                     <span>Código</span>
@@ -258,7 +323,7 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
                 </th>
                 <th
                   onClick={() => handleSort('description')}
-                  className="py-3 px-4 cursor-pointer hover:bg-slate-100/70"
+                  className="py-3 px-4 cursor-pointer hover:opacity-80"
                 >
                   <div className="flex items-center space-x-1">
                     <span>Descrição do Centro</span>
@@ -267,7 +332,7 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
                 </th>
                 <th
                   onClick={() => handleSort('gestor')}
-                  className="py-3 px-4 cursor-pointer hover:bg-slate-100/70"
+                  className="py-3 px-4 cursor-pointer hover:opacity-80"
                 >
                   <div className="flex items-center space-x-1">
                     <span>Gestor</span>
@@ -276,7 +341,7 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
                 </th>
                 <th
                   onClick={() => handleSort('macroarea')}
-                  className="py-3 px-4 cursor-pointer hover:bg-slate-100/70"
+                  className="py-3 px-4 cursor-pointer hover:opacity-80"
                 >
                   <div className="flex items-center space-x-1">
                     <span>Macroárea</span>
@@ -285,7 +350,7 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
                 </th>
                 <th
                   onClick={() => handleSort('orcado')}
-                  className="py-3 px-4 text-right cursor-pointer hover:bg-slate-100/70"
+                  className="py-3 px-4 text-right cursor-pointer hover:opacity-80"
                 >
                   <div className="flex items-center justify-end space-x-1">
                     <span>Orçado</span>
@@ -294,7 +359,7 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
                 </th>
                 <th
                   onClick={() => handleSort('realizado')}
-                  className="py-3 px-4 text-right cursor-pointer hover:bg-slate-100/70"
+                  className="py-3 px-4 text-right cursor-pointer hover:opacity-80"
                 >
                   <div className="flex items-center justify-end space-x-1">
                     <span>Realizado</span>
@@ -303,7 +368,7 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
                 </th>
                 <th
                   onClick={() => handleSort('desvio')}
-                  className="py-3 px-4 text-right cursor-pointer hover:bg-slate-100/70"
+                  className="py-3 px-4 text-right cursor-pointer hover:opacity-80"
                 >
                   <div className="flex items-center justify-end space-x-1">
                     <span>Desvio (R$)</span>
@@ -312,7 +377,7 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
                 </th>
                 <th
                   onClick={() => handleSort('desvio_pct')}
-                  className="py-3 px-4 text-right cursor-pointer hover:bg-slate-100/70"
+                  className="py-3 px-4 text-right cursor-pointer hover:opacity-80"
                 >
                   <div className="flex items-center justify-end space-x-1">
                     <span>Var (%)</span>
@@ -322,46 +387,61 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
                 <th className="py-3 px-4 text-center">Status</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100">
+            <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
               {paginated.map((cc) => {
                 const isOver = cc.desvio > 0;
                 let statusBadge = {
                   text: 'OK',
-                  style: 'bg-emerald-50 text-emerald-700 border-emerald-200'
+                  style: 'bg-emerald-500/15 text-emerald-600 dark:text-emerald-400 border-emerald-500/30'
                 };
                 if (cc.desvio_pct > 15) {
                   statusBadge = {
                     text: 'Crítico',
-                    style: 'bg-rose-50 text-rose-700 border-rose-200'
+                    style: 'bg-rose-500/15 text-rose-600 dark:text-rose-400 border-rose-500/30'
                   };
                 } else if (cc.desvio_pct > 0) {
                   statusBadge = {
                     text: 'Atenção',
-                    style: 'bg-amber-50 text-amber-700 border-amber-200'
+                    style: 'bg-amber-500/15 text-amber-600 dark:text-amber-400 border-amber-500/30'
                   };
                 }
 
                 return (
-                  <tr key={cc.code} className="hover:bg-slate-50/70 transition-colors">
-                    <td className="py-2.5 px-4 font-mono font-bold text-slate-900">{cc.code}</td>
-                    <td className="py-2.5 px-4 font-semibold text-slate-800 max-w-[220px] truncate">
+                  <tr
+                    key={cc.code}
+                    onClick={() => handleRowClick(cc)}
+                    title="Clique para abrir drill-down deste centro de custo"
+                    className={`transition-colors cursor-pointer ${
+                      isDark ? 'hover:bg-slate-800/60' : 'hover:bg-slate-50'
+                    }`}
+                  >
+                    <td className="py-2.5 px-4 font-mono font-bold text-[#e84752]">{cc.code}</td>
+                    <td
+                      className={`py-2.5 px-4 font-semibold max-w-[220px] truncate ${
+                        isDark ? 'text-slate-200' : 'text-slate-800'
+                      }`}
+                    >
                       {cc.description}
                     </td>
-                    <td className="py-2.5 px-4 text-slate-600 max-w-[160px] truncate">
+                    <td className="py-2.5 px-4 text-slate-400 max-w-[160px] truncate">
                       {cc.gestor}
                     </td>
-                    <td className="py-2.5 px-4 text-slate-500 text-[11px] font-medium">
-                      {cc.macroarea}
+                    <td className="py-2.5 px-4 text-slate-400 text-[11px] font-medium">
+                      {cc.macroarea || '—'}
                     </td>
-                    <td className="py-2.5 px-4 text-right font-medium text-slate-600">
+                    <td className="py-2.5 px-4 text-right font-medium text-slate-400">
                       {formatCurrency(cc.orcado)}
                     </td>
-                    <td className="py-2.5 px-4 text-right font-bold text-slate-900">
+                    <td
+                      className={`py-2.5 px-4 text-right font-bold ${
+                        isDark ? 'text-white' : 'text-slate-900'
+                      }`}
+                    >
                       {formatCurrency(cc.realizado)}
                     </td>
                     <td
                       className={`py-2.5 px-4 text-right font-extrabold ${
-                        isOver ? 'text-[#e84752]' : 'text-emerald-600'
+                        isOver ? 'text-[#e84752]' : 'text-emerald-500'
                       }`}
                     >
                       {isOver ? '+' : ''}
@@ -369,7 +449,7 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
                     </td>
                     <td
                       className={`py-2.5 px-4 text-right font-bold ${
-                        isOver ? 'text-[#e84752]' : 'text-emerald-600'
+                        isOver ? 'text-[#e84752]' : 'text-emerald-500'
                       }`}
                     >
                       {cc.desvio_pct >= 0 ? '+' : ''}
@@ -397,18 +477,26 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
         </div>
 
         {/* Pagination Footer */}
-        <div className="bg-slate-50 px-4 py-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
+        <div
+          className={`px-4 py-3 border-t flex items-center justify-between text-xs ${
+            isDark
+              ? 'bg-[#141b25] border-slate-700 text-slate-400'
+              : 'bg-slate-50 border-slate-200 text-slate-500'
+          }`}
+        >
           <div>
-            Exibindo <span className="font-bold text-slate-700">{filtered.length > 0 ? (page - 1) * pageSize + 1 : 0}</span> até{' '}
-            <span className="font-bold text-slate-700">{Math.min(page * pageSize, filtered.length)}</span> de{' '}
-            <span className="font-bold text-slate-700">{filtered.length}</span> registros
+            Exibindo <span className="font-bold">{filtered.length > 0 ? (page - 1) * pageSize + 1 : 0}</span> até{' '}
+            <span className="font-bold">{Math.min(page * pageSize, filtered.length)}</span> de{' '}
+            <span className="font-bold">{filtered.length}</span> registros
           </div>
           <div className="flex items-center space-x-2">
             <button
               type="button"
               disabled={page <= 1}
               onClick={() => setPage(page - 1)}
-              className="p-1.5 rounded-md border border-slate-200 bg-white text-slate-600 hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+              className={`p-1.5 rounded-md border disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer ${
+                isDark ? 'bg-slate-800 border-slate-700 text-white' : 'bg-white border-slate-200'
+              }`}
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -419,7 +507,9 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({ costCenters, s
               type="button"
               disabled={page >= totalPages}
               onClick={() => setPage(page + 1)}
-              className="p-1.5 rounded-md border border-slate-200 bg-white text-slate-600 hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+              className={`p-1.5 rounded-md border disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer ${
+                isDark ? 'bg-slate-800 border-slate-700 text-white' : 'bg-white border-slate-200'
+              }`}
             >
               <ChevronRight className="w-4 h-4" />
             </button>

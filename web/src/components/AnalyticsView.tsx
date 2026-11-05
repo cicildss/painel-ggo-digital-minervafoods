@@ -15,9 +15,15 @@ import type { AnalyticsRecord } from '../types';
 interface AnalyticsViewProps {
   records: AnalyticsRecord[];
   scale: 'BRL' | 'BRL_1000';
+  theme?: 'light' | 'dark';
 }
 
-export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) => {
+export const AnalyticsView: React.FC<AnalyticsViewProps> = ({
+  records,
+  scale,
+  theme = 'light'
+}) => {
+  const isDark = theme === 'dark';
   const [searchTerm, setSearchTerm] = useState('');
   const [filterType, setFilterType] = useState<'ALL' | 'Orçado' | 'Realizado'>('ALL');
   const [page, setPage] = useState(1);
@@ -95,60 +101,74 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
     <div className="space-y-6 animate-fade-in">
       {/* Summary Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 stagger-children">
-        <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex items-center justify-between">
+        <div
+          className={`rounded-xl border p-5 shadow-xs flex items-center justify-between transition-all ${
+            isDark ? 'bg-[#18222f] border-slate-700/80 text-white' : 'bg-white border-slate-200/90'
+          }`}
+        >
           <div>
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
               Registros no Escopo
             </span>
-            <h3 className="text-2xl font-extrabold text-slate-900 mt-1">
+            <h3 className="text-2xl font-extrabold mt-1">
               {filtered.length.toLocaleString('pt-BR')}
             </h3>
-            <p className="text-xs text-slate-500 font-medium mt-0.5">
+            <p className="text-xs text-slate-400 font-medium mt-0.5">
               linhas filtradas para auditoria
             </p>
           </div>
-          <div className="p-3 rounded-xl bg-blue-50 text-[#385463]">
+          <div className="p-3 rounded-xl bg-blue-500/10 text-blue-500">
             <Database className="w-5 h-5" />
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex items-center justify-between">
+        <div
+          className={`rounded-xl border p-5 shadow-xs flex items-center justify-between transition-all ${
+            isDark ? 'bg-[#18222f] border-slate-700/80 text-white' : 'bg-white border-slate-200/90'
+          }`}
+        >
           <div>
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
               Orçado Filtrado
             </span>
-            <h3 className="text-2xl font-extrabold text-[#385463] mt-1">
+            <h3 className="text-2xl font-extrabold text-[#385463] dark:text-[#7bb0ce] mt-1">
               {formatCurrency(totalOrcado)}
             </h3>
-            <p className="text-xs text-slate-500 font-medium mt-0.5">
+            <p className="text-xs text-slate-400 font-medium mt-0.5">
               meta orçamentária dos registros
             </p>
           </div>
-          <div className="p-3 rounded-xl bg-slate-100 text-[#385463]">
+          <div className="p-3 rounded-xl bg-blue-500/10 text-blue-500">
             <DollarSign className="w-5 h-5" />
           </div>
         </div>
 
-        <div className="bg-white rounded-xl border border-slate-200/90 p-5 shadow-xs flex items-center justify-between">
+        <div
+          className={`rounded-xl border p-5 shadow-xs flex items-center justify-between transition-all ${
+            isDark ? 'bg-[#18222f] border-slate-700/80 text-white' : 'bg-white border-slate-200/90'
+          }`}
+        >
           <div>
             <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">
               Realizado Filtrado
             </span>
-            <h3 className="text-2xl font-extrabold text-slate-900 mt-1">
-              {formatCurrency(totalRealizado)}
-            </h3>
-            <p className="text-xs text-slate-500 font-medium mt-0.5">
+            <h3 className="text-2xl font-extrabold mt-1">{formatCurrency(totalRealizado)}</h3>
+            <p className="text-xs text-slate-400 font-medium mt-0.5">
               execução contábil acumulada
             </p>
           </div>
-          <div className="p-3 rounded-xl bg-slate-100 text-[#24303b]">
+          <div className="p-3 rounded-xl bg-slate-500/10 text-slate-400">
             <TrendingUp className="w-5 h-5" />
           </div>
         </div>
       </div>
 
       {/* Filter Bar with Export */}
-      <div className="bg-white rounded-xl border border-slate-200/90 p-4 shadow-xs flex flex-wrap gap-3 items-center justify-between">
+      <div
+        className={`rounded-xl border p-4 shadow-xs flex flex-wrap gap-3 items-center justify-between transition-all ${
+          isDark ? 'bg-[#18222f] border-slate-700/80' : 'bg-white border-slate-200/90'
+        }`}
+      >
         <div className="flex flex-wrap items-center gap-3 flex-1 min-w-[280px]">
           {/* Search */}
           <div className="relative flex-1 min-w-[220px] max-w-md">
@@ -163,20 +183,28 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
                 setSearchTerm(e.target.value);
                 setPage(1);
               }}
-              className="w-full pl-9 pr-3 py-2 bg-slate-50 border border-slate-200 rounded-lg text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-[#385463]/30 font-medium"
+              className={`w-full pl-9 pr-3 py-2 rounded-lg text-xs font-medium focus:outline-none focus:ring-2 focus:ring-[#385463]/40 border ${
+                isDark
+                  ? 'bg-slate-800 border-slate-700 text-white placeholder-slate-500'
+                  : 'bg-slate-50 border-slate-200 text-slate-800 placeholder-slate-400'
+              }`}
             />
           </div>
 
           {/* Type filter */}
-          <div className="flex items-center space-x-1.5 text-xs text-slate-600">
-            <Filter className="w-3.5 h-3.5 text-slate-400" />
+          <div className="flex items-center space-x-1.5 text-xs text-slate-400">
+            <Filter className="w-3.5 h-3.5" />
             <select
               value={filterType}
               onChange={(e) => {
                 setFilterType(e.target.value as any);
                 setPage(1);
               }}
-              className="bg-slate-50 border border-slate-200 rounded-lg px-2.5 py-2 text-xs text-slate-700 font-semibold focus:outline-none"
+              className={`border rounded-lg px-2.5 py-2 text-xs font-semibold focus:outline-none ${
+                isDark
+                  ? 'bg-slate-800 border-slate-700 text-slate-200'
+                  : 'bg-slate-50 border-slate-200 text-slate-700'
+              }`}
             >
               <option value="ALL">Todos os Tipos</option>
               <option value="Orçado">Apenas Orçado</option>
@@ -197,10 +225,20 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
       </div>
 
       {/* Main Table */}
-      <div className="bg-white rounded-xl border border-slate-200/90 overflow-hidden shadow-xs">
+      <div
+        className={`rounded-xl border overflow-hidden shadow-xs transition-all ${
+          isDark ? 'bg-[#18222f] border-slate-700/80' : 'bg-white border-slate-200/90'
+        }`}
+      >
         <div className="overflow-x-auto">
           <table className="w-full text-left text-xs">
-            <thead className="bg-slate-50 border-b border-slate-200 text-[11px] font-bold text-slate-500 uppercase tracking-wider">
+            <thead
+              className={`border-b text-[11px] font-bold uppercase tracking-wider ${
+                isDark
+                  ? 'bg-[#141b25] border-slate-700 text-slate-400'
+                  : 'bg-slate-50 border-slate-200 text-slate-500'
+              }`}
+            >
               <tr>
                 <th className="py-3 px-4">Data</th>
                 <th className="py-3 px-4">Documento</th>
@@ -213,39 +251,60 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
                 <th className="py-3 px-4 text-right">Valor</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-slate-100">
+            <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
               {paginated.map((r, idx) => (
-                <tr key={`${r.documento}-${idx}`} className="zebra-row hover:bg-slate-100/60 transition-colors">
-                  <td className="py-2.5 px-4 text-slate-500 font-mono text-[11px] whitespace-nowrap">
+                <tr
+                  key={`${r.documento}-${idx}`}
+                  className={`transition-colors ${
+                    isDark
+                      ? idx % 2 === 0
+                        ? 'bg-transparent hover:bg-slate-800/60'
+                        : 'bg-slate-800/30 hover:bg-slate-800/60'
+                      : idx % 2 === 0
+                      ? 'bg-white hover:bg-slate-50'
+                      : 'bg-slate-50/70 hover:bg-slate-100/70'
+                  }`}
+                >
+                  <td className="py-2.5 px-4 text-slate-400 font-mono text-[11px] whitespace-nowrap">
                     {r.data}
                   </td>
-                  <td className="py-2.5 px-4 font-mono font-medium text-slate-600">
+                  <td className="py-2.5 px-4 font-mono font-medium text-slate-400">
                     {r.documento || '—'}
                   </td>
-                  <td className="py-2.5 px-4 font-mono font-bold text-slate-900">{r.conta}</td>
-                  <td className="py-2.5 px-4 font-medium text-slate-700 max-w-[200px] truncate">
+                  <td className="py-2.5 px-4 font-mono font-bold text-[#e84752]">{r.conta}</td>
+                  <td
+                    className={`py-2.5 px-4 font-medium max-w-[200px] truncate ${
+                      isDark ? 'text-slate-200' : 'text-slate-700'
+                    }`}
+                  >
                     {r.desc_conta}
                   </td>
-                  <td className="py-2.5 px-4 text-slate-600">{r.pacote}</td>
+                  <td className="py-2.5 px-4 text-slate-400">{r.pacote}</td>
                   <td className="py-2.5 px-4">
-                    <div className="font-mono font-bold text-slate-800">{r.centro_custo}</div>
+                    <div className="font-mono font-bold text-slate-300 dark:text-slate-200">
+                      {r.centro_custo}
+                    </div>
                     <div className="text-[10px] text-slate-400 truncate max-w-[150px]">
                       {r.desc_centro}
                     </div>
                   </td>
-                  <td className="py-2.5 px-4 text-slate-600 max-w-[130px] truncate">{r.gestor}</td>
+                  <td className="py-2.5 px-4 text-slate-400 max-w-[130px] truncate">{r.gestor}</td>
                   <td className="py-2.5 px-4 text-center">
                     <span
                       className={`inline-block px-2 py-0.5 rounded-full text-[10px] font-bold ${
                         r.tipo === 'Orçado'
-                          ? 'bg-blue-50 text-[#385463] border border-blue-200'
-                          : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                          ? 'bg-blue-500/15 text-blue-500 border border-blue-500/30'
+                          : 'bg-emerald-500/15 text-emerald-500 border border-emerald-500/30'
                       }`}
                     >
                       {r.tipo}
                     </span>
                   </td>
-                  <td className="py-2.5 px-4 text-right font-extrabold text-slate-900">
+                  <td
+                    className={`py-2.5 px-4 text-right font-extrabold ${
+                      isDark ? 'text-white' : 'text-slate-900'
+                    }`}
+                  >
                     {formatCurrency(r.valor)}
                   </td>
                 </tr>
@@ -262,18 +321,26 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
         </div>
 
         {/* Pagination Footer */}
-        <div className="bg-slate-50 px-4 py-3 border-t border-slate-200 flex items-center justify-between text-xs text-slate-500">
+        <div
+          className={`px-4 py-3 border-t flex items-center justify-between text-xs ${
+            isDark
+              ? 'bg-[#141b25] border-slate-700 text-slate-400'
+              : 'bg-slate-50 border-slate-200 text-slate-500'
+          }`}
+        >
           <div>
-            Exibindo <span className="font-bold text-slate-700">{filtered.length > 0 ? (page - 1) * pageSize + 1 : 0}</span> até{' '}
-            <span className="font-bold text-slate-700">{Math.min(page * pageSize, filtered.length)}</span> de{' '}
-            <span className="font-bold text-slate-700">{filtered.length.toLocaleString('pt-BR')}</span> registros
+            Exibindo <span className="font-bold">{filtered.length > 0 ? (page - 1) * pageSize + 1 : 0}</span> até{' '}
+            <span className="font-bold">{Math.min(page * pageSize, filtered.length)}</span> de{' '}
+            <span className="font-bold">{filtered.length.toLocaleString('pt-BR')}</span> registros
           </div>
           <div className="flex items-center space-x-2">
             <button
               type="button"
               disabled={page <= 1}
               onClick={() => setPage(page - 1)}
-              className="p-1.5 rounded-md border border-slate-200 bg-white text-slate-600 hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+              className={`p-1.5 rounded-md border disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer ${
+                isDark ? 'bg-slate-800 border-slate-700 text-white' : 'bg-white border-slate-200'
+              }`}
             >
               <ChevronLeft className="w-4 h-4" />
             </button>
@@ -284,7 +351,9 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({ records, scale }) 
               type="button"
               disabled={page >= totalPages}
               onClick={() => setPage(page + 1)}
-              className="p-1.5 rounded-md border border-slate-200 bg-white text-slate-600 hover:bg-slate-100 disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer"
+              className={`p-1.5 rounded-md border disabled:opacity-40 disabled:cursor-not-allowed cursor-pointer ${
+                isDark ? 'bg-slate-800 border-slate-700 text-white' : 'bg-white border-slate-200'
+              }`}
             >
               <ChevronRight className="w-4 h-4" />
             </button>
