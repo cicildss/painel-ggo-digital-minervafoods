@@ -53,6 +53,9 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({
         r.conta.toLowerCase().includes(searchTerm.toLowerCase()) ||
         r.desc_conta.toLowerCase().includes(searchTerm.toLowerCase()) ||
         r.gestor.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        (r.gerente && r.gerente.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (r.diretor && r.diretor.toLowerCase().includes(searchTerm.toLowerCase())) ||
+        (r.negocio && r.negocio.toLowerCase().includes(searchTerm.toLowerCase())) ||
         r.pacote.toLowerCase().includes(searchTerm.toLowerCase());
 
       const matchesType = filterType === 'ALL' || r.tipo === filterType;
@@ -85,6 +88,9 @@ export const AnalyticsView: React.FC<AnalyticsViewProps> = ({
       Pacote: r.pacote,
       'Centro Custo': r.centro_custo,
       'Descrição Centro': r.desc_centro,
+      'Negócio (BU)': r.negocio || 'Corporativo',
+      'Diretoria': r.diretor || '-',
+      'Gerência Executiva': r.gerente || '-',
       Gestor: r.gestor,
       'E-mail Gestor': r.email_gestor,
       Macroárea: r.macroarea,

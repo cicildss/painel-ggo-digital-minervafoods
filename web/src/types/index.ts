@@ -13,6 +13,11 @@ export interface Metadata {
   years: number[];
   months: { id: number; name: string }[];
   total_records: number;
+  directors?: string[];
+  executive_managers?: string[];
+  managers?: string[];
+  businesses?: string[];
+  macroareas?: string[];
   sync_info?: {
     source_file: string;
     source_mtime: string;
@@ -40,6 +45,9 @@ export interface CostCenterRecord {
   desvio_pct: number;
   gestor: string;
   email_gestor: string;
+  gerente?: string;
+  diretor?: string;
+  clevel?: string;
   macroarea: string;
   negocio: string;
 }
@@ -63,7 +71,11 @@ export interface AnalyticsRecord {
   desc_centro: string;
   gestor: string;
   email_gestor: string;
+  gerente?: string;
+  diretor?: string;
+  clevel?: string;
   macroarea: string;
+  negocio?: string;
   tipo: 'Orçado' | 'Realizado';
   valor: number;
 }

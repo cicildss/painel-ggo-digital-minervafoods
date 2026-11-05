@@ -10,7 +10,8 @@ import {
   FileSpreadsheet,
   ArrowUpRight,
   ArrowDownRight,
-  MousePointerClick
+  MousePointerClick,
+  Briefcase
 } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import type { CostCenterRecord } from '../types';
@@ -46,6 +47,7 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
   onSelectDrillDown
 }) => {
   const isDark = theme === 'dark';
+  const [hierarchyLevel, setHierarchyLevel] = useState<'GESTOR' | 'GERENTE' | 'DIRETOR'>('GESTOR');
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'ACIMA' | 'ABAIXO'>('ALL');
   const [sortField, setSortField] = useState<SortField>('desvio');
@@ -67,14 +69,25 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
     );
   };
 
-  // Group cost centers by manager
+  // Group cost centers by manager, executive manager, or director
   const managersData = useMemo(() => {
     const map = new Map<string, ManagerSummary>();
 
     costCenters.forEach((cc) => {
-      const gestorKey = cc.gestor?.trim() || 'Não Atribuído';
-      const existing = map.get(gestorKey) || {
-        name: gestorKey,
+      let key = '';
+      if (hierarchyLevel === 'DIRETOR') {
+        key = cc.diretor?.trim() || '';
+      } else if (hierarchyLevel === 'GERENTE') {
+        key = cc.gerente?.trim() || '';
+      } else {
+        key = cc.gestor?.trim() || '';
+      }
+      if (!key || key === 'Não mapeado') {
+        key = hierarchyLevel === 'DIRETOR' ? 'Diretoria Geral' : hierarchyLevel === 'GERENTE' ? 'Gerência Geral' : 'Gestor Geral';
+      }
+
+      const existing = map.get(key) || {
+        name: key,
         email: cc.email_gestor || '',
         macroarea: cc.macroarea || 'Corporativo',
         costCentersCount: 0,
@@ -93,14 +106,14 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
       if (cc.email_gestor && !existing.email) existing.email = cc.email_gestor;
       if (cc.macroarea && existing.macroarea === 'Corporativo') existing.macroarea = cc.macroarea;
 
-      map.set(gestorKey, existing);
+      map.set(key, existing);
     });
 
     return Array.from(map.values()).map((m) => ({
       ...m,
       desvio_pct: m.orcado > 0 ? (m.desvio / m.orcado) * 100 : 0
     }));
-  }, [costCenters]);
+  }, [costCenters, hierarchyLevel]);
 
   // Filter & Sort
   const filtered = useMemo(() => {
@@ -176,8 +189,16 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
 
   // Export to Excel
   const exportToExcel = () => {
+    const levelLabel =
+      hierarchyLevel === 'DIRETOR'
+        ? 'Diretoria'
+        : hierarchyLevel === 'GERENTE'
+        ? 'Gerência Executiva'
+        : 'Gestor';
+
     const exportData = filtered.map((m) => ({
-      Gestor: m.name,
+      'Nível de Liderança': levelLabel,
+      'Responsável / Liderança': m.name,
       'E-mail': m.email,
       Macroárea: m.macroarea,
       'Centros de Custo (Qtd)': m.costCentersCount,
@@ -190,8 +211,8 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
 
     const ws = XLSX.utils.json_to_sheet(exportData);
     const wb = XLSX.utils.book_new();
-    XLSX.utils.book_append_sheet(wb, ws, 'GGO_Gestores');
-    XLSX.writeFile(wb, `GGO_Minerva_Gestores_${new Date().toISOString().slice(0, 10)}.xlsx`);
+    XLSX.utils.book_append_sheet(wb, ws, `GGO_${levelLabel}`);
+    XLSX.writeFile(wb, `GGO_Minerva_${levelLabel}_${new Date().toISOString().slice(0, 10)}.xlsx`);
   };
 
   const handleOpenManager = (m: ManagerSummary) => {
@@ -213,6 +234,72 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
 
   return (
     <div className="space-y-6 animate-fade-in">
+      {/* Leadership Level Selector */}
+      <div
+        className={`p-2.5 rounded-xl border flex flex-wrap items-center justify-between gap-3 shadow-xs ${
+          isDark ? 'bg-[#18222f] border-slate-700/80' : 'bg-white border-slate-200/90'
+        }`}
+      >
+        <div className="flex items-center space-x-2 pl-1">
+          <div className="p-1.5 rounded-lg bg-[#385463]/15 text-[#385463] dark:text-[#7bb0ce]">
+            <Briefcase className="w-4 h-4" />
+          </div>
+          <div>
+            <span className="text-xs font-bold text-slate-800 dark:text-slate-100 uppercase tracking-wider block">
+              Agrupamento por Hierarquia
+            </span>
+            <span className="text-[10px] text-slate-400">
+              Analise desvios consolidados por Gestor direto, Gerência Executiva ou Diretoria
+            </span>
+          </div>
+        </div>
+
+        <div className={`flex items-center p-1 rounded-lg ${isDark ? 'bg-slate-800' : 'bg-slate-100'}`}>
+          <button
+            type="button"
+            onClick={() => {
+              setHierarchyLevel('GESTOR');
+              setPage(1);
+            }}
+            className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
+              hierarchyLevel === 'GESTOR'
+                ? 'bg-[#385463] text-white shadow-xs'
+                : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+            }`}
+          >
+            Gestores de CC
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setHierarchyLevel('GERENTE');
+              setPage(1);
+            }}
+            className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
+              hierarchyLevel === 'GERENTE'
+                ? 'bg-[#385463] text-white shadow-xs'
+                : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+            }`}
+          >
+            Gerências Executivas
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              setHierarchyLevel('DIRETOR');
+              setPage(1);
+            }}
+            className={`px-3 py-1.5 text-xs font-bold rounded-md transition-all cursor-pointer ${
+              hierarchyLevel === 'DIRETOR'
+                ? 'bg-[#385463] text-white shadow-xs'
+                : 'text-slate-400 hover:text-slate-700 dark:hover:text-slate-200'
+            }`}
+          >
+            Diretorias
+          </button>
+        </div>
+      </div>
+
       {/* Summary KPI Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 stagger-children">
         <div

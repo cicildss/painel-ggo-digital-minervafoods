@@ -19,6 +19,9 @@ export interface DrillDownItem {
   desvio_pct: number;
   gestor?: string;
   email_gestor?: string;
+  gerente?: string;
+  diretor?: string;
+  clevel?: string;
   macroarea?: string;
   negocio?: string;
 }
@@ -160,16 +163,39 @@ export const DetailModal: React.FC<DetailModalProps> = ({
         {/* Scrollable Body */}
         <div className="p-6 overflow-y-auto space-y-6 flex-1">
           {/* Metadata info strip */}
-          {(item.gestor || item.macroarea || item.negocio) && (
+          {(item.gestor || item.gerente || item.diretor || item.macroarea || item.negocio) && (
             <div
               className={`p-3.5 rounded-xl border flex flex-wrap gap-4 text-xs ${
                 isDark ? 'bg-slate-800/40 border-slate-700/80' : 'bg-slate-50 border-slate-200'
               }`}
             >
+              {item.negocio && (
+                <div className="flex items-center space-x-1.5">
+                  <Building2 className="w-4 h-4 text-slate-400" />
+                  <span className="text-slate-400">Negócio (BU):</span>
+                  <span className="font-bold text-[#e3e0b0] dark:text-[#e3e0b0] bg-slate-700/40 px-2 py-0.5 rounded">
+                    {item.negocio}
+                  </span>
+                </div>
+              )}
+              {item.diretor && (
+                <div className="flex items-center space-x-1.5">
+                  <User className="w-4 h-4 text-slate-400" />
+                  <span className="text-slate-400">Diretoria:</span>
+                  <span className="font-bold">{item.diretor}</span>
+                </div>
+              )}
+              {item.gerente && (
+                <div className="flex items-center space-x-1.5">
+                  <User className="w-4 h-4 text-slate-400" />
+                  <span className="text-slate-400">Gerência Executiva:</span>
+                  <span className="font-bold">{item.gerente}</span>
+                </div>
+              )}
               {item.gestor && (
                 <div className="flex items-center space-x-1.5">
                   <User className="w-4 h-4 text-slate-400" />
-                  <span className="text-slate-400">Gestor:</span>
+                  <span className="text-slate-400">Gestor do Centro:</span>
                   <span className="font-bold">{item.gestor}</span>
                 </div>
               )}
@@ -178,13 +204,6 @@ export const DetailModal: React.FC<DetailModalProps> = ({
                   <Compass className="w-4 h-4 text-slate-400" />
                   <span className="text-slate-400">Macroárea:</span>
                   <span className="font-bold">{item.macroarea}</span>
-                </div>
-              )}
-              {item.negocio && (
-                <div className="flex items-center space-x-1.5">
-                  <Building2 className="w-4 h-4 text-slate-400" />
-                  <span className="text-slate-400">Negócio:</span>
-                  <span className="font-bold">{item.negocio}</span>
                 </div>
               )}
             </div>

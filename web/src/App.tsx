@@ -39,7 +39,15 @@ function DashboardContent() {
   );
   const [selectedMonth, setSelectedMonth] = useState<number | 'ALL'>('ALL');
   const [viewMode, setViewMode] = useState<'YTD' | 'MONTH'>('YTD');
+
+  // Multi-Level Organizational Filters
+  const [selectedBusiness, setSelectedBusiness] = useState<string>('ALL');
+  const [selectedDirector, setSelectedDirector] = useState<string>('ALL');
+  const [selectedGerente, setSelectedGerente] = useState<string>('ALL');
+  const [selectedGestor, setSelectedGestor] = useState<string>('ALL');
+  const [selectedCostCenter, setSelectedCostCenter] = useState<string>('ALL');
   const [selectedMacro, setSelectedMacro] = useState<string>('ALL');
+
   const [drillDownItem, setDrillDownItem] = useState<DrillDownItem | null>(null);
   const [isSyncing, setIsSyncing] = useState<boolean>(false);
   const [lastSyncMsg, setLastSyncMsg] = useState<string | null>(null);
@@ -71,40 +79,145 @@ function DashboardContent() {
     localStorage.setItem('minerva_ggo_theme', newTheme);
   };
 
-  // Macroareas list
+  // Reset all organizational filters
+  const handleResetFilters = useCallback(() => {
+    setSelectedBusiness('ALL');
+    setSelectedDirector('ALL');
+    setSelectedGerente('ALL');
+    setSelectedGestor('ALL');
+    setSelectedCostCenter('ALL');
+    setSelectedMacro('ALL');
+  }, []);
+
+  // Count active filters
+  const activeFilterCount = useMemo(() => {
+    let count = 0;
+    if (selectedBusiness !== 'ALL') count++;
+    if (selectedDirector !== 'ALL') count++;
+    if (selectedGerente !== 'ALL') count++;
+    if (selectedGestor !== 'ALL') count++;
+    if (selectedCostCenter !== 'ALL') count++;
+    if (selectedMacro !== 'ALL') count++;
+    return count;
+  }, [
+    selectedBusiness,
+    selectedDirector,
+    selectedGerente,
+    selectedGestor,
+    selectedCostCenter,
+    selectedMacro
+  ]);
+
+  // Available options for dropdowns
+  const availableBusinesses = useMemo(() => {
+    return metadata.businesses && metadata.businesses.length > 0
+      ? metadata.businesses
+      : Array.from(new Set(initialCostCenters.map((c) => c.negocio).filter(Boolean))).sort();
+  }, [metadata.businesses, initialCostCenters]);
+
+  const availableDirectors = useMemo(() => {
+    return metadata.directors && metadata.directors.length > 0
+      ? metadata.directors
+      : Array.from(new Set(initialCostCenters.map((c) => c.diretor).filter(Boolean) as string[])).sort();
+  }, [metadata.directors, initialCostCenters]);
+
+  const availableGerentes = useMemo(() => {
+    return metadata.executive_managers && metadata.executive_managers.length > 0
+      ? metadata.executive_managers
+      : Array.from(new Set(initialCostCenters.map((c) => c.gerente).filter(Boolean) as string[])).sort();
+  }, [metadata.executive_managers, initialCostCenters]);
+
+  const availableGestores = useMemo(() => {
+    return Array.from(new Set(initialCostCenters.map((c) => c.gestor).filter(Boolean))).sort();
+  }, [initialCostCenters]);
+
   const availableMacros = useMemo(() => {
     const set = new Set(initialCostCenters.map((c) => c.macroarea).filter(Boolean));
     return Array.from(set).sort();
   }, [initialCostCenters]);
 
+  const availableCostCentersList = useMemo(() => {
+    return initialCostCenters.map((c) => ({ code: c.code, description: c.description }));
+  }, [initialCostCenters]);
+
   const isUserAdmin = user?.hasFullAccess ?? false;
   const userAllowedCCs = user?.costCenters ?? [];
 
-  // Filtered Cost Centers (RLS + Macroarea)
+  // Filtered Cost Centers (RLS + Multi-Dimensional Hierarchy)
   const filteredCostCenters = useMemo(() => {
     let result = initialCostCenters;
     if (!isUserAdmin) {
       result = result.filter((cc) => userAllowedCCs.includes(cc.code));
     }
+    if (selectedBusiness !== 'ALL') {
+      result = result.filter((cc) => cc.negocio === selectedBusiness);
+    }
+    if (selectedDirector !== 'ALL') {
+      result = result.filter((cc) => cc.diretor === selectedDirector);
+    }
+    if (selectedGerente !== 'ALL') {
+      result = result.filter((cc) => cc.gerente === selectedGerente);
+    }
+    if (selectedGestor !== 'ALL') {
+      result = result.filter((cc) => cc.gestor === selectedGestor);
+    }
+    if (selectedCostCenter !== 'ALL') {
+      result = result.filter((cc) => cc.code === selectedCostCenter);
+    }
     if (selectedMacro !== 'ALL') {
       result = result.filter((cc) => cc.macroarea === selectedMacro);
     }
     return result;
-  }, [isUserAdmin, userAllowedCCs, initialCostCenters, selectedMacro]);
+  }, [
+    isUserAdmin,
+    userAllowedCCs,
+    initialCostCenters,
+    selectedBusiness,
+    selectedDirector,
+    selectedGerente,
+    selectedGestor,
+    selectedCostCenter,
+    selectedMacro
+  ]);
 
-  // Filtered Analytics (RLS + Macroarea)
+  // Filtered Analytics (RLS + Multi-Dimensional Hierarchy)
   const filteredAnalytics = useMemo(() => {
     let result = initialAnalytics;
     if (!isUserAdmin) {
       result = result.filter((r) => userAllowedCCs.includes(r.centro_custo));
     }
+    if (selectedBusiness !== 'ALL') {
+      result = result.filter((r) => r.negocio === selectedBusiness);
+    }
+    if (selectedDirector !== 'ALL') {
+      result = result.filter((r) => r.diretor === selectedDirector);
+    }
+    if (selectedGerente !== 'ALL') {
+      result = result.filter((r) => r.gerente === selectedGerente);
+    }
+    if (selectedGestor !== 'ALL') {
+      result = result.filter((r) => r.gestor === selectedGestor);
+    }
+    if (selectedCostCenter !== 'ALL') {
+      result = result.filter((r) => r.centro_custo === selectedCostCenter);
+    }
     if (selectedMacro !== 'ALL') {
       result = result.filter((r) => r.macroarea === selectedMacro);
     }
     return result;
-  }, [isUserAdmin, userAllowedCCs, initialAnalytics, selectedMacro]);
+  }, [
+    isUserAdmin,
+    userAllowedCCs,
+    initialAnalytics,
+    selectedBusiness,
+    selectedDirector,
+    selectedGerente,
+    selectedGestor,
+    selectedCostCenter,
+    selectedMacro
+  ]);
 
-  // Filtered Monthly Summary (Year + Month/YTD + Macroarea Factor)
+  // Filtered Monthly Summary (Year + Month/YTD + Dynamic Scope Scaling)
   const filteredMonthly = useMemo(() => {
     let yearRecords = initialMonthly.filter((m) => m.year === selectedYear);
 
@@ -113,15 +226,15 @@ function DashboardContent() {
       if (viewMode === 'MONTH') {
         yearRecords = yearRecords.filter((m) => m.month === selectedMonth);
       } else {
-        // YTD: up to selected month
         yearRecords = yearRecords.filter((m) => m.month <= (selectedMonth as number));
       }
     }
 
-    // Macroarea or gestor proportion factor
+    // Proportion factor based on active filtered cost centers
     const totalAllCCReal = initialCostCenters.reduce((acc, c) => acc + c.realizado, 0);
     const activeCCReal = filteredCostCenters.reduce((acc, c) => acc + c.realizado, 0);
-    const factor = totalAllCCReal > 0 && (!isUserAdmin || selectedMacro !== 'ALL')
+    const hasOrgFilter = activeFilterCount > 0;
+    const factor = totalAllCCReal > 0 && (!isUserAdmin || hasOrgFilter)
       ? activeCCReal / totalAllCCReal
       : 1;
 
@@ -143,7 +256,7 @@ function DashboardContent() {
     selectedYear,
     selectedMonth,
     viewMode,
-    selectedMacro,
+    activeFilterCount,
     initialMonthly,
     initialCostCenters,
     filteredCostCenters
@@ -153,7 +266,8 @@ function DashboardContent() {
   const filteredPackages = useMemo(() => {
     const totalAllCCReal = initialCostCenters.reduce((acc, c) => acc + c.realizado, 0);
     const activeCCReal = filteredCostCenters.reduce((acc, c) => acc + c.realizado, 0);
-    const factor = totalAllCCReal > 0 && (!isUserAdmin || selectedMacro !== 'ALL')
+    const hasOrgFilter = activeFilterCount > 0;
+    const factor = totalAllCCReal > 0 && (!isUserAdmin || hasOrgFilter)
       ? activeCCReal / totalAllCCReal
       : 1;
 
@@ -170,7 +284,7 @@ function DashboardContent() {
         desvio_pct: desvPct
       };
     });
-  }, [isUserAdmin, selectedMacro, initialPackages, initialCostCenters, filteredCostCenters]);
+  }, [isUserAdmin, activeFilterCount, initialPackages, initialCostCenters, filteredCostCenters]);
 
   // Conditional renders AFTER all hooks
   if (isLoading) {
@@ -199,7 +313,7 @@ function DashboardContent() {
         setActiveTab={setActiveTab}
       />
 
-      {/* Global Filter Ribbon (Year, Month, YTD/Month, Macroarea, Scale, Theme) */}
+      {/* Global Filter Ribbon with Hierarchical Organizational Filtering */}
       <FilterRibbon
         selectedYear={selectedYear}
         setSelectedYear={setSelectedYear}
@@ -209,9 +323,26 @@ function DashboardContent() {
         availableMonths={metadata.months}
         viewMode={viewMode}
         setViewMode={setViewMode}
+        selectedBusiness={selectedBusiness}
+        setSelectedBusiness={setSelectedBusiness}
+        availableBusinesses={availableBusinesses}
+        selectedDirector={selectedDirector}
+        setSelectedDirector={setSelectedDirector}
+        availableDirectors={availableDirectors}
+        selectedGerente={selectedGerente}
+        setSelectedGerente={setSelectedGerente}
+        availableGerentes={availableGerentes}
+        selectedGestor={selectedGestor}
+        setSelectedGestor={setSelectedGestor}
+        availableGestores={availableGestores}
+        selectedCostCenter={selectedCostCenter}
+        setSelectedCostCenter={setSelectedCostCenter}
+        availableCostCenters={availableCostCentersList}
         selectedMacro={selectedMacro}
         setSelectedMacro={setSelectedMacro}
         availableMacros={availableMacros}
+        onResetFilters={handleResetFilters}
+        activeFilterCount={activeFilterCount}
         scale={scale}
         setScale={setScale}
         theme={theme}
@@ -326,7 +457,7 @@ function DashboardContent() {
             )}
 
             <span className="text-slate-400 hidden lg:inline">
-              • {metadata.total_records.toLocaleString('pt-BR')} registros
+              • {filteredCostCenters.length} centros no escopo
             </span>
           </div>
         </div>

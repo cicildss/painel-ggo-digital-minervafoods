@@ -133,6 +133,9 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
         desvio_pct: cc.desvio_pct,
         gestor: cc.gestor,
         email_gestor: cc.email_gestor,
+        gerente: cc.gerente,
+        diretor: cc.diretor,
+        clevel: cc.clevel,
         macroarea: cc.macroarea,
         negocio: cc.negocio
       });

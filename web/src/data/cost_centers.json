@@ -6,10 +6,13 @@
     "realizado": 65903062.95,
     "desvio": 65903062.95,
     "desvio_pct": 0,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Lilian Nascimento",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Lilian Nascimento",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Geral",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060004",
@@ -20,8 +23,11 @@
     "desvio_pct": -44.94,
     "gestor": "Fernando Galletti de Queiroz",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Executivos",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060298",
@@ -30,10 +36,13 @@
     "realizado": 48546834.97,
     "desvio": -10180214.85,
     "desvio_pct": -17.33,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Lilian Nascimento",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Lilian Nascimento",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060016",
@@ -42,10 +51,13 @@
     "realizado": 18317825.19,
     "desvio": -7453519.6,
     "desvio_pct": -28.92,
-    "gestor": "Norberto Giangrande",
+    "gestor": "Melise Ariella Roncoleta Scarpa",
     "email_gestor": "norberto.giangrande@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Daniela Arantes",
+    "diretor": "Não mapeado",
+    "clevel": "Norberto Giangrande",
+    "macroarea": "Marketing",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060003",
@@ -56,8 +68,11 @@
     "desvio_pct": -47.31,
     "gestor": "Fernando Galletti de Queiroz",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Executivos",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060824",
@@ -66,10 +81,13 @@
     "realizado": 13205060.9,
     "desvio": -18864643.19,
     "desvio_pct": -58.82,
-    "gestor": "Norberto Giangrande",
+    "gestor": "Melise Ariella Roncoleta Scarpa",
     "email_gestor": "norberto.giangrande@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Daniela Arantes",
+    "diretor": "Não mapeado",
+    "clevel": "Norberto Giangrande",
+    "macroarea": "Marketing",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060042",
@@ -78,10 +96,13 @@
     "realizado": 12866209.53,
     "desvio": -7623733.56,
     "desvio_pct": -37.21,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Waldemar Moi Neto",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX00960826",
@@ -92,8 +113,11 @@
     "desvio_pct": -36.35,
     "gestor": "Luis Ricardo Alves Luz",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060001",
@@ -104,8 +128,11 @@
     "desvio_pct": -51.27,
     "gestor": "Fernando Galletti de Queiroz",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Executivos",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060653",
@@ -114,10 +141,13 @@
     "realizado": 11327070.4,
     "desvio": -9536419.63,
     "desvio_pct": -45.71,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Ralph Pinotti Leite",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Ralph Pinotti Leite",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX00960081",
@@ -126,10 +156,13 @@
     "realizado": 10830954.52,
     "desvio": -5026288.54,
     "desvio_pct": -31.7,
-    "gestor": "Frederico Alcantara de Queiroz",
+    "gestor": "Lais Borges Clemente",
     "email_gestor": "frederico.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Vinicius Augusto Andrade",
+    "diretor": "Robert Emilio Walder Silvestri",
+    "clevel": "Frederico Alcantara de Queiroz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "AX00060282",
@@ -140,8 +173,11 @@
     "desvio_pct": -20.35,
     "gestor": "Leandro Protzen",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XB02580045",
@@ -150,10 +186,13 @@
     "realizado": 9505173.39,
     "desvio": -875778.7,
     "desvio_pct": -8.44,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Marco Aurelio Gasparini",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS PY",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX00060826",
@@ -164,8 +203,11 @@
     "desvio_pct": -45.01,
     "gestor": "Luis Ricardo Alves Luz",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060027",
@@ -174,10 +216,13 @@
     "realizado": 8384980.07,
     "desvio": -8833508.31,
     "desvio_pct": -51.3,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Tamara Leite Ferreira Lopes",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Tamara Leite Ferreira Lopes",
+    "diretor": "Marta Lisli Ribeiro de Morais Giannichi",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Sustentabilidade/Renove",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00960282",
@@ -188,8 +233,11 @@
     "desvio_pct": -54.94,
     "gestor": "Leandro Protzen",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "IA03160082",
@@ -198,10 +246,13 @@
     "realizado": 6337320.03,
     "desvio": -3650837.54,
     "desvio_pct": -36.55,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Bruno Paiva de Souza",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Comercializadora Energia"
   },
   {
     "code": "YX00060064",
@@ -210,10 +261,13 @@
     "realizado": 6315299.24,
     "desvio": -2717140.12,
     "desvio_pct": -30.08,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Wagner Munhoz de Souza",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Carlos Eduardo Heitor Canas",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suprimentos",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060044",
@@ -222,10 +276,13 @@
     "realizado": 6246843.34,
     "desvio": -17361913.47,
     "desvio_pct": -73.54,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Leandro Tadeu Flosi Cury",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060066",
@@ -234,10 +291,13 @@
     "realizado": 5488335.58,
     "desvio": -4928617.79,
     "desvio_pct": -47.31,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Aldair Cesar da Silva",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Vitor Bonafim",
+    "diretor": "Não mapeado",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00960351",
@@ -248,8 +308,11 @@
     "desvio_pct": -34.84,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00960281",
@@ -258,10 +321,13 @@
     "realizado": 5323902.68,
     "desvio": -4050593.33,
     "desvio_pct": -43.21,
-    "gestor": "Frederico Alcantara de Queiroz",
+    "gestor": "Carlos Henrique de Carvalho",
     "email_gestor": "frederico.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Michaela de Dobozy",
+    "clevel": "Frederico Alcantara de Queiroz",
+    "macroarea": "NR",
+    "negocio": "Corporativo Negócios Relacionados"
   },
   {
     "code": "YX00060083",
@@ -270,10 +336,13 @@
     "realizado": 4715865.36,
     "desvio": -3731882.83,
     "desvio_pct": -44.18,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Marcio Kravetch Ratico",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Kravetch Ratico",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060037",
@@ -282,10 +351,13 @@
     "realizado": 4666083.47,
     "desvio": -3085784.0,
     "desvio_pct": -39.81,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Luiza Puoli",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Danilo Tadeu Maurin Cabrera",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960004",
@@ -296,8 +368,11 @@
     "desvio_pct": -38.07,
     "gestor": "Fernando Galletti de Queiroz",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Executivos",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960864",
@@ -306,10 +381,13 @@
     "realizado": 4579383.76,
     "desvio": -4120460.49,
     "desvio_pct": -47.36,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Fabiana Cristina Fontana",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Inteligência",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060064",
@@ -318,10 +396,13 @@
     "realizado": 4543357.4,
     "desvio": -4703099.64,
     "desvio_pct": -50.86,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Silas da Silva Pereira",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Carlos Eduardo Heitor Canas",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suprimentos",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060083",
@@ -330,10 +411,13 @@
     "realizado": 4343258.52,
     "desvio": -2844512.44,
     "desvio_pct": -39.57,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Marcio Kravetch Ratico",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Kravetch Ratico",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "AX00060403",
@@ -342,10 +426,13 @@
     "realizado": 4257149.05,
     "desvio": -5130372.0,
     "desvio_pct": -54.65,
-    "gestor": "Leandro Protzen",
+    "gestor": "Patricia Camillo",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Gilson Luciano Brioli",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "AX00060105",
@@ -354,10 +441,13 @@
     "realizado": 4162938.31,
     "desvio": -4568471.73,
     "desvio_pct": -52.32,
-    "gestor": "Leandro Protzen",
+    "gestor": "Joao Guilherme de Freitas Correa",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Gilson Luciano Brioli",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00960417",
@@ -366,10 +456,13 @@
     "realizado": 4150674.12,
     "desvio": -862422.46,
     "desvio_pct": -17.2,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Caroline Heck Drape Scramim",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060040",
@@ -378,10 +471,13 @@
     "realizado": 4128184.21,
     "desvio": -4142428.28,
     "desvio_pct": -50.09,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Afonso Junior Pelegrini",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00010356",
@@ -392,8 +488,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XX00060030",
@@ -402,10 +501,13 @@
     "realizado": 3912631.55,
     "desvio": -3654472.58,
     "desvio_pct": -48.29,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Emerson Perassoli Silveira",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Jose Carlos Ferreira",
+    "diretor": "Não mapeado",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060658",
@@ -414,10 +516,13 @@
     "realizado": 3893076.99,
     "desvio": -2616423.27,
     "desvio_pct": -40.19,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alvaro Luiz Mansor Neto",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Alvaro Luiz Mansor Neto",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX02580083",
@@ -426,10 +531,13 @@
     "realizado": 3825310.67,
     "desvio": 3825310.67,
     "desvio_pct": 0,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Marcio Kravetch Ratico",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Kravetch Ratico",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060025",
@@ -438,10 +546,13 @@
     "realizado": 3815758.39,
     "desvio": -2427751.65,
     "desvio_pct": -38.88,
-    "gestor": "Flavia Regina Ribeiro da Silva Villa",
+    "gestor": "Felipe de Araujo Cruz",
     "email_gestor": "flavia.ribeiro@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Gustavo Marioti",
+    "clevel": "Flavia Regina Ribeiro da Silva Villa",
+    "macroarea": "Jurídico",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "SX05080082",
@@ -450,10 +561,13 @@
     "realizado": 3707871.44,
     "desvio": -10654645.37,
     "desvio_pct": -74.18,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Guilherme Moraes Ferraudo",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Guilherme Moraes Ferraudo",
+    "diretor": "Marta Lisli Ribeiro de Morais Giannichi",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "My Carbon",
+    "negocio": "Corporativo Crédito de Carbono"
   },
   {
     "code": "XX00060676",
@@ -462,10 +576,13 @@
     "realizado": 3698416.85,
     "desvio": -3197633.82,
     "desvio_pct": -46.37,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Juliano Vicoto Goncalves",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Ralph Pinotti Leite",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060698",
@@ -474,10 +591,13 @@
     "realizado": 3660227.1,
     "desvio": -3720947.77,
     "desvio_pct": -50.41,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Leandro Tadeu Flosi Cury",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060057",
@@ -486,10 +606,13 @@
     "realizado": 3607544.91,
     "desvio": -1859105.2,
     "desvio_pct": -34.01,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Regiane Borges Marcal",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Alexandre Rocha Valeriano",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Controle",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060067",
@@ -498,10 +621,13 @@
     "realizado": 3580637.95,
     "desvio": -2990510.89,
     "desvio_pct": -45.51,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Lilian Nascimento",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Lilian Nascimento",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060013",
@@ -510,10 +636,13 @@
     "realizado": 3534474.73,
     "desvio": -2844917.48,
     "desvio_pct": -44.6,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Camila de Lima Pontes",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Carolina Rodrigues Campezato",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060864",
@@ -522,10 +651,13 @@
     "realizado": 3438098.11,
     "desvio": -1217476.7,
     "desvio_pct": -26.15,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Fabiana Cristina Fontana",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Inteligência",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060009",
@@ -534,10 +666,13 @@
     "realizado": 3154721.99,
     "desvio": -1835906.58,
     "desvio_pct": -36.79,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Luiz Adriani Garcia",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060043",
@@ -546,10 +681,13 @@
     "realizado": 3076266.28,
     "desvio": -2833462.37,
     "desvio_pct": -47.95,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alvaro Luiz Mansor Neto",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Alvaro Luiz Mansor Neto",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060281",
@@ -558,10 +696,13 @@
     "realizado": 2796871.68,
     "desvio": -3824236.91,
     "desvio_pct": -57.76,
-    "gestor": "Frederico Alcantara de Queiroz",
+    "gestor": "Carlos Henrique de Carvalho",
     "email_gestor": "frederico.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Michaela de Dobozy",
+    "clevel": "Frederico Alcantara de Queiroz",
+    "macroarea": "NR",
+    "negocio": "Corporativo Negócios Relacionados"
   },
   {
     "code": "XX04905001",
@@ -570,10 +711,13 @@
     "realizado": 2768518.65,
     "desvio": -2919157.06,
     "desvio_pct": -51.32,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Lilian Nascimento",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Lilian Nascimento",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Geral",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060884",
@@ -582,10 +726,13 @@
     "realizado": 2720008.41,
     "desvio": -2264921.59,
     "desvio_pct": -45.44,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alacir Imidio da Silva",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX00060110",
@@ -594,10 +741,13 @@
     "realizado": 2654835.85,
     "desvio": -2839300.28,
     "desvio_pct": -51.68,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Maria Fernanda Isac",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Vitor Jose Fernandes de Matos",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "AX00960088",
@@ -606,10 +756,13 @@
     "realizado": 2650364.54,
     "desvio": 385616.26,
     "desvio_pct": 17.03,
-    "gestor": "Leandro Protzen",
+    "gestor": "Melina Izidoro Marchi",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Fabiano Ribeiro Tito Rosa",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "AX00060832",
@@ -618,10 +771,13 @@
     "realizado": 2636266.3,
     "desvio": -2461121.75,
     "desvio_pct": -48.28,
-    "gestor": "Leandro Protzen",
+    "gestor": "Pedro Henrique Souza Ribeiro",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Glauco Smania",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00060060",
@@ -630,10 +786,13 @@
     "realizado": 2609661.19,
     "desvio": -1554288.81,
     "desvio_pct": -37.33,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Stefany Cristina Truculo",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Aeronaves",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060417",
@@ -642,10 +801,13 @@
     "realizado": 2600201.14,
     "desvio": -2799534.18,
     "desvio_pct": -51.85,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Caroline Heck Drape Scramim",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060088",
@@ -654,10 +816,13 @@
     "realizado": 2521548.57,
     "desvio": -873317.27,
     "desvio_pct": -25.72,
-    "gestor": "Leandro Protzen",
+    "gestor": "Melina Izidoro Marchi",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Fabiano Ribeiro Tito Rosa",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00060848",
@@ -666,10 +831,13 @@
     "realizado": 2463947.22,
     "desvio": -2251433.78,
     "desvio_pct": -47.75,
-    "gestor": "Frederico Alcantara de Queiroz",
+    "gestor": "Mateus Felipe Luz",
     "email_gestor": "frederico.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Michaela de Dobozy",
+    "clevel": "Frederico Alcantara de Queiroz",
+    "macroarea": "NR",
+    "negocio": "Corporativo Negócios Relacionados"
   },
   {
     "code": "YX00960083",
@@ -678,10 +846,13 @@
     "realizado": 2460836.43,
     "desvio": -1637792.6,
     "desvio_pct": -39.96,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Marcio Kravetch Ratico",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Kravetch Ratico",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060039",
@@ -690,10 +861,13 @@
     "realizado": 2389098.23,
     "desvio": -1641068.86,
     "desvio_pct": -40.72,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Leandro Tadeu Flosi Cury",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX00060081",
@@ -702,10 +876,13 @@
     "realizado": 2364831.99,
     "desvio": -667967.86,
     "desvio_pct": -22.02,
-    "gestor": "Frederico Alcantara de Queiroz",
+    "gestor": "Lais Borges Clemente",
     "email_gestor": "frederico.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Vinicius Augusto Andrade",
+    "diretor": "Robert Emilio Walder Silvestri",
+    "clevel": "Frederico Alcantara de Queiroz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060665",
@@ -714,10 +891,13 @@
     "realizado": 2335061.53,
     "desvio": -1757116.99,
     "desvio_pct": -42.94,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Adriana Conceicao Pedroza Machado",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060020",
@@ -726,10 +906,13 @@
     "realizado": 2200134.26,
     "desvio": -1454507.06,
     "desvio_pct": -39.8,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Raphael de Oliveira Roza",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Jose Roberto Affonso",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060895",
@@ -738,10 +921,13 @@
     "realizado": 2165892.8,
     "desvio": -683768.76,
     "desvio_pct": -23.99,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Stefany Cristina Truculo",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Aeronaves",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00060350",
@@ -750,10 +936,13 @@
     "realizado": 2079516.71,
     "desvio": -1845803.61,
     "desvio_pct": -47.02,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Fabio Correa dos Santos",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX02120212",
@@ -762,10 +951,13 @@
     "realizado": 2009358.2,
     "desvio": -1350857.18,
     "desvio_pct": -40.2,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Caroline Andrade Santos",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX00960857",
@@ -774,10 +966,13 @@
     "realizado": 1965536.5,
     "desvio": -1731670.44,
     "desvio_pct": -46.84,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Rogerio Aparecido do Carmo",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Rogerio Aparecido do Carmo",
+    "diretor": "Não mapeado",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "RX00060035",
@@ -786,10 +981,13 @@
     "realizado": 1948595.68,
     "desvio": -922635.09,
     "desvio_pct": -32.13,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Welington Cristiano de Moraes",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060051",
@@ -798,10 +996,13 @@
     "realizado": 1929017.26,
     "desvio": -2823687.65,
     "desvio_pct": -59.41,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Joyce Macieri",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060821",
@@ -810,10 +1011,13 @@
     "realizado": 1924243.0,
     "desvio": -2352622.39,
     "desvio_pct": -55.01,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Sonia Yonara da Silva",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Sonia Yonara da Silva",
+    "diretor": "Fernanda Devecz Penteado de Luca",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060635",
@@ -822,10 +1026,13 @@
     "realizado": 1919787.16,
     "desvio": -1217879.9,
     "desvio_pct": -38.81,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Stefany Cristina Truculo",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Aeronaves",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00060036",
@@ -836,8 +1043,11 @@
     "desvio_pct": -27.75,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcelo Ribeiro Neiva",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060387",
@@ -846,10 +1056,13 @@
     "realizado": 1846111.97,
     "desvio": -1438481.12,
     "desvio_pct": -43.79,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alvaro Luiz Mansor Neto",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Alvaro Luiz Mansor Neto",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060894",
@@ -858,10 +1071,13 @@
     "realizado": 1817960.27,
     "desvio": -1487261.11,
     "desvio_pct": -45.0,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Rodinei Ferraz",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX05225006",
@@ -872,8 +1088,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00060017",
@@ -882,10 +1101,13 @@
     "realizado": 1789735.0,
     "desvio": -1295981.62,
     "desvio_pct": -42.0,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Denise Batista da Rocha",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Denise Batista da Rocha",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060730",
@@ -894,10 +1116,13 @@
     "realizado": 1723102.27,
     "desvio": -1934772.18,
     "desvio_pct": -52.89,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alacir Imidio da Silva",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060709",
@@ -906,10 +1131,13 @@
     "realizado": 1720620.78,
     "desvio": -3743572.32,
     "desvio_pct": -68.51,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Gracie Verde Selva",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Gracie Verde Selva",
+    "diretor": "Joao de Almeida Sampaio Filho",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Sustentabilidade/Renove",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060321",
@@ -918,10 +1146,13 @@
     "realizado": 1680909.36,
     "desvio": -1466841.27,
     "desvio_pct": -46.6,
-    "gestor": "Leandro Protzen",
+    "gestor": "Jocivane da Silva Oliveira de Morais",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Weiss Reimao de Melo",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "RX00060664",
@@ -930,10 +1161,13 @@
     "realizado": 1656099.79,
     "desvio": -1228399.68,
     "desvio_pct": -42.59,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060023",
@@ -942,10 +1176,13 @@
     "realizado": 1602027.72,
     "desvio": -924078.64,
     "desvio_pct": -36.58,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Alex Scramim",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Jose Roberto Affonso",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060008",
@@ -954,10 +1191,13 @@
     "realizado": 1591370.87,
     "desvio": -2028981.89,
     "desvio_pct": -56.04,
-    "gestor": "Leandro Protzen",
+    "gestor": "Paulo Cesar Nunes Silva",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Fabio Adriano Pereira",
+    "diretor": "Jose Roberto Affonso",
+    "clevel": "Leandro Protzen",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "AX00060367",
@@ -966,10 +1206,13 @@
     "realizado": 1463943.77,
     "desvio": -478631.98,
     "desvio_pct": -24.64,
-    "gestor": "Leandro Protzen",
+    "gestor": "Patricia Camillo",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Gilson Luciano Brioli",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00960056",
@@ -980,8 +1223,11 @@
     "desvio_pct": -57.34,
     "gestor": "Não mapeado",
     "email_gestor": "",
-    "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060082",
@@ -990,10 +1236,13 @@
     "realizado": 1433405.13,
     "desvio": -646081.87,
     "desvio_pct": -31.07,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Caroline Heck Drape Scramim",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060380",
@@ -1002,10 +1251,13 @@
     "realizado": 1419270.39,
     "desvio": -866260.97,
     "desvio_pct": -37.9,
-    "gestor": "Flavia Regina Ribeiro da Silva Villa",
+    "gestor": "Fernanda Brandao Scur",
     "email_gestor": "flavia.ribeiro@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Alexandre de Aguiar Cezimbra",
+    "clevel": "Flavia Regina Ribeiro da Silva Villa",
+    "macroarea": "Jurídico",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060647",
@@ -1014,10 +1266,13 @@
     "realizado": 1384357.13,
     "desvio": -879964.32,
     "desvio_pct": -38.86,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Juliano Vicoto Goncalves",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Ralph Pinotti Leite",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00960350",
@@ -1026,10 +1281,13 @@
     "realizado": 1367654.39,
     "desvio": -1572097.18,
     "desvio_pct": -53.48,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Fabio Correa dos Santos",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX00060717",
@@ -1040,8 +1298,11 @@
     "desvio_pct": -10.63,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcelo Ribeiro Neiva",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "YX00960361",
@@ -1050,10 +1311,13 @@
     "realizado": 1340162.65,
     "desvio": -142460.23,
     "desvio_pct": -9.61,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Marcelo Yasuhiro Ramos Narita",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcelo Yasuhiro Ramos Narita",
+    "diretor": "Anderson Nascimento",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060006",
@@ -1062,10 +1326,13 @@
     "realizado": 1316460.2,
     "desvio": 465235.76,
     "desvio_pct": 54.65,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Joao de Almeida Sampaio Filho",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Joao de Almeida Sampaio Filho",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "CGA",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060732",
@@ -1074,10 +1341,13 @@
     "realizado": 1309639.45,
     "desvio": -1037184.48,
     "desvio_pct": -44.2,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Adriana Conceicao Pedroza Machado",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060656",
@@ -1088,8 +1358,11 @@
     "desvio_pct": -27.83,
     "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060090",
@@ -1098,10 +1371,13 @@
     "realizado": 1287112.15,
     "desvio": -2387952.63,
     "desvio_pct": -64.98,
-    "gestor": "Leandro Protzen",
+    "gestor": "Melina Izidoro Marchi",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Rostyner Pereira Costa",
+    "diretor": "Fabiano Ribeiro Tito Rosa",
+    "clevel": "Leandro Protzen",
+    "macroarea": "CRM/SRM",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "AX00060356",
@@ -1112,8 +1388,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XX00060212",
@@ -1122,10 +1401,13 @@
     "realizado": 1264787.0,
     "desvio": -41649.43,
     "desvio_pct": -3.19,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Caroline Andrade Santos",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX00060106",
@@ -1134,10 +1416,13 @@
     "realizado": 1262348.93,
     "desvio": -2681238.72,
     "desvio_pct": -67.99,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Flavia Rodrigues Pignata",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcia Regina Rodrigues Lopes",
+    "diretor": "Não mapeado",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "RX00060560",
@@ -1148,8 +1433,11 @@
     "desvio_pct": -68.26,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060729",
@@ -1158,10 +1446,13 @@
     "realizado": 1209076.7,
     "desvio": -823449.0,
     "desvio_pct": -40.51,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alacir Imidio da Silva",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060726",
@@ -1170,10 +1461,13 @@
     "realizado": 1142652.16,
     "desvio": -881025.29,
     "desvio_pct": -43.54,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Adriana Conceicao Pedroza Machado",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00060693",
@@ -1182,10 +1476,13 @@
     "realizado": 1140862.4,
     "desvio": -469719.43,
     "desvio_pct": -29.16,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Bruno Martins Gimenez",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AX00960082",
@@ -1194,10 +1491,13 @@
     "realizado": 1134651.94,
     "desvio": 60076.82,
     "desvio_pct": 5.59,
-    "gestor": "Leandro Protzen",
+    "gestor": "Rafael Henrique Amaral",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "AX00060082",
@@ -1206,10 +1506,13 @@
     "realizado": 1134558.64,
     "desvio": -2068969.12,
     "desvio_pct": -64.58,
-    "gestor": "Leandro Protzen",
+    "gestor": "Rafael Henrique Amaral",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00060415",
@@ -1218,10 +1521,13 @@
     "realizado": 1131116.16,
     "desvio": -219195.04,
     "desvio_pct": -16.23,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Stefany Cristina Truculo",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00060494",
@@ -1232,8 +1538,11 @@
     "desvio_pct": -39.67,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AX00060081",
@@ -1242,10 +1551,13 @@
     "realizado": 1094841.56,
     "desvio": 1094841.56,
     "desvio_pct": 0,
-    "gestor": "Frederico Alcantara de Queiroz",
+    "gestor": "Robert Emilio Walder Silvestri",
     "email_gestor": "frederico.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Robert Emilio Walder Silvestri",
+    "clevel": "Frederico Alcantara de Queiroz",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00060010",
@@ -1254,10 +1566,13 @@
     "realizado": 1084030.79,
     "desvio": -794683.84,
     "desvio_pct": -42.3,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Thamara Fernanda da Silva Brito",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Murielle Xavier dos Reis",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060809",
@@ -1266,10 +1581,13 @@
     "realizado": 1081412.99,
     "desvio": -2122825.01,
     "desvio_pct": -66.25,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Carolina Vinhal Grupioni",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Fabian Estermann Meyer",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Executivos",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX02580034",
@@ -1280,8 +1598,11 @@
     "desvio_pct": 107.79,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "YX00960830",
@@ -1290,10 +1611,13 @@
     "realizado": 1027336.46,
     "desvio": -814096.99,
     "desvio_pct": -44.21,
-    "gestor": "Frederico Alcantara de Queiroz",
+    "gestor": "Robert Emilio Walder Silvestri",
     "email_gestor": "frederico.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Robert Emilio Walder Silvestri",
+    "clevel": "Frederico Alcantara de Queiroz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX04720824",
@@ -1302,10 +1626,13 @@
     "realizado": 1021421.42,
     "desvio": 1021421.42,
     "desvio_pct": 0,
-    "gestor": "Norberto Giangrande",
+    "gestor": "Alejandro Spataro",
     "email_gestor": "norberto.giangrande@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Daniela Arantes",
+    "diretor": "Não mapeado",
+    "clevel": "Norberto Giangrande",
+    "macroarea": "Marketing",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060072",
@@ -1314,10 +1641,13 @@
     "realizado": 1018708.95,
     "desvio": -1092117.78,
     "desvio_pct": -51.74,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Adriana Conceicao Pedroza Machado",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX02580043",
@@ -1326,10 +1656,13 @@
     "realizado": 1007953.06,
     "desvio": -407001.34,
     "desvio_pct": -28.76,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alvaro Luiz Mansor Neto",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Alvaro Luiz Mansor Neto",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060863",
@@ -1338,10 +1671,13 @@
     "realizado": 1002399.9,
     "desvio": -1305488.83,
     "desvio_pct": -56.57,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Najla Khadige Abou Haikal",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Najla Khadige Abou Haikal",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "CRM/SRM",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00960008",
@@ -1350,10 +1686,13 @@
     "realizado": 1001343.49,
     "desvio": 856535.03,
     "desvio_pct": 591.5,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Barbara Madrid Botelho",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Anderson Nascimento",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Comercial Beef Brasil"
   },
   {
     "code": "AX00960056",
@@ -1364,8 +1703,11 @@
     "desvio_pct": -64.8,
     "gestor": "Não mapeado",
     "email_gestor": "",
-    "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00060579",
@@ -1374,10 +1716,13 @@
     "realizado": 953661.73,
     "desvio": 18506.16,
     "desvio_pct": 1.98,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Silvia Regina de Massena",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Fabian Estermann Meyer",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Executivos",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00960328",
@@ -1386,10 +1731,13 @@
     "realizado": 894221.54,
     "desvio": -910454.16,
     "desvio_pct": -50.45,
-    "gestor": "Leandro Protzen",
+    "gestor": "Walisson Guilhermitte Rodrigues",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Weiss Reimao de Melo",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "RX00060008",
@@ -1398,10 +1746,13 @@
     "realizado": 891811.68,
     "desvio": -741189.24,
     "desvio_pct": -45.39,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Rubens Mazzetti Junior",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AA05340082",
@@ -1412,8 +1763,11 @@
     "desvio_pct": -31.26,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "XX00060079",
@@ -1422,10 +1776,13 @@
     "realizado": 880907.35,
     "desvio": -953420.3,
     "desvio_pct": -51.98,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Adriana Conceicao Pedroza Machado",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960070",
@@ -1434,10 +1791,13 @@
     "realizado": 877833.79,
     "desvio": -871476.64,
     "desvio_pct": -49.82,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Flavia Silva Rodrigues da Costa",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Alexandre Rocha Valeriano",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Controle",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060098",
@@ -1446,10 +1806,13 @@
     "realizado": 875316.98,
     "desvio": -641317.23,
     "desvio_pct": -42.29,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Daiana Kelly Toledo da Silva",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Daiana Kelly Toledo da Silva",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00960811",
@@ -1460,8 +1823,11 @@
     "desvio_pct": -61.68,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Gustavo Elias Miguel",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "YX00960110",
@@ -1470,10 +1836,13 @@
     "realizado": 871912.79,
     "desvio": 526915.28,
     "desvio_pct": 152.73,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Maria Fernanda Isac",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Vitor Jose Fernandes de Matos",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060045",
@@ -1484,8 +1853,11 @@
     "desvio_pct": -39.0,
     "gestor": "Roberto Hoelz Stern",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX00060764",
@@ -1494,10 +1866,13 @@
     "realizado": 856054.77,
     "desvio": -702219.56,
     "desvio_pct": -45.06,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Laercio Nascimento",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060890",
@@ -1506,10 +1881,13 @@
     "realizado": 852956.72,
     "desvio": -752768.03,
     "desvio_pct": -46.88,
-    "gestor": "Flavia Regina Ribeiro da Silva Villa",
+    "gestor": "Camila Tsuki Ito",
     "email_gestor": "flavia.ribeiro@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Flavia Regina Ribeiro da Silva Villa",
+    "macroarea": "Cultura",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00960321",
@@ -1518,10 +1896,13 @@
     "realizado": 836989.31,
     "desvio": 461663.78,
     "desvio_pct": 123.0,
-    "gestor": "Leandro Protzen",
+    "gestor": "Jocivane da Silva Oliveira de Morais",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Weiss Reimao de Melo",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00060469",
@@ -1530,10 +1911,13 @@
     "realizado": 834277.3,
     "desvio": -936892.3,
     "desvio_pct": -52.9,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alacir Imidio da Silva",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX05220066",
@@ -1544,8 +1928,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
-    "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060015",
@@ -1554,10 +1941,13 @@
     "realizado": 809318.85,
     "desvio": -1255210.22,
     "desvio_pct": -60.8,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Mariane Fonseca de Souza Gimenes",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Sonia Yonara da Silva",
+    "diretor": "Fernanda Devecz Penteado de Luca",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960020",
@@ -1566,10 +1956,13 @@
     "realizado": 808165.65,
     "desvio": 468400.39,
     "desvio_pct": 137.86,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Raphael de Oliveira Roza",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Jose Roberto Affonso",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00060052",
@@ -1580,8 +1973,11 @@
     "desvio_pct": -42.36,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AX00060334",
@@ -1590,10 +1986,13 @@
     "realizado": 770438.77,
     "desvio": -703972.71,
     "desvio_pct": -47.75,
-    "gestor": "Leandro Protzen",
+    "gestor": "Roniele Gervasio",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00060050",
@@ -1602,10 +2001,13 @@
     "realizado": 756697.45,
     "desvio": -1589331.28,
     "desvio_pct": -67.75,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Henrique Cincerre Neto",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Alexandre Rocha Valeriano",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Controle",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060662",
@@ -1614,10 +2016,13 @@
     "realizado": 753288.96,
     "desvio": -686734.25,
     "desvio_pct": -47.69,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Juliano Vicoto Goncalves",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Ralph Pinotti Leite",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060080",
@@ -1626,10 +2031,13 @@
     "realizado": 736014.58,
     "desvio": -921821.55,
     "desvio_pct": -55.6,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Nathan Freire",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060370",
@@ -1638,10 +2046,13 @@
     "realizado": 711293.32,
     "desvio": 133973.27,
     "desvio_pct": 23.21,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Nathan Freire",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX04730083",
@@ -1650,10 +2061,13 @@
     "realizado": 708851.29,
     "desvio": 708851.29,
     "desvio_pct": 0,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Marcio Kravetch Ratico",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Kravetch Ratico",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "RX00960693",
@@ -1662,10 +2076,13 @@
     "realizado": 696737.95,
     "desvio": -717214.12,
     "desvio_pct": -50.72,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Bruno Martins Gimenez",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060073",
@@ -1674,10 +2091,13 @@
     "realizado": 693498.0,
     "desvio": -520848.63,
     "desvio_pct": -42.89,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Adriana Conceicao Pedroza Machado",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00960334",
@@ -1686,10 +2106,13 @@
     "realizado": 643207.78,
     "desvio": 346259.16,
     "desvio_pct": 116.61,
-    "gestor": "Leandro Protzen",
+    "gestor": "Roniele Gervasio",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "RX00060706",
@@ -1700,8 +2123,11 @@
     "desvio_pct": -35.33,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Michel Paulo de Oliveira",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00960809",
@@ -1710,10 +2136,13 @@
     "realizado": 617463.85,
     "desvio": 84100.26,
     "desvio_pct": 15.77,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Carolina Vinhal Grupioni",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Fabian Estermann Meyer",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Executivos",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060689",
@@ -1722,10 +2151,13 @@
     "realizado": 602792.89,
     "desvio": 602792.89,
     "desvio_pct": 0,
-    "gestor": "Norberto Giangrande",
+    "gestor": "Melise Ariella Roncoleta Scarpa",
     "email_gestor": "norberto.giangrande@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Daniela Arantes",
+    "diretor": "Não mapeado",
+    "clevel": "Norberto Giangrande",
+    "macroarea": "Marketing",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060074",
@@ -1734,10 +2166,13 @@
     "realizado": 602716.31,
     "desvio": -307689.77,
     "desvio_pct": -33.8,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Adriana Conceicao Pedroza Machado",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060657",
@@ -1748,8 +2183,11 @@
     "desvio_pct": -35.56,
     "gestor": "Fernando Galletti de Queiroz",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Sergio de Zen",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Inteligência",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060328",
@@ -1758,10 +2196,13 @@
     "realizado": 581822.44,
     "desvio": -508992.33,
     "desvio_pct": -46.66,
-    "gestor": "Leandro Protzen",
+    "gestor": "Walisson Guilhermitte Rodrigues",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Weiss Reimao de Melo",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00060735",
@@ -1772,8 +2213,11 @@
     "desvio_pct": -71.93,
     "gestor": "Roberto Hoelz Stern",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00960218",
@@ -1782,10 +2226,13 @@
     "realizado": 564666.04,
     "desvio": -648514.95,
     "desvio_pct": -53.46,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Lucas Camillo da Silva",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcelo Ribeiro Neiva",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060065",
@@ -1794,10 +2241,13 @@
     "realizado": 561404.26,
     "desvio": -652445.32,
     "desvio_pct": -53.75,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Pedro Petroni de Almeida Sampaio",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960050",
@@ -1806,10 +2256,13 @@
     "realizado": 559445.96,
     "desvio": -64672.05,
     "desvio_pct": -10.36,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Henrique Cincerre Neto",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Alexandre Rocha Valeriano",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Controle",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060833",
@@ -1818,10 +2271,13 @@
     "realizado": 555053.91,
     "desvio": -785037.79,
     "desvio_pct": -58.58,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Sonia Yonara da Silva",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Sonia Yonara da Silva",
+    "diretor": "Fernanda Devecz Penteado de Luca",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960553",
@@ -1830,10 +2286,13 @@
     "realizado": 530069.92,
     "desvio": 492943.85,
     "desvio_pct": 1327.76,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Welington Paulino de Oliveira",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960015",
@@ -1842,10 +2301,13 @@
     "realizado": 518838.87,
     "desvio": 291780.17,
     "desvio_pct": 128.5,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Mariane Fonseca de Souza Gimenes",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Sonia Yonara da Silva",
+    "diretor": "Fernanda Devecz Penteado de Luca",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00060064",
@@ -1854,10 +2316,13 @@
     "realizado": 510079.48,
     "desvio": -160309.72,
     "desvio_pct": -23.91,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Gustavo Elias Miguel",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suprimentos",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AX00060111",
@@ -1866,10 +2331,13 @@
     "realizado": 482895.4,
     "desvio": -9849233.54,
     "desvio_pct": -95.33,
-    "gestor": "Leandro Protzen",
+    "gestor": "Tania Cristina Vaz Batista Cintra",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcia Regina Rodrigues Lopes",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "AX00060126",
@@ -1878,10 +2346,13 @@
     "realizado": 480131.29,
     "desvio": -348867.12,
     "desvio_pct": -42.08,
-    "gestor": "Leandro Protzen",
+    "gestor": "Rodrigo Garziera",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Rodrigo Garziera",
+    "diretor": "Gilson Luciano Brioli",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "RX00060172",
@@ -1892,8 +2363,11 @@
     "desvio_pct": -65.3,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcelo Ribeiro Neiva",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX00960560",
@@ -1904,8 +2378,11 @@
     "desvio_pct": -13.27,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060077",
@@ -1914,10 +2391,13 @@
     "realizado": 467567.64,
     "desvio": -492481.08,
     "desvio_pct": -51.3,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Daiana Kelly Toledo da Silva",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Daiana Kelly Toledo da Silva",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060213",
@@ -1926,10 +2406,13 @@
     "realizado": 464435.64,
     "desvio": -269538.66,
     "desvio_pct": -36.72,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Daiana Kelly Toledo da Silva",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Daiana Kelly Toledo da Silva",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XB02580726",
@@ -1940,8 +2423,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "AA04630225",
@@ -1952,8 +2438,11 @@
     "desvio_pct": -47.47,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "AX00060114",
@@ -1962,10 +2451,13 @@
     "realizado": 447016.37,
     "desvio": -930754.6,
     "desvio_pct": -67.56,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Wagner Munhoz de Souza",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Carlos Eduardo Heitor Canas",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "RX00960056",
@@ -1976,8 +2468,11 @@
     "desvio_pct": -35.15,
     "gestor": "Não mapeado",
     "email_gestor": "",
-    "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060482",
@@ -1986,10 +2481,13 @@
     "realizado": 444194.63,
     "desvio": -259273.21,
     "desvio_pct": -36.86,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Stefany Cristina Truculo",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060800",
@@ -1998,10 +2496,13 @@
     "realizado": 434329.34,
     "desvio": 434329.34,
     "desvio_pct": 0,
-    "gestor": "Leandro Protzen",
+    "gestor": "Marcelo Ribeiro Neiva",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcelo Ribeiro Neiva",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00060681",
@@ -2010,10 +2511,13 @@
     "realizado": 424885.29,
     "desvio": -291659.04,
     "desvio_pct": -40.7,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alvaro Luiz Mansor Neto",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Alvaro Luiz Mansor Neto",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060764",
@@ -2022,10 +2526,13 @@
     "realizado": 413784.41,
     "desvio": -56665.58,
     "desvio_pct": -12.04,
-    "gestor": "Leandro Protzen",
+    "gestor": "Laercio Nascimento",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00060076",
@@ -2034,10 +2541,13 @@
     "realizado": 412883.9,
     "desvio": -120962.93,
     "desvio_pct": -22.66,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Adriana Conceicao Pedroza Machado",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060704",
@@ -2046,10 +2556,13 @@
     "realizado": 410587.36,
     "desvio": -1430245.24,
     "desvio_pct": -77.7,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Regiane Borges Marcal",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Alexandre Rocha Valeriano",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Controle",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060036",
@@ -2058,10 +2571,13 @@
     "realizado": 402081.73,
     "desvio": 402081.73,
     "desvio_pct": 0,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Marcelo Ribeiro Neiva",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcelo Ribeiro Neiva",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "YX00060827",
@@ -2070,10 +2586,13 @@
     "realizado": 401522.25,
     "desvio": -269371.11,
     "desvio_pct": -40.15,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Melina Izidoro Marchi",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Fabiano Ribeiro Tito Rosa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "AA05270082",
@@ -2084,8 +2603,11 @@
     "desvio_pct": -54.57,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "IA00010284",
@@ -2094,10 +2616,13 @@
     "realizado": 392601.11,
     "desvio": 344276.44,
     "desvio_pct": 712.42,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Bruno Paiva de Souza",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Energia",
+    "negocio": "Comercializadora Energia"
   },
   {
     "code": "XX00060728",
@@ -2106,10 +2631,13 @@
     "realizado": 391008.68,
     "desvio": -260792.94,
     "desvio_pct": -40.01,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alacir Imidio da Silva",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960824",
@@ -2118,10 +2646,13 @@
     "realizado": 386591.55,
     "desvio": 310995.27,
     "desvio_pct": 411.39,
-    "gestor": "Norberto Giangrande",
+    "gestor": "Melise Ariella Roncoleta Scarpa",
     "email_gestor": "norberto.giangrande@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Daniela Arantes",
+    "diretor": "Não mapeado",
+    "clevel": "Norberto Giangrande",
+    "macroarea": "Marketing",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RA05230664",
@@ -2130,10 +2661,13 @@
     "realizado": 378822.98,
     "desvio": 42826.55,
     "desvio_pct": 12.75,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060831",
@@ -2142,10 +2676,13 @@
     "realizado": 378543.28,
     "desvio": -86741.72,
     "desvio_pct": -18.64,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Leandro Tadeu Flosi Cury",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "IA03160298",
@@ -2154,10 +2691,13 @@
     "realizado": 373886.33,
     "desvio": 373886.33,
     "desvio_pct": 0,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Bruno Paiva de Souza",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Comercializadora Energia"
   },
   {
     "code": "XX00060070",
@@ -2166,10 +2706,13 @@
     "realizado": 369328.11,
     "desvio": -382296.35,
     "desvio_pct": -50.86,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Flavia Silva Rodrigues da Costa",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Alexandre Rocha Valeriano",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Controle",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960013",
@@ -2178,10 +2721,13 @@
     "realizado": 342230.67,
     "desvio": -768861.15,
     "desvio_pct": -69.2,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Camila de Lima Pontes",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Carolina Rodrigues Campezato",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060913",
@@ -2190,10 +2736,13 @@
     "realizado": 341590.73,
     "desvio": -800066.42,
     "desvio_pct": -70.08,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Luiza Fadul Diniz Bessa",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Lilian Nascimento",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AA00430057",
@@ -2204,8 +2753,11 @@
     "desvio_pct": -37.13,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "AA00490057",
@@ -2216,8 +2768,11 @@
     "desvio_pct": -38.95,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "XX04720051",
@@ -2226,10 +2781,13 @@
     "realizado": 323799.92,
     "desvio": 323799.92,
     "desvio_pct": 0,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Joyce Macieri",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060285",
@@ -2238,10 +2796,13 @@
     "realizado": 321596.1,
     "desvio": -10731.38,
     "desvio_pct": -3.23,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Flavia Silva Rodrigues da Costa",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Alexandre Rocha Valeriano",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Controle",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960039",
@@ -2250,10 +2811,13 @@
     "realizado": 320660.29,
     "desvio": -203411.2,
     "desvio_pct": -38.81,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Leandro Tadeu Flosi Cury",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00510884",
@@ -2262,10 +2826,13 @@
     "realizado": 320268.74,
     "desvio": -206637.23,
     "desvio_pct": -39.22,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alacir Imidio da Silva",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00960064",
@@ -2274,10 +2841,13 @@
     "realizado": 304650.93,
     "desvio": -142400.71,
     "desvio_pct": -31.85,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Gustavo Elias Miguel",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suprimentos",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060354",
@@ -2286,10 +2856,13 @@
     "realizado": 302917.23,
     "desvio": -194693.82,
     "desvio_pct": -39.13,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Daiana Kelly Toledo da Silva",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Daiana Kelly Toledo da Silva",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060035",
@@ -2298,10 +2871,13 @@
     "realizado": 296513.94,
     "desvio": 296513.94,
     "desvio_pct": 0,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Leivison Tadeu Silva da Cruz",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "RX00060791",
@@ -2312,8 +2888,11 @@
     "desvio_pct": -48.9,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcelo Ribeiro Neiva",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX00060218",
@@ -2322,10 +2901,13 @@
     "realizado": 271866.75,
     "desvio": -1658998.13,
     "desvio_pct": -85.92,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Lucas Camillo da Silva",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcelo Ribeiro Neiva",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00960848",
@@ -2334,10 +2916,13 @@
     "realizado": 271468.53,
     "desvio": -366504.9,
     "desvio_pct": -57.45,
-    "gestor": "Frederico Alcantara de Queiroz",
+    "gestor": "Mateus Felipe Luz",
     "email_gestor": "frederico.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Michaela de Dobozy",
+    "clevel": "Frederico Alcantara de Queiroz",
+    "macroarea": "NR",
+    "negocio": "Corporativo Negócios Relacionados"
   },
   {
     "code": "XX00060898",
@@ -2346,10 +2931,13 @@
     "realizado": 269210.02,
     "desvio": -38669.98,
     "desvio_pct": -12.56,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Norberto Giangrande",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Norberto Giangrande",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Marketing",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AA05290082",
@@ -2360,8 +2948,11 @@
     "desvio_pct": -45.26,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "XX00060733",
@@ -2370,10 +2961,13 @@
     "realizado": 262232.42,
     "desvio": -593531.59,
     "desvio_pct": -69.36,
-    "gestor": "Flavia Regina Ribeiro da Silva Villa",
+    "gestor": "Tulio de Oliveira Faria",
     "email_gestor": "flavia.ribeiro@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Flavia Regina Ribeiro da Silva Villa",
+    "macroarea": "Jurídico",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00060420",
@@ -2384,8 +2978,11 @@
     "desvio_pct": 876.13,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AX00060225",
@@ -2396,8 +2993,11 @@
     "desvio_pct": -5.82,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "XX00060742",
@@ -2406,10 +3006,13 @@
     "realizado": 251683.0,
     "desvio": -2142959.14,
     "desvio_pct": -89.49,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Jose Roberto Affonso",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Jose Roberto Affonso",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00060811",
@@ -2420,8 +3023,11 @@
     "desvio_pct": -58.81,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Gustavo Elias Miguel",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060078",
@@ -2430,10 +3036,13 @@
     "realizado": 250947.37,
     "desvio": -298237.5,
     "desvio_pct": -54.31,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Adriana Conceicao Pedroza Machado",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX00060857",
@@ -2442,10 +3051,13 @@
     "realizado": 250840.18,
     "desvio": -262068.31,
     "desvio_pct": -51.09,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Rogerio Aparecido do Carmo",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Rogerio Aparecido do Carmo",
+    "diretor": "Não mapeado",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX05220704",
@@ -2456,8 +3068,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
-    "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
+    "macroarea": "Controle",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00960832",
@@ -2466,10 +3081,13 @@
     "realizado": 246134.71,
     "desvio": -268282.59,
     "desvio_pct": -52.15,
-    "gestor": "Leandro Protzen",
+    "gestor": "Pedro Henrique Souza Ribeiro",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Glauco Smania",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "AX05220282",
@@ -2480,8 +3098,11 @@
     "desvio_pct": 0,
     "gestor": "Leandro Protzen",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "RX00060702",
@@ -2490,10 +3111,13 @@
     "realizado": 232299.55,
     "desvio": 231734.12,
     "desvio_pct": 40983.7,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Luis Ricardo Alves Luz",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AA00490082",
@@ -2504,8 +3128,11 @@
     "desvio_pct": -44.38,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "XX00060369",
@@ -2514,10 +3141,13 @@
     "realizado": 227668.86,
     "desvio": -66405611.31,
     "desvio_pct": -99.66,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Lilian Nascimento",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Lilian Nascimento",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00040553",
@@ -2526,10 +3156,13 @@
     "realizado": 227148.76,
     "desvio": 224948.76,
     "desvio_pct": 10224.94,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Welington Paulino de Oliveira",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060731",
@@ -2538,10 +3171,13 @@
     "realizado": 223973.26,
     "desvio": -282402.26,
     "desvio_pct": -55.77,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Adriana Conceicao Pedroza Machado",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960387",
@@ -2550,10 +3186,13 @@
     "realizado": 217606.99,
     "desvio": -38303.52,
     "desvio_pct": -14.97,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Alvaro Luiz Mansor Neto",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Alvaro Luiz Mansor Neto",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX00960828",
@@ -2562,10 +3201,13 @@
     "realizado": 214784.63,
     "desvio": -334972.94,
     "desvio_pct": -60.93,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Silvio Shinji Irizawa",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Kravetch Ratico",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "YX04730064",
@@ -2574,10 +3216,13 @@
     "realizado": 212225.62,
     "desvio": 212225.62,
     "desvio_pct": 0,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Wagner Munhoz de Souza",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Carlos Eduardo Heitor Canas",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suprimentos",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060366",
@@ -2586,10 +3231,13 @@
     "realizado": 211139.6,
     "desvio": -936648.61,
     "desvio_pct": -81.6,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Jairo Ronan Ferreira",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Jairo Ronan Ferreira",
+    "diretor": "Não mapeado",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960917",
@@ -2598,10 +3246,13 @@
     "realizado": 207731.74,
     "desvio": -12156.75,
     "desvio_pct": -5.53,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Rodrigo Arnus Koelle",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Rodrigo Arnus Koelle",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suprimentos",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX05220009",
@@ -2610,10 +3261,13 @@
     "realizado": 200968.6,
     "desvio": 200968.6,
     "desvio_pct": 0,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Marco Aurelio Gasparini",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060388",
@@ -2622,10 +3276,13 @@
     "realizado": 198772.28,
     "desvio": -181870.22,
     "desvio_pct": -47.78,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Roberto Alves de Almeida",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Roberto Alves de Almeida",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "CGA",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060357",
@@ -2634,10 +3291,13 @@
     "realizado": 197372.89,
     "desvio": 171200.79,
     "desvio_pct": 654.13,
-    "gestor": "Flavia Regina Ribeiro da Silva Villa",
+    "gestor": "Raquel Soares Mendjoud Guedes Prado",
     "email_gestor": "flavia.ribeiro@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Flavia Regina Ribeiro da Silva Villa",
+    "macroarea": "Jurídico",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00960702",
@@ -2646,10 +3306,13 @@
     "realizado": 195156.54,
     "desvio": -543392.11,
     "desvio_pct": -73.58,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Luis Ricardo Alves Luz",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX00960792",
@@ -2660,8 +3323,11 @@
     "desvio_pct": -38.03,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060011",
@@ -2670,10 +3336,13 @@
     "realizado": 192920.67,
     "desvio": -259596.96,
     "desvio_pct": -57.37,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Camila de Lima Pontes",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Carolina Rodrigues Campezato",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX04940082",
@@ -2684,8 +3353,11 @@
     "desvio_pct": -35.53,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060008",
@@ -2694,10 +3366,13 @@
     "realizado": 183478.95,
     "desvio": -197604.04,
     "desvio_pct": -51.85,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Jose Roberto Affonso",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Jose Roberto Affonso",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00960380",
@@ -2706,10 +3381,13 @@
     "realizado": 172185.02,
     "desvio": -413196.1,
     "desvio_pct": -70.59,
-    "gestor": "Flavia Regina Ribeiro da Silva Villa",
+    "gestor": "Fernanda Brandao Scur",
     "email_gestor": "flavia.ribeiro@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Alexandre de Aguiar Cezimbra",
+    "clevel": "Flavia Regina Ribeiro da Silva Villa",
+    "macroarea": "Jurídico",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060727",
@@ -2718,10 +3396,13 @@
     "realizado": 171236.46,
     "desvio": -164128.72,
     "desvio_pct": -48.94,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Adriana Conceicao Pedroza Machado",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060031",
@@ -2730,10 +3411,13 @@
     "realizado": 168014.88,
     "desvio": -305187.95,
     "desvio_pct": -64.49,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Marcela Luiza Moura",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcela Luiza Moura",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "CRM/SRM",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060057",
@@ -2742,10 +3426,13 @@
     "realizado": 163828.78,
     "desvio": -160650.38,
     "desvio_pct": -49.51,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Regiane Borges Marcal",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Alexandre Rocha Valeriano",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Controle",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "RA00040664",
@@ -2754,10 +3441,13 @@
     "realizado": 158600.8,
     "desvio": -76679.32,
     "desvio_pct": -32.59,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX00060082",
@@ -2768,8 +3458,11 @@
     "desvio_pct": -94.43,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060655",
@@ -2780,8 +3473,11 @@
     "desvio_pct": -49.23,
     "gestor": "Flavia Regina Ribeiro da Silva Villa",
     "email_gestor": "flavia.ribeiro@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Flavia Regina Ribeiro da Silva Villa",
+    "macroarea": "Jurídico",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AA00430082",
@@ -2792,8 +3488,11 @@
     "desvio_pct": -43.51,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "YX00960827",
@@ -2802,10 +3501,13 @@
     "realizado": 143582.1,
     "desvio": -282553.01,
     "desvio_pct": -66.31,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Melina Izidoro Marchi",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Fabiano Ribeiro Tito Rosa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060215",
@@ -2814,10 +3516,13 @@
     "realizado": 142390.51,
     "desvio": -168028.76,
     "desvio_pct": -54.13,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Flavia Silva Rodrigues da Costa",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Alexandre Rocha Valeriano",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "Controle",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX02580020",
@@ -2826,10 +3531,13 @@
     "realizado": 132588.01,
     "desvio": -91518.4,
     "desvio_pct": -40.84,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Raphael de Oliveira Roza",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Jose Roberto Affonso",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060061",
@@ -2838,10 +3546,13 @@
     "realizado": 131763.48,
     "desvio": -47430.52,
     "desvio_pct": -26.47,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Stefany Cristina Truculo",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Aeronaves",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX00060388",
@@ -2850,10 +3561,13 @@
     "realizado": 129321.05,
     "desvio": -140780.89,
     "desvio_pct": -52.12,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Wagner Jose Augusto",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Wagner Jose Augusto",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "CGA",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX00960025",
@@ -2862,10 +3576,13 @@
     "realizado": 127008.96,
     "desvio": -492147.99,
     "desvio_pct": -79.49,
-    "gestor": "Flavia Regina Ribeiro da Silva Villa",
+    "gestor": "Felipe de Araujo Cruz",
     "email_gestor": "flavia.ribeiro@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Gustavo Marioti",
+    "clevel": "Flavia Regina Ribeiro da Silva Villa",
+    "macroarea": "Jurídico",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RA05320664",
@@ -2874,10 +3591,13 @@
     "realizado": 124390.37,
     "desvio": -53430.39,
     "desvio_pct": -30.05,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX05330023",
@@ -2886,10 +3606,13 @@
     "realizado": 122100.68,
     "desvio": 122100.68,
     "desvio_pct": 0,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Alex Scramim",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Jose Roberto Affonso",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00960042",
@@ -2900,8 +3623,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XX00060805",
@@ -2912,8 +3638,11 @@
     "desvio_pct": -57.44,
     "gestor": "Roberto Hoelz Stern",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AA05270057",
@@ -2924,8 +3653,11 @@
     "desvio_pct": -37.2,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "RX00060023",
@@ -2934,10 +3666,13 @@
     "realizado": 114066.08,
     "desvio": -587729.31,
     "desvio_pct": -83.75,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Alex Scramim",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Jose Roberto Affonso",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AX00060290",
@@ -2946,10 +3681,13 @@
     "realizado": 112853.05,
     "desvio": -97530.37,
     "desvio_pct": -46.36,
-    "gestor": "Frederico Alcantara de Queiroz",
+    "gestor": "Robert Emilio Walder Silvestri",
     "email_gestor": "frederico.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Robert Emilio Walder Silvestri",
+    "clevel": "Frederico Alcantara de Queiroz",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "RX00510008",
@@ -2958,10 +3696,13 @@
     "realizado": 108163.67,
     "desvio": 78831.71,
     "desvio_pct": 268.76,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Rubens Mazzetti Junior",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RA00600664",
@@ -2970,10 +3711,13 @@
     "realizado": 103370.85,
     "desvio": -71429.57,
     "desvio_pct": -40.86,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060201",
@@ -2982,10 +3726,13 @@
     "realizado": 98460.06,
     "desvio": -64919.94,
     "desvio_pct": -39.74,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Caroline Heck Drape Scramim",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "SX00060082",
@@ -2996,8 +3743,11 @@
     "desvio_pct": -69.36,
     "gestor": "Não mapeado",
     "email_gestor": "",
-    "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
+    "macroarea": "My Carbon",
+    "negocio": "Corporativo Crédito de Carbono"
   },
   {
     "code": "RA05300664",
@@ -3006,10 +3756,13 @@
     "realizado": 96748.07,
     "desvio": -59711.85,
     "desvio_pct": -38.16,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RA05310664",
@@ -3018,10 +3771,13 @@
     "realizado": 93197.79,
     "desvio": -80728.23,
     "desvio_pct": -46.42,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AA05290329",
@@ -3032,8 +3788,11 @@
     "desvio_pct": -44.09,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "RA04630664",
@@ -3042,10 +3801,13 @@
     "realizado": 88152.1,
     "desvio": -71382.93,
     "desvio_pct": -44.74,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX00065533",
@@ -3056,8 +3818,11 @@
     "desvio_pct": 0,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00960023",
@@ -3066,10 +3831,13 @@
     "realizado": 81731.88,
     "desvio": -94558.21,
     "desvio_pct": -53.64,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Alex Scramim",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Jose Roberto Affonso",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RA04920664",
@@ -3078,10 +3846,13 @@
     "realizado": 81362.82,
     "desvio": -21027.15,
     "desvio_pct": -20.54,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AA05290057",
@@ -3092,8 +3863,11 @@
     "desvio_pct": -48.83,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "AX00960403",
@@ -3102,10 +3876,13 @@
     "realizado": 77343.05,
     "desvio": 48035.72,
     "desvio_pct": 163.9,
-    "gestor": "Leandro Protzen",
+    "gestor": "Patricia Camillo",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Gilson Luciano Brioli",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "SX05080004",
@@ -3114,10 +3891,13 @@
     "realizado": 77228.7,
     "desvio": -333872.73,
     "desvio_pct": -81.21,
-    "gestor": "Fernando Galletti de Queiroz",
+    "gestor": "Marta Lisli Ribeiro de Morais Giannichi",
     "email_gestor": "fernando.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Marta Lisli Ribeiro de Morais Giannichi",
+    "clevel": "Fernando Galletti de Queiroz",
+    "macroarea": "My Carbon",
+    "negocio": "Corporativo Crédito de Carbono"
   },
   {
     "code": "XX00060075",
@@ -3126,10 +3906,13 @@
     "realizado": 73549.14,
     "desvio": -58267.38,
     "desvio_pct": -44.2,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Marcos Antonio Martins Culpo",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00380082",
@@ -3140,8 +3923,11 @@
     "desvio_pct": -49.55,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "IA02130082",
@@ -3150,10 +3936,13 @@
     "realizado": 68204.91,
     "desvio": -53580.95,
     "desvio_pct": -44.0,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Bruno Paiva de Souza",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Comercializadora Energia"
   },
   {
     "code": "XB02650894",
@@ -3164,8 +3953,11 @@
     "desvio_pct": 0,
     "gestor": "Roberto Hoelz Stern",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS PY",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RA00610664",
@@ -3174,10 +3966,13 @@
     "realizado": 65507.76,
     "desvio": 65432.5,
     "desvio_pct": 86941.93,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX00960035",
@@ -3186,10 +3981,13 @@
     "realizado": 64552.05,
     "desvio": -41962.59,
     "desvio_pct": -39.4,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Welington Cristiano de Moraes",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AA05340057",
@@ -3200,8 +3998,11 @@
     "desvio_pct": -79.12,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "XX00060435",
@@ -3210,10 +4011,13 @@
     "realizado": 63561.73,
     "desvio": -3711164.45,
     "desvio_pct": -98.32,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Caroline Heck Drape Scramim",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "YX02580064",
@@ -3224,8 +4028,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "RX00960008",
@@ -3234,10 +4041,13 @@
     "realizado": 60859.9,
     "desvio": -40037.5,
     "desvio_pct": -39.68,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Rubens Mazzetti Junior",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XL04730553",
@@ -3246,10 +4056,13 @@
     "realizado": 58574.39,
     "desvio": 58574.39,
     "desvio_pct": 0,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Welington Paulino de Oliveira",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RA05240664",
@@ -3258,10 +4071,13 @@
     "realizado": 53414.59,
     "desvio": -25811.0,
     "desvio_pct": -32.58,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX00960420",
@@ -3272,8 +4088,11 @@
     "desvio_pct": -57.77,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX00310035",
@@ -3282,10 +4101,13 @@
     "realizado": 51214.5,
     "desvio": -35276.96,
     "desvio_pct": -40.79,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Welington Cristiano de Moraes",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RA05280664",
@@ -3294,10 +4116,13 @@
     "realizado": 51040.15,
     "desvio": -30195.8,
     "desvio_pct": -37.17,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00960017",
@@ -3306,10 +4131,13 @@
     "realizado": 50237.91,
     "desvio": -70248.09,
     "desvio_pct": -58.3,
-    "gestor": "Sergio Saraiva",
+    "gestor": "Denise Batista da Rocha",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Denise Batista da Rocha",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AA00490327",
@@ -3320,8 +4148,11 @@
     "desvio_pct": -32.44,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "RA00180664",
@@ -3330,10 +4161,13 @@
     "realizado": 42478.66,
     "desvio": -29802.98,
     "desvio_pct": -41.23,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00960653",
@@ -3344,8 +4178,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "RA05250664",
@@ -3354,10 +4191,13 @@
     "realizado": 41368.85,
     "desvio": -34773.49,
     "desvio_pct": -45.67,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XB02585001",
@@ -3366,10 +4206,13 @@
     "realizado": 40760.52,
     "desvio": 40760.52,
     "desvio_pct": 0,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Lilian Nascimento",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Lilian Nascimento",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Geral",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RA00030664",
@@ -3378,10 +4221,13 @@
     "realizado": 39492.79,
     "desvio": -31706.86,
     "desvio_pct": -44.53,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX00960791",
@@ -3392,8 +4238,11 @@
     "desvio_pct": -22.57,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcelo Ribeiro Neiva",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RA05260664",
@@ -3402,10 +4251,13 @@
     "realizado": 35237.12,
     "desvio": -45035.3,
     "desvio_pct": -56.1,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Chrystoffer Souto Ciriero",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX05220724",
@@ -3416,8 +4268,11 @@
     "desvio_pct": 0,
     "gestor": "Sergio Saraiva",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AA05270329",
@@ -3428,8 +4283,11 @@
     "desvio_pct": 0,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "AA00130298",
@@ -3440,8 +4298,11 @@
     "desvio_pct": -18.57,
     "gestor": "Leandro Protzen",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "XX00960890",
@@ -3450,10 +4311,13 @@
     "realizado": 29613.66,
     "desvio": -169326.4,
     "desvio_pct": -85.11,
-    "gestor": "Flavia Regina Ribeiro da Silva Villa",
+    "gestor": "Camila Tsuki Ito",
     "email_gestor": "flavia.ribeiro@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Flavia Regina Ribeiro da Silva Villa",
+    "macroarea": "Cultura",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00380356",
@@ -3464,8 +4328,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XB02650045",
@@ -3474,10 +4341,13 @@
     "realizado": 27461.25,
     "desvio": -66392.73,
     "desvio_pct": -70.74,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Marco Aurelio Gasparini",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS PY",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AA00490329",
@@ -3488,8 +4358,11 @@
     "desvio_pct": -33.09,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "AA05340329",
@@ -3500,8 +4373,11 @@
     "desvio_pct": -50.06,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "YX00060830",
@@ -3510,10 +4386,13 @@
     "realizado": 20456.63,
     "desvio": 20456.63,
     "desvio_pct": 0,
-    "gestor": "Frederico Alcantara de Queiroz",
+    "gestor": "Robert Emilio Walder Silvestri",
     "email_gestor": "frederico.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Robert Emilio Walder Silvestri",
+    "clevel": "Frederico Alcantara de Queiroz",
+    "macroarea": "Suporte Latam",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "YX00960056",
@@ -3524,8 +4403,11 @@
     "desvio_pct": -98.76,
     "gestor": "Não mapeado",
     "email_gestor": "",
-    "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
+    "macroarea": "Administrativo",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "RX05330560",
@@ -3536,8 +4418,11 @@
     "desvio_pct": 0,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "YX00060355",
@@ -3546,10 +4431,13 @@
     "realizado": 17033.64,
     "desvio": -65671.46,
     "desvio_pct": -79.4,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Carlos Eduardo Heitor Canas",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Carlos Eduardo Heitor Canas",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suprimentos",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "XX00060553",
@@ -3558,10 +4446,13 @@
     "realizado": 17029.1,
     "desvio": 17029.1,
     "desvio_pct": 0,
-    "gestor": "Roberto Hoelz Stern",
+    "gestor": "Waldemar Moi Neto",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Leandro Tadeu Flosi Cury",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "Tecnologia",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00060654",
@@ -3572,8 +4463,11 @@
     "desvio_pct": -52.36,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "XX00060724",
@@ -3584,8 +4478,11 @@
     "desvio_pct": 0,
     "gestor": "Sergio Saraiva",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX04565001",
@@ -3596,8 +4493,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX05235006",
@@ -3608,8 +4508,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
-    "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "SX05080356",
@@ -3620,8 +4523,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XX00960356",
@@ -3632,8 +4538,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XX00310724",
@@ -3644,8 +4553,11 @@
     "desvio_pct": 0,
     "gestor": "Sergio Saraiva",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX00060792",
@@ -3656,8 +4568,11 @@
     "desvio_pct": 0,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AA05270126",
@@ -3668,8 +4583,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XX04900724",
@@ -3680,8 +4598,11 @@
     "desvio_pct": 0,
     "gestor": "Sergio Saraiva",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XC04565001",
@@ -3690,10 +4611,13 @@
     "realizado": 3350.27,
     "desvio": 3350.27,
     "desvio_pct": 0,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Lilian Nascimento",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Lilian Nascimento",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Geral",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "RX05410082",
@@ -3704,8 +4628,11 @@
     "desvio_pct": -78.31,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RA04940082",
@@ -3716,8 +4643,11 @@
     "desvio_pct": -62.18,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "YX00960565",
@@ -3728,8 +4658,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "AA00185534",
@@ -3740,8 +4673,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XX00060917",
@@ -3750,10 +4686,13 @@
     "realizado": 2157.29,
     "desvio": 1852.67,
     "desvio_pct": 608.19,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Rodrigo Arnus Koelle",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Rodrigo Arnus Koelle",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Suprimentos",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AX05230083",
@@ -3762,10 +4701,13 @@
     "realizado": 2045.97,
     "desvio": 2045.97,
     "desvio_pct": 0,
-    "gestor": "Leandro Protzen",
+    "gestor": "Marcio Kravetch Ratico",
     "email_gestor": "leandro.protzen@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Kravetch Ratico",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "YX05225006",
@@ -3776,8 +4718,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "AA00015534",
@@ -3788,8 +4733,11 @@
     "desvio_pct": 0,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "RX00060351",
@@ -3800,8 +4748,11 @@
     "desvio_pct": -99.93,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "YX00960362",
@@ -3812,8 +4763,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "IA04500082",
@@ -3822,10 +4776,13 @@
     "realizado": 1171.68,
     "desvio": 811.68,
     "desvio_pct": 225.47,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Bruno Paiva de Souza",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Energia",
+    "negocio": "Comercializadora Energia"
   },
   {
     "code": "YX00960691",
@@ -3836,8 +4793,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XX00960077",
@@ -3846,10 +4806,13 @@
     "realizado": 939.0,
     "desvio": -456.52,
     "desvio_pct": -32.71,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Daiana Kelly Toledo da Silva",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Daiana Kelly Toledo da Silva",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Financeiro",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AA00015013",
@@ -3860,8 +4823,11 @@
     "desvio_pct": -75.19,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "AA00015527",
@@ -3872,8 +4838,11 @@
     "desvio_pct": 0,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "RX00380420",
@@ -3884,8 +4853,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XX03165001",
@@ -3896,8 +4868,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "YX00960563",
@@ -3908,8 +4883,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "RX00310172",
@@ -3920,8 +4898,11 @@
     "desvio_pct": 0,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcelo Ribeiro Neiva",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AA00490128",
@@ -3932,8 +4913,11 @@
     "desvio_pct": 229.03,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "AA00015529",
@@ -3944,8 +4928,11 @@
     "desvio_pct": 0,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "RX00960494",
@@ -3956,8 +4943,11 @@
     "desvio_pct": 0,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX05225533",
@@ -3968,8 +4958,11 @@
     "desvio_pct": 0,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AA00490130",
@@ -3980,8 +4973,11 @@
     "desvio_pct": 31.53,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "XX05085001",
@@ -3992,8 +4988,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "AA00490122",
@@ -4004,8 +5003,11 @@
     "desvio_pct": 78.25,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "RX00060435",
@@ -4016,8 +5018,11 @@
     "desvio_pct": 0.0,
     "gestor": "Moises Carlos Goncalves da Silva",
     "email_gestor": "moises.gsilva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "AA00490135",
@@ -4028,8 +5033,11 @@
     "desvio_pct": 178.88,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "XX00060841",
@@ -4040,8 +5048,11 @@
     "desvio_pct": 0,
     "gestor": "Roberto Hoelz Stern",
     "email_gestor": "roberto.stern@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Roberto Hoelz Stern",
+    "macroarea": "MBS",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "AA00430019",
@@ -4052,8 +5063,11 @@
     "desvio_pct": 42.57,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "IA03160724",
@@ -4064,8 +5078,11 @@
     "desvio_pct": 0,
     "gestor": "Sergio Saraiva",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Comercializadora Energia"
   },
   {
     "code": "AA00490087",
@@ -4076,8 +5093,11 @@
     "desvio_pct": 0,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "SX05080724",
@@ -4088,8 +5108,11 @@
     "desvio_pct": 0,
     "gestor": "Sergio Saraiva",
     "email_gestor": "sergio.saraiva@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "Sergio Saraiva",
+    "macroarea": "G&G",
+    "negocio": "Corporativo Crédito de Carbono"
   },
   {
     "code": "AA00180425",
@@ -4100,8 +5123,11 @@
     "desvio_pct": -39.55,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "AX05310083",
@@ -4112,8 +5138,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "AA05270137",
@@ -4124,8 +5153,11 @@
     "desvio_pct": 0,
     "gestor": "Rafael Henrique Amaral",
     "email_gestor": "rafael.amaral@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Amarildo Carlos Rodrigues",
+    "diretor": "Não mapeado",
+    "clevel": "Leandro Protzen",
+    "macroarea": "Inativas",
+    "negocio": "Unidades Inativas"
   },
   {
     "code": "AX00010083",
@@ -4134,10 +5166,13 @@
     "realizado": 0.0,
     "desvio": 0.0,
     "desvio_pct": 0,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Marcio Kravetch Ratico",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Kravetch Ratico",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "IA03160356",
@@ -4148,8 +5183,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "IA04905001",
@@ -4158,10 +5196,13 @@
     "realizado": 0.0,
     "desvio": -1979971.47,
     "desvio_pct": -100.0,
-    "gestor": "Edison Ticle de Andrade Melo e Souza Filho",
+    "gestor": "Bruno Paiva de Souza",
     "email_gestor": "edison.ticle@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Nathan Freire",
+    "clevel": "Edison Ticle de Andrade Melo e Souza Filho",
+    "macroarea": "Energia",
+    "negocio": "Comercializadora Energia"
   },
   {
     "code": "RX00010035",
@@ -4170,10 +5211,13 @@
     "realizado": 0.0,
     "desvio": 0.0,
     "desvio_pct": 0,
-    "gestor": "Adriano Rosa Delfino",
+    "gestor": "Welington Cristiano de Moraes",
     "email_gestor": "adriano.delfino@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Leivison Tadeu Silva da Cruz",
+    "diretor": "Adriano Rosa Delfino",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Logística",
+    "negocio": "Corporativo Logística"
   },
   {
     "code": "RX00010356",
@@ -4184,8 +5228,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "RX04940356",
@@ -4196,8 +5243,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XC04555001",
@@ -4208,8 +5258,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "XX02120356",
@@ -4220,8 +5273,11 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   },
   {
     "code": "YX00060828",
@@ -4230,10 +5286,13 @@
     "realizado": 0.0,
     "desvio": -0.0,
     "desvio_pct": -100.0,
-    "gestor": "Luis Ricardo Alves Luz",
+    "gestor": "Silvio Shinji Irizawa",
     "email_gestor": "luis.luz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Marcio Kravetch Ratico",
+    "diretor": "Silvio Shinji Irizawa",
+    "clevel": "Luis Ricardo Alves Luz",
+    "macroarea": "Eficiência Operacional",
+    "negocio": "Corporativo Latam"
   },
   {
     "code": "AX00010081",
@@ -4242,10 +5301,13 @@
     "realizado": -4.03,
     "desvio": -4.03,
     "desvio_pct": 0,
-    "gestor": "Frederico Alcantara de Queiroz",
+    "gestor": "Lais Borges Clemente",
     "email_gestor": "frederico.queiroz@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Não mapeado",
+    "diretor": "Robert Emilio Walder Silvestri",
+    "clevel": "Frederico Alcantara de Queiroz",
+    "macroarea": "Gestão Beef",
+    "negocio": "Corporativo Beef Brasil"
   },
   {
     "code": "XX03170824",
@@ -4254,10 +5316,13 @@
     "realizado": -57988.45,
     "desvio": -57988.45,
     "desvio_pct": 0,
-    "gestor": "Norberto Giangrande",
+    "gestor": "Alejandro Spataro",
     "email_gestor": "norberto.giangrande@minervafoods.com",
-    "macroarea": "",
-    "negocio": ""
+    "gerente": "Daniela Arantes",
+    "diretor": "Não mapeado",
+    "clevel": "Norberto Giangrande",
+    "macroarea": "Marketing",
+    "negocio": "Corporativo Corporativo"
   },
   {
     "code": "XX00060356",
@@ -4268,7 +5333,10 @@
     "desvio_pct": 0,
     "gestor": "Não mapeado",
     "email_gestor": "",
+    "gerente": "Não mapeado",
+    "diretor": "Não mapeado",
+    "clevel": "",
     "macroarea": "Geral",
-    "negocio": "Minerva Foods"
+    "negocio": "Corporativo"
   }
 ]

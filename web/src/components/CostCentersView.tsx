@@ -127,6 +127,9 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({
         desvio_pct: cc.desvio_pct,
         gestor: cc.gestor,
         email_gestor: cc.email_gestor,
+        gerente: cc.gerente,
+        diretor: cc.diretor,
+        clevel: cc.clevel,
         macroarea: cc.macroarea,
         negocio: cc.negocio
       });
@@ -137,10 +140,12 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({
     const exportData = filtered.map((cc) => ({
       'Código': cc.code,
       'Descrição': cc.description,
+      'Negócio (BU)': cc.negocio,
+      'Diretoria': cc.diretor || 'Não informado',
+      'Gerência Executiva': cc.gerente || 'Não informado',
       'Gestor': cc.gestor,
       'E-mail Gestor': cc.email_gestor,
       'Macroárea': cc.macroarea,
-      'Negócio': cc.negocio,
       'Orçado (R$)': cc.orcado,
       'Realizado (R$)': cc.realizado,
       'Desvio Nominal (R$)': cc.desvio,
@@ -458,8 +463,11 @@ export const CostCentersView: React.FC<CostCentersViewProps> = ({
                     >
                       {cc.description}
                     </td>
-                    <td className="py-2.5 px-4 text-slate-400 max-w-[160px] truncate">
-                      {cc.gestor}
+                    <td className="py-2.5 px-4 max-w-[170px] truncate">
+                      <div className="font-semibold text-slate-800 dark:text-slate-200 truncate">{cc.gestor}</div>
+                      {cc.diretor && cc.diretor !== 'Não mapeado' && (
+                        <div className="text-[10px] text-slate-400 truncate">Dir: {cc.diretor}</div>
+                      )}
                     </td>
                     <td className="py-2.5 px-4 text-slate-400 text-[11px] font-medium">
                       {cc.macroarea || '—'}
