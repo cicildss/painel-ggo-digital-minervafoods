@@ -248,12 +248,26 @@ function DashboardContent() {
             : 'bg-white/80 backdrop-blur-sm border-slate-200/60 text-slate-400'
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-1 text-[11px]">
-          <span>
-            <strong className={isDark ? 'text-slate-200' : 'text-slate-600'}>Minerva Foods</strong>{' '}
-            • Diretoria de Controladoria Corporativa
-          </span>
-          <span>Painel GGO Digital • Segurança RLS Ativa • Dados sincronizados com DW Minerva</span>
+        <div className="max-w-[1400px] mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-2 text-[11px]">
+          <div className="flex items-center space-x-2">
+            <span>
+              <strong className={isDark ? 'text-slate-200' : 'text-slate-600'}>Minerva Foods</strong>{' '}
+              • Diretoria de Controladoria Corporativa
+            </span>
+          </div>
+
+          <div className="flex items-center space-x-2">
+            <span className="inline-flex items-center space-x-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 border border-emerald-500/20 font-medium">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+              <span>
+                OneDrive: <strong>{metadata.sync_info?.source_file || 'PBIX'}</strong>
+                {metadata.sync_info?.last_sync ? ` (Sincronizado: ${metadata.sync_info.last_sync})` : ''}
+              </span>
+            </span>
+            <span className="text-slate-400 hidden md:inline">
+              • {metadata.total_records.toLocaleString('pt-BR')} registros carregados
+            </span>
+          </div>
         </div>
       </footer>
 

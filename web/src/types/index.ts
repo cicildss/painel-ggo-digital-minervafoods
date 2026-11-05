@@ -13,6 +13,12 @@ export interface Metadata {
   years: number[];
   months: { id: number; name: string }[];
   total_records: number;
+  sync_info?: {
+    source_file: string;
+    source_mtime: string;
+    last_sync: string;
+    total_records: number;
+  };
 }
 
 export interface MonthlyRecord {

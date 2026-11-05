@@ -4,11 +4,33 @@ import json
 import os
 import numpy as np
 
-pbix_path = r"C:\Users\MARIA.ALMEIDA\OneDrive - Minerva S.A\Área de Trabalho\painel GGO Digital V6 - com RLS.pbix"
+import glob
+import time
+
+onedrive_dir = r"C:\Users\MARIA.ALMEIDA\OneDrive - Minerva S.A\Área de Trabalho"
+default_pbix = os.path.join(onedrive_dir, "painel GGO Digital V6 - com RLS.pbix")
+
+# Procura dinamicamente a versão mais recente do arquivo PBIX no OneDrive
+pbix_candidates = glob.glob(os.path.join(onedrive_dir, "*GGO*.pbix")) + glob.glob(os.path.join(onedrive_dir, "painel*.pbix"))
+pbix_candidates = list(set(pbix_candidates))
+
+if pbix_candidates:
+    # Ordena pelo arquivo com data de modificação mais recente
+    pbix_candidates.sort(key=lambda x: os.path.getmtime(x), reverse=True)
+    pbix_path = pbix_candidates[0]
+else:
+    pbix_path = default_pbix
+
+pbix_filename = os.path.basename(pbix_path)
+pbix_mtime_str = time.strftime('%d/%m/%Y %H:%M:%S', time.localtime(os.path.getmtime(pbix_path))) if os.path.exists(pbix_path) else "Desconhecido"
+current_sync_time = time.strftime('%d/%m/%Y %H:%M:%S')
+
 web_data_dir = r"C:\Users\MARIA.ALMEIDA\.gemini\antigravity\scratch\painel-ggo-digital-minervafoods\web\src\data"
 os.makedirs(web_data_dir, exist_ok=True)
 
-print("Carregando modelo do Power BI...")
+print(f"Arquivo Power BI selecionado no OneDrive: {pbix_filename}")
+print(f"Data de modificação no OneDrive: {pbix_mtime_str}")
+print("Carregando modelo do Power BI via pbixray...")
 model = pbixray.PBIXRay(pbix_path)
 
 # Carrega tabelas
@@ -105,7 +127,13 @@ metadata = {
     "gestores": list(gestores_map.values()),
     "years": [int(y) for y in anos_disponiveis if y >= 2023],
     "months": [{"id": i+1, "name": m} for i, m in enumerate(meses_nomes)],
-    "total_records": len(fato)
+    "total_records": len(fato),
+    "sync_info": {
+        "source_file": pbix_filename,
+        "source_mtime": pbix_mtime_str,
+        "last_sync": current_sync_time,
+        "total_records": len(fato)
+    }
 }
 
 with open(os.path.join(web_data_dir, "metadata.json"), "w", encoding="utf-8") as f:
