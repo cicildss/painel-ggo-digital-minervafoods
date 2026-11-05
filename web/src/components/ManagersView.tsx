@@ -11,12 +11,14 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   MousePointerClick,
-  Briefcase
+  Briefcase,
+  Mail
 } from 'lucide-react';
 import * as XLSX from 'xlsx';
 import type { CostCenterRecord } from '../types';
 import type { DrillDownItem } from './DetailModal';
 import { EmptyState } from './EmptyState';
+import { useToast } from '../context/ToastContext';
 
 interface ManagersViewProps {
   costCenters: CostCenterRecord[];
@@ -47,6 +49,7 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
   onSelectDrillDown
 }) => {
   const isDark = theme === 'dark';
+  const { showToast } = useToast();
   const [hierarchyLevel, setHierarchyLevel] = useState<'GESTOR' | 'GERENTE' | 'DIRETOR'>('GESTOR');
   const [searchTerm, setSearchTerm] = useState('');
   const [statusFilter, setStatusFilter] = useState<'ALL' | 'ACIMA' | 'ABAIXO'>('ALL');
@@ -213,6 +216,16 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, `GGO_${levelLabel}`);
     XLSX.writeFile(wb, `GGO_Minerva_${levelLabel}_${new Date().toISOString().slice(0, 10)}.xlsx`);
+    showToast(`Relatório de ${levelLabel} exportado (${filtered.length} líderes)!`, 'success');
+  };
+
+  const handleNotifyManager = (m: ManagerSummary) => {
+    const toEmail = m.email || '';
+    const subject = `[GGO Minerva Foods] Acompanhamento de Gastos Operacionais - ${m.name}`;
+    const body = `Olá ${m.name},\n\nIdentificamos no Painel GGO Digital que a sua gestão (${m.costCentersCount} centros de custo) apresenta o seguinte desempenho acumulado:\n\n• Orçado: ${formatCurrency(m.orcado)}\n• Realizado: ${formatCurrency(m.realizado)}\n• Desvio: ${m.desvio > 0 ? '+' : ''}${formatCurrency(m.desvio)} (${m.desvio_pct >= 0 ? '+' : ''}${m.desvio_pct.toFixed(1)}%)\n\nSolicitamos avaliar os principais lançamentos e ofensores para alinhamento junto à Controladoria.\n\nAtenciosamente,\nDiretoria de Controladoria Corporativa\nMinerva Foods`;
+
+    window.open(`mailto:${toEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`);
+    showToast(`E-mail de alinhamento aberto para ${m.name}!`, 'info');
   };
 
   const handleOpenManager = (m: ManagerSummary) => {
@@ -682,6 +695,7 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
                   </div>
                 </th>
                 <th className="py-3 px-4 text-center">Status</th>
+                <th className="py-3 px-3 text-center">Ações</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-slate-100 dark:divide-slate-800">
@@ -732,7 +746,18 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
                         isDark ? 'text-white' : 'text-slate-900'
                       }`}
                     >
-                      {formatCurrency(m.realizado)}
+                      <div>{formatCurrency(m.realizado)}</div>
+                      {/* Visual consumption progress bar */}
+                      <div className="w-20 ml-auto bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full mt-1 overflow-hidden" title={`Consumo orçamentário: ${(m.orcado > 0 ? (m.realizado / m.orcado) * 100 : 100).toFixed(1)}%`}>
+                        <div
+                          className={`h-full rounded-full transition-all ${
+                            isOver ? 'bg-[#e84752]' : 'bg-emerald-500'
+                          }`}
+                          style={{
+                            width: `${Math.min(100, Math.max(5, m.orcado > 0 ? (m.realizado / m.orcado) * 100 : 100))}%`
+                          }}
+                        />
+                      </div>
                     </td>
                     <td
                       className={`py-2.5 px-4 text-right font-extrabold ${
@@ -757,12 +782,22 @@ export const ManagersView: React.FC<ManagersViewProps> = ({
                         {statusBadge.text}
                       </span>
                     </td>
+                    <td className="py-2.5 px-3 text-center" onClick={(e) => e.stopPropagation()}>
+                      <button
+                        type="button"
+                        onClick={() => handleNotifyManager(m)}
+                        title={`Enviar e-mail de alinhamento orçamentário para ${m.name}`}
+                        className="p-1.5 rounded-lg border border-slate-200 dark:border-slate-700 text-slate-400 hover:text-[#385463] dark:hover:text-[#7bb0ce] hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors cursor-pointer"
+                      >
+                        <Mail className="w-3.5 h-3.5" />
+                      </button>
+                    </td>
                   </tr>
                 );
               })}
               {paginated.length === 0 && (
                 <tr>
-                  <td colSpan={8} className="py-2 px-4">
+                  <td colSpan={9} className="py-2 px-4">
                     <EmptyState
                       variant="search"
                       title="Nenhum gestor encontrado"

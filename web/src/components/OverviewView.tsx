@@ -25,8 +25,10 @@ import {
   ArrowUpRight,
   ArrowDownRight,
   MousePointerClick,
-  Sparkles
+  Sparkles,
+  Printer
 } from 'lucide-react';
+import { useToast } from '../context/ToastContext';
 import { StatCard } from './StatCard';
 import { ExecutiveGauge } from './ExecutiveGauge';
 import type { MonthlyRecord, CostCenterRecord, PackageRecord } from '../types';
@@ -50,7 +52,15 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
   onSelectDrillDown
 }) => {
   const isDark = theme === 'dark';
+  const { showToast } = useToast();
   const [chartView, setChartView] = useState<'comparativo' | 'desvio'>('comparativo');
+
+  const handlePrint = () => {
+    showToast('Preparando relatório executivo para impressão/PDF...', 'info', 2000);
+    setTimeout(() => {
+      window.print();
+    }, 400);
+  };
 
   const scaleDivisor = scale === 'BRL_1000' ? 1000 : 1;
   const scaleSuffix = scale === 'BRL_1000' ? ' mil' : '';
@@ -144,6 +154,24 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
 
   return (
     <div className="space-y-6 animate-fade-in">
+      {/* Print-Only Header (visible only when printing / exporting to PDF) */}
+      <div className="hidden print-only mb-6 border-b pb-4">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-xl font-bold uppercase tracking-tight text-slate-900">
+              Minerva Foods • Painel GGO Digital
+            </h1>
+            <p className="text-xs text-slate-500">
+              Diretoria de Controladoria Corporativa • Relatório Executivo de Gastos Operacionais
+            </p>
+          </div>
+          <div className="text-right text-xs text-slate-400">
+            <div>Emissão: {new Date().toLocaleDateString('pt-BR')}</div>
+            <div>Escopo: {costCenters.length} centros analisados</div>
+          </div>
+        </div>
+      </div>
+
       {/* Executive Narrative Briefing Bar */}
       <div
         className={`p-4 rounded-xl border flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 text-xs shadow-xs transition-all ${
@@ -172,7 +200,16 @@ export const OverviewView: React.FC<OverviewViewProps> = ({
           </div>
         </div>
 
-        <div className="shrink-0 flex items-center space-x-2 w-full sm:w-auto justify-end pt-1 sm:pt-0">
+        <div className="shrink-0 flex items-center space-x-2 w-full sm:w-auto justify-end pt-1 sm:pt-0 no-print">
+          <button
+            type="button"
+            onClick={handlePrint}
+            title="Exportar Relatório Executivo em PDF ou Imprimir para Reunião de Diretoria"
+            className="flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold text-white bg-[#385463] hover:bg-[#2b3d4a] transition-all shadow-xs cursor-pointer btn-press"
+          >
+            <Printer className="w-3.5 h-3.5" />
+            <span>Relatório Executivo (PDF)</span>
+          </button>
           <span className="px-2.5 py-1 rounded-full text-[10px] font-bold bg-white/70 dark:bg-slate-800 border border-slate-200 dark:border-slate-700">
             {costCenters.length} Centros Analisados
           </span>

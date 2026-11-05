@@ -136,3 +136,29 @@ select.dark-select {
 .btn-press:active {
   transform: scale(0.97);
 }
+
+/* Print / Executive Deck Mode */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #0f172a !important;
+    font-size: 10pt;
+  }
+  header, footer, .no-print {
+    display: none !important;
+  }
+  main {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .rounded-xl {
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0 !important;
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+  .print-only {
+    display: block !important;
+  }
+}

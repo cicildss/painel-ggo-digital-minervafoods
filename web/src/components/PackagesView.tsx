@@ -14,6 +14,7 @@ import * as XLSX from 'xlsx';
 import type { PackageRecord } from '../types';
 import type { DrillDownItem } from './DetailModal';
 import { EmptyState } from './EmptyState';
+import { useToast } from '../context/ToastContext';
 
 interface PackagesViewProps {
   packages: PackageRecord[];
@@ -29,6 +30,7 @@ export const PackagesView: React.FC<PackagesViewProps> = ({
   onSelectDrillDown
 }) => {
   const isDark = theme === 'dark';
+  const { showToast } = useToast();
   const scaleDivisor = scale === 'BRL_1000' ? 1000 : 1;
   const scaleSuffix = scale === 'BRL_1000' ? ' mil' : '';
 
@@ -93,6 +95,7 @@ export const PackagesView: React.FC<PackagesViewProps> = ({
     const wb = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(wb, ws, 'Pacotes_de_Gastos');
     XLSX.writeFile(wb, `GGO_Minerva_Pacotes_${new Date().toISOString().slice(0, 10)}.xlsx`);
+    showToast(`Pacotes exportados com sucesso (${packages.length} pacotes)!`, 'success');
   };
 
   return (
@@ -319,7 +322,18 @@ export const PackagesView: React.FC<PackagesViewProps> = ({
                         isDark ? 'text-white' : 'text-slate-900'
                       }`}
                     >
-                      {formatCurrency(p.realizado)}
+                      <div>{formatCurrency(p.realizado)}</div>
+                      {/* Visual consumption bar */}
+                      <div className="w-20 ml-auto bg-slate-200 dark:bg-slate-700 h-1.5 rounded-full mt-1 overflow-hidden" title={`Consumo: ${(p.orcado > 0 ? (p.realizado / p.orcado) * 100 : 100).toFixed(1)}%`}>
+                        <div
+                          className={`h-full rounded-full transition-all ${
+                            isOver ? 'bg-[#e84752]' : 'bg-emerald-500'
+                          }`}
+                          style={{
+                            width: `${Math.min(100, Math.max(5, p.orcado > 0 ? (p.realizado / p.orcado) * 100 : 100))}%`
+                          }}
+                        />
+                      </div>
                     </td>
                     <td
                       className={`py-2.5 px-4 text-right font-extrabold ${

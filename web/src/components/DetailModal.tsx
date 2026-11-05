@@ -5,9 +5,11 @@ import {
   Layers,
   FileText,
   User,
-  Compass
+  Compass,
+  Mail
 } from 'lucide-react';
 import type { AnalyticsRecord } from '../types';
+import { useToast } from '../context/ToastContext';
 
 export interface DrillDownItem {
   type: 'cost_center' | 'package';
@@ -43,6 +45,7 @@ export const DetailModal: React.FC<DetailModalProps> = ({
 }) => {
   if (!item) return null;
 
+  const { showToast } = useToast();
   const isDark = theme === 'dark';
   const scaleDivisor = scale === 'BRL_1000' ? 1000 : 1;
   const scaleSuffix = scale === 'BRL_1000' ? ' mil' : '';
@@ -100,6 +103,29 @@ export const DetailModal: React.FC<DetailModalProps> = ({
 
   const isOver = item.desvio > 0;
   const atingimentoPct = item.orcado > 0 ? (item.realizado / item.orcado) * 100 : 0;
+
+  const handleNotifyManager = () => {
+    const gestorName = item.gestor || 'Gestor Responsável';
+    const email = item.email_gestor || `${gestorName.toLowerCase().replace(/\s+/g, '.')}@minervafoods.com`;
+    const subject = encodeURIComponent(`[GGO Minerva Foods] Acompanhamento Orçamentário - ${item.id} - ${item.title}`);
+
+    const statusMsg = item.desvio > 0
+      ? `foi apurado um desvio desfavorável de +${formatCurrency(item.desvio)} (${item.desvio_pct >= 0 ? '+' : ''}${item.desvio_pct.toFixed(1)}% vs Meta). Solicitamos o envio do plano de mitigação e justificativa para alinhamento com a Controladoria.`
+      : `registramos aderência orçamentária com economia apurada de ${formatCurrency(Math.abs(item.desvio))}. Parabéns pelo controle de custos!`;
+
+    const body = encodeURIComponent(
+      `Prezado(a) ${gestorName},\n\n` +
+      `Apresentamos a posição atualizada do Centro de Custo ${item.id} (${item.title}):\n\n` +
+      `• Orçamento Previsto: ${formatCurrency(item.orcado)}\n` +
+      `• Realizado Apurado: ${formatCurrency(item.realizado)}\n` +
+      `• Desvio Acumulado: ${item.desvio > 0 ? '+' : ''}${formatCurrency(item.desvio)} (${item.desvio_pct.toFixed(1)}%)\n\n` +
+      `Posicionamento da Controladoria:\n${statusMsg}\n\n` +
+      `Atenciosamente,\nControladoria Corporativa • Minerva Foods`
+    );
+
+    window.open(`mailto:${email}?subject=${subject}&body=${body}`, '_blank');
+    showToast(`Cliente de e-mail acionado para ${gestorName} (${email})`, 'info');
+  };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm animate-fade-in">
@@ -355,11 +381,24 @@ export const DetailModal: React.FC<DetailModalProps> = ({
 
         {/* Footer */}
         <div
-          className={`px-6 py-3 border-t flex justify-between items-center text-xs ${
+          className={`px-6 py-3 border-t flex flex-wrap gap-2 justify-between items-center text-xs ${
             isDark ? 'bg-[#141b25] border-slate-700 text-slate-400' : 'bg-slate-50 border-slate-200 text-slate-500'
           }`}
         >
-          <span>Painel GGO Digital • Drill-down de Controladoria</span>
+          <div className="flex items-center space-x-3">
+            <span>Painel GGO Digital • Drill-down</span>
+            {(item.gestor || item.email_gestor) && (
+              <button
+                type="button"
+                onClick={handleNotifyManager}
+                title="Abrir cliente de e-mail com modelo de notificação preenchido"
+                className="inline-flex items-center space-x-1.5 px-3 py-1 rounded-lg text-[11px] font-bold bg-[#e84752]/10 text-[#e84752] hover:bg-[#e84752]/20 border border-[#e84752]/30 transition-all cursor-pointer"
+              >
+                <Mail className="w-3.5 h-3.5" />
+                <span>Notificar Gestor por E-mail</span>
+              </button>
+            )}
+          </div>
           <button
             type="button"
             onClick={onClose}

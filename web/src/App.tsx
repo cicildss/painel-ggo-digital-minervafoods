@@ -1,6 +1,7 @@
 import { useState, useMemo, useEffect, useCallback } from 'react';
 import { RefreshCw } from 'lucide-react';
 import { AuthProvider } from './context/AuthContext';
+import { ToastProvider } from './context/ToastContext';
 import { useAuth } from './hooks/useAuth';
 import { LoginScreen } from './components/LoginScreen';
 import { Header } from './components/Header';
@@ -302,11 +303,12 @@ function DashboardContent() {
   const isDark = theme === 'dark';
 
   return (
-    <div
-      className={`min-h-screen flex flex-col transition-colors duration-200 ${
-        isDark ? 'bg-[#0f1720] text-slate-100 dark' : 'bg-[#f0f4f8] text-slate-800'
-      }`}
-    >
+    <ToastProvider theme={theme}>
+      <div
+        className={`min-h-screen flex flex-col transition-colors duration-200 ${
+          isDark ? 'bg-[#0f1720] text-slate-100 dark' : 'bg-[#f0f4f8] text-slate-800'
+        }`}
+      >
       {/* Header with Navigation and Corporate Branding */}
       <Header
         activeTab={activeTab}
@@ -472,6 +474,7 @@ function DashboardContent() {
         theme={theme}
       />
     </div>
+  </ToastProvider>
   );
 }
 
